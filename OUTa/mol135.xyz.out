@@ -1,0 +1,150 @@
+molecule mol135.xyz
+System:, atNum: 1 coords [0.         0.         0.69652092]
+System:, atNum: 1 coords [ 0.          0.         -0.69652092]
+===== Original AO-S matrix =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+nbas 2
+ ===== CA ===== 
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.5485               1.2158
+[Row   2]               0.5485              -1.2158
+ ===== CB ===== 
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.5485               1.2158
+[Row   2]               0.5485              -1.2158
+ ===== P_psi ===== Dalpha+Dbeta 
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.6018               0.6018
+[Row   2]               0.6018               0.6018
+===== P_mu,nu local =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.6018               0.6018
+[Row   2]               0.6018               0.6018
+===== P_mu,nu psi4 =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.6018               0.6018
+[Row   2]               0.6018               0.6018
+====== P^(AO) = SPS =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.6617               1.6617
+[Row   2]               1.6617               1.6617
+====== S^(AO) = S =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+====== P^(AO) std gaussian m_l ordering SPS =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.6617               1.6617
+[Row   2]               1.6617               1.6617
+====== S^(AO) std gaussian m_l ordering =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+===== After load P check zeros ===== 
+ [[1.66172782 1.66172782]
+ [1.66172782 1.66172782]]
+lctrl 0 ntrue 1
+lctrl 0 ntrue 1
+N_functions in (iatom,l):( 0 0 ) block =  1
+===== iatom,lblock eigvals ===== 0 0 
+ [1.66172782]
+===== iatom,lblock eigvecs ===== 0 0 
+ [[1.]]
+N_functions in (iatom,l):( 1 0 ) block =  1
+===== iatom,lblock eigvals ===== 1 0 
+ [1.66172782]
+===== iatom,lblock eigvecs ===== 1 0 
+ [[1.]]
+===== W_pnao ===== 
+ [1.66172782 1.66172782]
+===== N_avpnao =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.0000
+[Row   2]               0.0000               1.0000
+N_functions in (iatom,l):( 0 0 ) block =  1
+===== iatom,lblock eigvals ===== 0 0 
+ [1.66172782]
+===== iatom,lblock eigvecs ===== 0 0 
+ [[1.]]
+N_functions in (iatom,l):( 1 0 ) block =  1
+===== iatom,lblock eigvals ===== 1 0 
+ [1.66172782]
+===== iatom,lblock eigvecs ===== 1 0 
+ [[1.]]
+N_functions in (iatom,l):( 0 0 ) block =  1
+===== iatom,lblock eigvals ===== 0 0 
+ [1.66172782]
+===== iatom,lblock eigvecs ===== 0 0 
+ [[1.]]
+N_functions in (iatom,l):( 1 0 ) block =  1
+===== iatom,lblock eigvals ===== 1 0 
+ [1.66172782]
+===== iatom,lblock eigvecs ===== 1 0 
+ [[1.]]
+eigvalP_aoao 
+ [1.66172782 1.66172782]
+eigvalP_avav 
+ [1.66172782 1.66172782]
+===== eigvecP_aoao =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.0000
+[Row   2]               0.0000               1.0000
+===== eigvecP_avav =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.0000
+[Row   2]               0.0000               1.0000
+===== T1 =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.0000
+[Row   2]               0.0000               1.0000
+===== invT1*T1 =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.0000
+[Row   2]               0.0000               1.0000
+===== Trial P_aoao -> P_avav =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.6617               1.6617
+[Row   2]               1.6617               1.6617
+===== P_avav =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.6617               1.6617
+[Row   2]               1.6617               1.6617
+===== Trial S_aoao -> S_avav =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+===== S_avav =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+===== Spnao =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+===== Ppnao =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.6617               1.6617
+[Row   2]               1.6617               1.6617

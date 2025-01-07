@@ -1,0 +1,12 @@
+%mem=25GB
+%chk=mol32.chk
+
+#RHF/STO-3G int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read 
+
+mol32-NBO
+
+0 1
+N .000000 .000000 .564990
+N .000000 .000000 -.564990
+
+$nbo BOAO SAO SPNAO DMPNAO DMNAO DMMO DMAO AOMO AOPNAO AONAO DETAIL ARCHIVE FILE=mol32.gen* AOINFO NPA $end

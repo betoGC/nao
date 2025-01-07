@@ -1,0 +1,1274 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /cluster/software/Gaussian/g16_C.01/l1.exe "/cluster/work/users/beto93/mol39/Gau-1046218.inp" -scrdir="/cluster/work/users/beto93/mol39/"
+ Entering Link 1 = /cluster/software/Gaussian/g16_C.01/l1.exe PID=   1046219.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                18-Nov-2024 
+ ******************************************
+ %LindaWorkers=c2-15-ib
+ %NProcShared=4
+ Will use up to    4 processors via shared memory.
+ %mem=25GB
+ %chk=mol39.chk
+ SetLPE:    new flags="-opt 'Tsnet.Node.lindarsharg: ssh'  -nodelist 'c2-15-ib.saga' -env GAUSS_MDEF=3355443200 -env GAUSS_EXEDIR="/cluster/software/Gaussian/g16_C.01/bsd:/cluster/software/Gaussian/g16_C.01""
+ Will use up to    1 processors via Linda.
+ -----------------------------------------------------------------
+ #RHF/STO-3G int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read
+ -----------------------------------------------------------------
+ 1/38=1,163=2,172=1/1;
+ 2/12=2,15=3,17=6,18=5,40=1/2;
+ 3/6=3,8=11,11=1,25=1,30=1,60=-1,116=1/1,2,3;
+ 4//1;
+ 5/5=2,38=5/2;
+ 6/7=2,8=2,9=2,10=2,28=1,40=2,113=1,114=1,124=2103/1,12;
+ 99/5=1,9=1/99;
+ ---------
+ mol39-NBO
+ ---------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ Na                    0.        0.        1.57626 
+ Na                    0.        0.       -1.57626 
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1         11           0        0.000000    0.000000    1.576262
+      2         11           0        0.000000    0.000000   -1.576262
+ ---------------------------------------------------------------------
+ Symmetry turned off by external request.
+ Stoichiometry    Na2
+ Rotational constants (GHZ):           0.0000000           4.4238029           4.4238029
+ Standard basis: STO-3G (5D, 7F)
+    18 basis functions,    54 primitive gaussians,    18 cartesian basis functions
+    11 alpha electrons       11 beta electrons
+       nuclear repulsion energy        20.3108501383 Hartrees.
+ NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=    18 RedAO= T EigKep=  4.41D-01  NBF=    18
+ NBsUse=    18 1.00D-06 EigRej= -1.00D+00 NBFU=    18
+ ExpMin= 1.61D-01 ExpMax= 2.51D+02 ExpMxC= 2.51D+02 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=       500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Keep R1 ints in memory in canonical form, NReq=818478.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -319.309162995     A.U. after    8 cycles
+            NFock=  8  Conv=0.33D-08     -V/T= 2.0177
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Alpha  occ. eigenvalues --  -40.03242 -40.03233  -2.61856  -2.61849  -1.25864
+ Alpha  occ. eigenvalues --   -1.25864  -1.25834  -1.25820  -1.25820  -1.25640
+ Alpha  occ. eigenvalues --    0.19724
+ Alpha virt. eigenvalues --    0.45764   0.72823   0.78730   0.78730   0.83866
+ Alpha virt. eigenvalues --    0.83866   0.97221
+          Condensed to atoms (all electrons):
+               1          2
+     1  Na  10.919965   0.080035
+     2  Na   0.080035  10.919965
+ Mulliken charges:
+               1
+     1  Na  -0.000000
+     2  Na   0.000000
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  Na  -0.000000
+     2  Na   0.000000
+ Electronic spatial extent (au):  <R**2>=            214.0241
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.0000    Y=             -0.0000    Z=             -0.0000  Tot=              0.0000
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=            -10.7677   YY=            -10.7677   ZZ=             -3.7852
+   XY=              0.0000   XZ=              0.0000   YZ=              0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -2.3275   YY=             -2.3275   ZZ=              4.6550
+   XY=              0.0000   XZ=              0.0000   YZ=              0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=             -0.0000  YYY=             -0.0000  ZZZ=             -0.0000  XYY=             -0.0000
+  XXY=             -0.0000  XXZ=             -0.0000  XZZ=             -0.0000  YZZ=             -0.0000
+  YYZ=             -0.0000  XYZ=              0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=             -8.4462 YYYY=             -8.4462 ZZZZ=           -124.2194 XXXY=              0.0000
+ XXXZ=              0.0000 YYYX=              0.0000 YYYZ=             -0.0000 ZZZX=              0.0000
+ ZZZY=              0.0000 XXYY=             -2.8154 XXZZ=            -26.8866 YYZZ=            -26.8866
+ XXYZ=             -0.0000 YYXZ=              0.0000 ZZXY=              0.0000
+ N-N= 2.031085013828D+01 E-N=-8.076863859885D+02  KE= 3.137523637855D+02
+ Running external command "gaunbo7 R"
+         input file       "/cluster/work/users/beto93/mol39/Gau-1046219.EIn"
+         output file      "/cluster/work/users/beto93/mol39/Gau-1046219.EOu"
+         message file     "/cluster/work/users/beto93/mol39/Gau-1046219.EMs"
+         fchk file        "/cluster/work/users/beto93/mol39/Gau-1046219.EFC"
+         mat. el file     "/cluster/work/users/beto93/mol39/Gau-1046219.EUF"
+
+ Writing WrtUnf unformatted file "/cluster/work/users/beto93/mol39/Gau-1046219.EUF"
+ Gaussian matrix elements                                         Version   2 NLab=11 Len12L=8 Len4L=8
+ Write SHELL TO ATOM MAP                   from file      0 offset           0 length                   6 to matrix element file.
+ Write SHELL TYPES                         from file      0 offset           0 length                   6 to matrix element file.
+ Write NUMBER OF PRIMITIVES PER SHELL      from file      0 offset           0 length                   6 to matrix element file.
+ Write PRIMITIVE EXPONENTS                 from file      0 offset           0 length                  18 to matrix element file.
+ Write CONTRACTION COEFFICIENTS            from file      0 offset           0 length                  18 to matrix element file.
+ Write P(S=P) CONTRACTION COEFFICIENTS     from file      0 offset           0 length                  18 to matrix element file.
+ Write COORDINATES OF EACH SHELL           from file      0 offset           0 length                  18 to matrix element file.
+ Write BONDS PER ATOM                      from file      0 offset           0 length                   2 to matrix element file.
+ Write BONDED ATOMS                        from file      0 offset           0 length                   2 to matrix element file.
+ Write BOND TYPES                          from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM CHARGE/MULT                   from file      0 offset           0 length                  32 to matrix element file.
+ Write ONIOM ATOM LAYERS                   from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM MODIFIERS                from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM TYPES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK ATOMS                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK CHARGES                  from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK DISTANCES                from file      0 offset           0 length                   8 to matrix element file.
+ Write SYMINF INTS                         from file      0 offset           0 length                  26 to matrix element file.
+ Write ROTTR TO SO                         from file      0 offset           0 length                  12 to matrix element file.
+ Write GAUSSIAN SCALARS                    from file    501 offset           0 to matrix element file.
+ Write OPTIMIZATION FLAGS                  from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER ISO                         from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER SPIN                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZEFFECTIVE                     from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL QUADRUPOLEMOMENT               from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL GFACTOR                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZNUCLEAR                       from file      0 offset           0 length                   2 to matrix element file.
+ Write MULLIKEN CHARGES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write NUCLEAR GRADIENT                    from file  10584 offset           0 length                   6 to matrix element file.
+ Array NUCLEAR FORCE CONSTANTS              on  file  10585 does not exist.
+ Write ELECTRIC DIPOLE MOMENT              from file      0 offset           0 length                   3 to matrix element file.
+ Write NON-ADIABATIC COUPLING              from file  10810 offset           0 length                   6 to matrix element file.
+ Write FINITE EM FIELD                     from file  10521 offset           0 length                  35 to matrix element file.
+ Write OVERLAP                             from file  10514 offset           0 length                 171 to matrix element file.
+ Write CORE HAMILTONIAN ALPHA              from file  10515 offset           0 length                 171 to matrix element file.
+ Write CORE HAMILTONIAN BETA               from file  10515 offset         171 length                 171 to matrix element file.
+ Write KINETIC ENERGY                      from file  10516 offset           0 length                 171 to matrix element file.
+ Write ORTHOGONAL BASIS                    from file  10685 offset           0 length                 324 to matrix element file.
+ Write DIPOLE INTEGRALS                    from file  10518 offset           0 length                 513 to matrix element file.
+ Array DIP VEL INTEGRALS                    on  file  10572 does not exist.
+ Array R X DEL INTEGRALS                    on  file  10572 does not exist.
+ Write ALPHA ORBITAL ENERGIES              from file      0 offset           0 length                  18 to matrix element file.
+ Write ALPHA MO COEFFICIENTS               from file  10524 offset           0 length                 324 to matrix element file.
+ Write ALPHA DENSITY MATRIX                from file      0 offset           0 length                 171 to matrix element file.
+ Write ALPHA FOCK MATRIX                   from file  10536 offset           0 length                 171 to matrix element file.
+ Write ENERGY-WEIGHTED DENSITY             from file  10571 offset           0 length                 171 to matrix element file.
+ Write ALPHA SCF DENSITY MATRIX            from file      0 offset           0 length                 171 to matrix element file.
+ No 2e integrals to process.
+ Perform NBO analysis...executing G16NBO...
+
+ *********************************** NBO 7.0 ***********************************
+             N A T U R A L   A T O M I C   O R B I T A L   A N D
+          N A T U R A L   B O N D   O R B I T A L   A N A L Y S I S
+ **************************** Espen Tangen (S101595) ***************************
+  (c) Copyright 1996-2021 Board of Regents of the University of Wisconsin System
+      on behalf of the Theoretical Chemistry Institute.  All rights reserved.
+
+          Cite this program [NBO 7.0.10 (8-Feb-2021)] as:
+
+          NBO 7.0.  E. D. Glendening, J. K. Badenhoop, A. E. Reed,
+          J. E. Carpenter, J. A. Bohmann, C. M. Morales, P. Karafiloglou,
+          C. R. Landis, and F. Weinhold, Theoretical Chemistry Institute,
+          University of Wisconsin, Madison, WI (2018)
+
+       /NPA    / : Natural Population Analysis
+       /AOPNAO / : Print the AO to PNAO transformation
+       /AONAO  / : Print the AO to NAO transformation
+       /AOMO   / : Print the MOs in the AO basis
+       /BOAO   / : Print the AO bond-order matrix
+       /DMAO   / : Print the AO density matrix
+       /DMPNAO / : Print the PNAO density matrix
+       /DMNAO  / : Print the NAO density matrix
+       /DMMO   / : Print the MO density matrix
+       /SAO    / : Print the AO overlap matrix
+       /SPNAO  / : Print the PNAO overlap matrix
+       /DETAIL / : Write details of NBO search
+       /ARCHIVE/ : Write the archive file to lfn47
+       /AOINFO / : Write AO information to lfn31
+       /FILE   / : Set to mol39.gen*
+
+ Filename set to mol39.gen1
+
+ Job title: mol39-NBO
+
+
+ MOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      0.7026  0.7027 -0.2118 -0.2119  0.0000  0.0000  0.0042  0.0000
+   2. Na 1 (s)      0.0160  0.0158  0.7094  0.7101  0.0000  0.0000 -0.0149  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000  0.0000 -0.1641  0.6106  0.0000 -0.1987
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.6106  0.1641  0.0000  0.6004
+   5. Na 1 (pz)     0.0000  0.0002  0.0107  0.0098  0.0000  0.0000  0.6325  0.0000
+   6. Na 1 (s)     -0.0044 -0.0040  0.0525  0.0505  0.0000  0.0000  0.0066  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000  0.0000 -0.0359  0.1334  0.0000 -0.0437
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.1334  0.0359  0.0000  0.1321
+   9. Na 1 (pz)     0.0003 -0.0003  0.0021  0.0048  0.0000  0.0000  0.1346  0.0000
+  10. Na 2 (s)     -0.7026  0.7027  0.2118 -0.2119  0.0000  0.0000  0.0042  0.0000
+  11. Na 2 (s)     -0.0160  0.0158 -0.7094  0.7101  0.0000  0.0000 -0.0149  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  0.0000 -0.1641  0.6106  0.0000  0.1987
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.6106  0.1641  0.0000 -0.6004
+  14. Na 2 (pz)     0.0000 -0.0002  0.0107 -0.0098  0.0000  0.0000 -0.6325  0.0000
+  15. Na 2 (s)      0.0044 -0.0040 -0.0525  0.0505  0.0000  0.0000  0.0066  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0000  0.0000 -0.0359  0.1334  0.0000  0.0437
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.1334  0.0359  0.0000 -0.1321
+  18. Na 2 (pz)     0.0003  0.0003  0.0021 -0.0048  0.0000  0.0000 -0.1346  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      0.0000  0.0046  0.1021  0.1058  0.0234  0.0000  0.0000  0.0000
+   2. Na 1 (s)      0.0000 -0.0165 -0.4120 -0.4270 -0.0939  0.0000  0.0000  0.0000
+   3. Na 1 (px)     0.6004  0.0000  0.0000  0.0000  0.0000  0.1721 -0.4511 -0.1004
+   4. Na 1 (py)     0.1987  0.0000  0.0000  0.0000  0.0000 -0.4511 -0.1721 -0.4778
+   5. Na 1 (pz)     0.0000  0.6325  0.0811 -0.0996 -0.4663  0.0000  0.0000  0.0000
+   6. Na 1 (s)      0.0000  0.0041  0.7529  0.7964  0.1851  0.0000  0.0000  0.0000
+   7. Na 1 (px)     0.1321  0.0000  0.0000  0.0000  0.0000 -0.2766  0.7248  0.1633
+   8. Na 1 (py)     0.0437  0.0000  0.0000  0.0000  0.0000  0.7248  0.2766  0.7777
+   9. Na 1 (pz)     0.0000  0.1420 -0.1165  0.1359  0.7305  0.0000  0.0000  0.0000
+  10. Na 2 (s)      0.0000 -0.0046  0.1021 -0.1058  0.0234  0.0000  0.0000  0.0000
+  11. Na 2 (s)      0.0000  0.0165 -0.4120  0.4270 -0.0939  0.0000  0.0000  0.0000
+  12. Na 2 (px)    -0.6004  0.0000  0.0000  0.0000  0.0000  0.1721 -0.4511  0.1004
+  13. Na 2 (py)    -0.1987  0.0000  0.0000  0.0000  0.0000 -0.4511 -0.1721  0.4778
+  14. Na 2 (pz)     0.0000  0.6325 -0.0811 -0.0996  0.4663  0.0000  0.0000  0.0000
+  15. Na 2 (s)      0.0000 -0.0041  0.7529 -0.7964  0.1851  0.0000  0.0000  0.0000
+  16. Na 2 (px)    -0.1321  0.0000  0.0000  0.0000  0.0000 -0.2766  0.7248 -0.1633
+  17. Na 2 (py)    -0.0437  0.0000  0.0000  0.0000  0.0000  0.7248  0.2766 -0.7777
+  18. Na 2 (pz)     0.0000  0.1420  0.1165  0.1359 -0.7305  0.0000  0.0000  0.0000
+
+           AO         17      18
+      ------------ ------- -------
+   1. Na 1 (s)      0.0000 -0.0258
+   2. Na 1 (s)      0.0000  0.1045
+   3. Na 1 (px)    -0.4778  0.0000
+   4. Na 1 (py)     0.1004  0.0000
+   5. Na 1 (pz)     0.0000 -0.4924
+   6. Na 1 (s)      0.0000 -0.2160
+   7. Na 1 (px)     0.7777  0.0000
+   8. Na 1 (py)    -0.1633  0.0000
+   9. Na 1 (pz)     0.0000  0.8374
+  10. Na 2 (s)      0.0000  0.0258
+  11. Na 2 (s)      0.0000 -0.1045
+  12. Na 2 (px)     0.4778  0.0000
+  13. Na 2 (py)    -0.1004  0.0000
+  14. Na 2 (pz)     0.0000 -0.4924
+  15. Na 2 (s)      0.0000  0.2160
+  16. Na 2 (px)    -0.7777  0.0000
+  17. Na 2 (py)     0.1633  0.0000
+  18. Na 2 (pz)     0.0000  0.8374
+
+
+ AO overlap matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      1.0000  0.2785  0.0000  0.0000  0.0000  0.0223  0.0000  0.0000
+   2. Na 1 (s)      0.2785  1.0000  0.0000  0.0000  0.0000  0.4495  0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.4618  0.0000
+   4. Na 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.4618
+   5. Na 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   6. Na 1 (s)      0.0223  0.4495  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.4618  0.0000  0.0000  0.0000  1.0000  0.0000
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.4618  0.0000  0.0000  0.0000  1.0000
+   9. Na 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.4618  0.0000  0.0000  0.0000
+  10. Na 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0002  0.0000  0.0000
+  11. Na 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0034  0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0008  0.0000
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0008
+  14. Na 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0037  0.0000  0.0000
+  15. Na 2 (s)      0.0002  0.0034  0.0000  0.0000 -0.0037  0.0508  0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0008  0.0000  0.0000  0.0000  0.0193  0.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0008  0.0000  0.0000  0.0000  0.0193
+  18. Na 2 (pz)     0.0005  0.0073  0.0000  0.0000 -0.0072  0.0769  0.0000  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0002  0.0000
+   2. Na 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0034  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0008
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5. Na 1 (pz)     0.4618  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0037  0.0000
+   6. Na 1 (s)      0.0000  0.0002  0.0034  0.0000  0.0000  0.0037  0.0508  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000  0.0008  0.0000  0.0000  0.0000  0.0193
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0008  0.0000  0.0000  0.0000
+   9. Na 1 (pz)     1.0000 -0.0005 -0.0073  0.0000  0.0000 -0.0072 -0.0769  0.0000
+  10. Na 2 (s)     -0.0005  1.0000  0.2785  0.0000  0.0000  0.0000  0.0223  0.0000
+  11. Na 2 (s)     -0.0073  0.2785  1.0000  0.0000  0.0000  0.0000  0.4495  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.4618
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+  14. Na 2 (pz)    -0.0072  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+  15. Na 2 (s)     -0.0769  0.0223  0.4495  0.0000  0.0000  0.0000  1.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0000  0.4618  0.0000  0.0000  0.0000  1.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.4618  0.0000  0.0000  0.0000
+  18. Na 2 (pz)    -0.1105  0.0000  0.0000  0.0000  0.0000  0.4618  0.0000  0.0000
+
+           AO         17      18
+      ------------ ------- -------
+   1. Na 1 (s)      0.0000  0.0005
+   2. Na 1 (s)      0.0000  0.0073
+   3. Na 1 (px)     0.0000  0.0000
+   4. Na 1 (py)     0.0008  0.0000
+   5. Na 1 (pz)     0.0000 -0.0072
+   6. Na 1 (s)      0.0000  0.0769
+   7. Na 1 (px)     0.0000  0.0000
+   8. Na 1 (py)     0.0193  0.0000
+   9. Na 1 (pz)     0.0000 -0.1105
+  10. Na 2 (s)      0.0000  0.0000
+  11. Na 2 (s)      0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000
+  13. Na 2 (py)     0.4618  0.0000
+  14. Na 2 (pz)     0.0000  0.4618
+  15. Na 2 (s)      0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000
+  17. Na 2 (py)     1.0000  0.0000
+  18. Na 2 (pz)     0.0000  1.0000
+
+
+ AO bond-order matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      2.1753 -0.6413  0.0000  0.0000  0.0194  0.0984  0.0000  0.0000
+   2. Na 1 (s)     -0.6413  2.3565  0.0000  0.0000 -0.0775 -0.4748  0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000  1.5992  0.0000  0.0000  0.0000  0.3507  0.0000
+   4. Na 1 (py)     0.0000  0.0000  0.0000  1.5992  0.0000  0.0000  0.0000  0.3507
+   5. Na 1 (pz)     0.0194 -0.0775  0.0000  0.0000  1.6139  0.1378  0.0000  0.0000
+   6. Na 1 (s)      0.0984 -0.4748  0.0000  0.0000  0.1378  1.1444  0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.3507  0.0000  0.0000  0.0000  0.0769  0.0000
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.3507  0.0000  0.0000  0.0000  0.0769
+   9. Na 1 (pz)    -0.0242  0.0971  0.0000  0.0000  0.3311 -0.1718  0.0000  0.0000
+  10. Na 2 (s)      0.0211 -0.0849  0.0000  0.0000  0.0168  0.1553  0.0000  0.0000
+  11. Na 2 (s)     -0.0849  0.3412  0.0000  0.0000 -0.0660 -0.6233  0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000 -0.0004  0.0000  0.0000  0.0000 -0.0012  0.0000
+  13. Na 2 (py)     0.0000  0.0000  0.0000 -0.0004  0.0000  0.0000  0.0000 -0.0012
+  14. Na 2 (pz)    -0.0168  0.0660  0.0000  0.0000 -0.0130 -0.1252  0.0000  0.0000
+  15. Na 2 (s)      0.1553 -0.6233  0.0000  0.0000  0.1252  1.1332  0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000 -0.0012  0.0000  0.0000  0.0000 -0.0005  0.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000 -0.0012  0.0000  0.0000  0.0000 -0.0005
+  18. Na 2 (pz)     0.0260 -0.1005  0.0000  0.0000  0.0283  0.1746  0.0000  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)     -0.0242  0.0211 -0.0849  0.0000  0.0000 -0.0168  0.1553  0.0000
+   2. Na 1 (s)      0.0971 -0.0849  0.3412  0.0000  0.0000  0.0660 -0.6233  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000 -0.0004  0.0000  0.0000  0.0000 -0.0012
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000 -0.0004  0.0000  0.0000  0.0000
+   5. Na 1 (pz)     0.3311  0.0168 -0.0660  0.0000  0.0000 -0.0130  0.1252  0.0000
+   6. Na 1 (s)     -0.1718  0.1553 -0.6233  0.0000  0.0000 -0.1252  1.1332  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000 -0.0012  0.0000  0.0000  0.0000 -0.0005
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000 -0.0012  0.0000  0.0000  0.0000
+   9. Na 1 (pz)     0.1038 -0.0260  0.1005  0.0000  0.0000  0.0283 -0.1746  0.0000
+  10. Na 2 (s)     -0.0260  2.1753 -0.6413  0.0000  0.0000 -0.0194  0.0984  0.0000
+  11. Na 2 (s)      0.1005 -0.6413  2.3565  0.0000  0.0000  0.0775 -0.4748  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  1.5992  0.0000  0.0000  0.0000  0.3507
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  1.5992  0.0000  0.0000  0.0000
+  14. Na 2 (pz)     0.0283 -0.0194  0.0775  0.0000  0.0000  1.6139 -0.1378  0.0000
+  15. Na 2 (s)     -0.1746  0.0984 -0.4748  0.0000  0.0000 -0.1378  1.1444  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0000  0.3507  0.0000  0.0000  0.0000  0.0769
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.3507  0.0000  0.0000  0.0000
+  18. Na 2 (pz)    -0.0231  0.0242 -0.0971  0.0000  0.0000  0.3311  0.1718  0.0000
+
+           AO         17      18
+      ------------ ------- -------
+   1. Na 1 (s)      0.0000  0.0260
+   2. Na 1 (s)      0.0000 -0.1005
+   3. Na 1 (px)     0.0000  0.0000
+   4. Na 1 (py)    -0.0012  0.0000
+   5. Na 1 (pz)     0.0000  0.0283
+   6. Na 1 (s)      0.0000  0.1746
+   7. Na 1 (px)     0.0000  0.0000
+   8. Na 1 (py)    -0.0005  0.0000
+   9. Na 1 (pz)     0.0000 -0.0231
+  10. Na 2 (s)      0.0000  0.0242
+  11. Na 2 (s)      0.0000 -0.0971
+  12. Na 2 (px)     0.0000  0.0000
+  13. Na 2 (py)     0.3507  0.0000
+  14. Na 2 (pz)     0.0000  0.3311
+  15. Na 2 (s)      0.0000  0.1718
+  16. Na 2 (px)     0.0000  0.0000
+  17. Na 2 (py)     0.0769  0.0000
+  18. Na 2 (pz)     0.0000  0.1038
+
+
+ AO density matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      2.0000  0.5574  0.0000  0.0000  0.0003  0.0389  0.0000  0.0000
+   2. Na 1 (s)      0.5574  1.9963  0.0000  0.0000 -0.0035  0.9498  0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000  1.9395  0.0000  0.0000  0.0000  1.1994  0.0000
+   4. Na 1 (py)     0.0000  0.0000  0.0000  1.9395  0.0000  0.0000  0.0000  1.1994
+   5. Na 1 (pz)     0.0003 -0.0035  0.0000  0.0000  1.9412  0.0430  0.0000  0.0000
+   6. Na 1 (s)      0.0389  0.9498  0.0000  0.0000  0.0430  1.2943  0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000  1.1994  0.0000  0.0000  0.0000  0.7418  0.0000
+   8. Na 1 (py)     0.0000  0.0000  0.0000  1.1994  0.0000  0.0000  0.0000  0.7418
+   9. Na 1 (pz)    -0.0014  0.0142  0.0000  0.0000  1.1907 -0.1708  0.0000  0.0000
+  10. Na 2 (s)      0.0000 -0.0004  0.0000  0.0000  0.0002  0.0057  0.0000  0.0000
+  11. Na 2 (s)     -0.0004  0.0034  0.0000  0.0000 -0.0009 -0.0406  0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000 -0.0010  0.0000  0.0000  0.0000  0.0071  0.0000
+  13. Na 2 (py)     0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000  0.0000  0.0071
+  14. Na 2 (pz)    -0.0002  0.0009  0.0000  0.0000  0.0032  0.0016  0.0000  0.0000
+  15. Na 2 (s)      0.0057 -0.0406  0.0000  0.0000 -0.0016  0.7688  0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0071  0.0000  0.0000  0.0000  0.0092  0.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0071  0.0000  0.0000  0.0000  0.0092
+  18. Na 2 (pz)     0.0021  0.0082  0.0000  0.0000 -0.0354  0.2100  0.0000  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)     -0.0014  0.0000 -0.0004  0.0000  0.0000 -0.0002  0.0057  0.0000
+   2. Na 1 (s)      0.0142 -0.0004  0.0034  0.0000  0.0000  0.0009 -0.0406  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000  0.0000  0.0071
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000  0.0000
+   5. Na 1 (pz)     1.1907  0.0002 -0.0009  0.0000  0.0000  0.0032 -0.0016  0.0000
+   6. Na 1 (s)     -0.1708  0.0057 -0.0406  0.0000  0.0000  0.0016  0.7688  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000  0.0071  0.0000  0.0000  0.0000  0.0092
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0071  0.0000  0.0000  0.0000
+   9. Na 1 (pz)     0.7834 -0.0021 -0.0082  0.0000  0.0000 -0.0354 -0.2100  0.0000
+  10. Na 2 (s)     -0.0021  2.0000  0.5574  0.0000  0.0000 -0.0003  0.0389  0.0000
+  11. Na 2 (s)     -0.0082  0.5574  1.9963  0.0000  0.0000  0.0035  0.9498  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  1.9395  0.0000  0.0000  0.0000  1.1994
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  1.9395  0.0000  0.0000  0.0000
+  14. Na 2 (pz)    -0.0354 -0.0003  0.0035  0.0000  0.0000  1.9412 -0.0430  0.0000
+  15. Na 2 (s)     -0.2100  0.0389  0.9498  0.0000  0.0000 -0.0430  1.2943  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0000  1.1994  0.0000  0.0000  0.0000  0.7418
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  1.1994  0.0000  0.0000  0.0000
+  18. Na 2 (pz)    -0.0967  0.0014 -0.0142  0.0000  0.0000  1.1907  0.1708  0.0000
+
+           AO         17      18
+      ------------ ------- -------
+   1. Na 1 (s)      0.0000  0.0021
+   2. Na 1 (s)      0.0000  0.0082
+   3. Na 1 (px)     0.0000  0.0000
+   4. Na 1 (py)     0.0071  0.0000
+   5. Na 1 (pz)     0.0000 -0.0354
+   6. Na 1 (s)      0.0000  0.2100
+   7. Na 1 (px)     0.0000  0.0000
+   8. Na 1 (py)     0.0092  0.0000
+   9. Na 1 (pz)     0.0000 -0.0967
+  10. Na 2 (s)      0.0000  0.0014
+  11. Na 2 (s)      0.0000 -0.0142
+  12. Na 2 (px)     0.0000  0.0000
+  13. Na 2 (py)     1.1994  0.0000
+  14. Na 2 (pz)     0.0000  1.1907
+  15. Na 2 (s)      0.0000  0.1708
+  16. Na 2 (px)     0.0000  0.0000
+  17. Na 2 (py)     0.7418  0.0000
+  18. Na 2 (pz)     0.0000  0.7834
+
+
+ MO density matrix:
+
+      MO     1       2       3       4       5       6       7       8       9
+     ---- ------  ------  ------  ------  ------  ------  ------  ------  ------
+   1.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000
+  10.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  14.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  15.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  16.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  17.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  18.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+      MO    10      11      12      13      14      15      16      17      18
+     ---- ------  ------  ------  ------  ------  ------  ------  ------  ------
+   1.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  14.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  15.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  16.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  17.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  18.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies
+
+  NAO Atom No lang   Type(AO)    Occupancy      Energy
+ -------------------------------------------------------
+   1   Na  1  s      Cor( 1s)     2.00000     -39.38711
+   2   Na  1  s      Cor( 2s)     1.99999      -3.26334
+   3   Na  1  s      Val( 3s)     0.97467       0.34101
+   4   Na  1  px     Cor( 2p)     2.00000      -1.25842
+   5   Na  1  px     Ryd( 3p)     0.00000       0.81298
+   6   Na  1  py     Cor( 2p)     2.00000      -1.25842
+   7   Na  1  py     Ryd( 3p)     0.00000       0.81298
+   8   Na  1  pz     Cor( 2p)     1.99993      -1.25764
+   9   Na  1  pz     Ryd( 3p)     0.02540       0.83646
+
+  10   Na  2  s      Cor( 1s)     2.00000     -39.38711
+  11   Na  2  s      Cor( 2s)     1.99999      -3.26334
+  12   Na  2  s      Val( 3s)     0.97467       0.34101
+  13   Na  2  px     Cor( 2p)     2.00000      -1.25842
+  14   Na  2  px     Ryd( 3p)     0.00000       0.81298
+  15   Na  2  py     Cor( 2p)     2.00000      -1.25842
+  16   Na  2  py     Ryd( 3p)     0.00000       0.81298
+  17   Na  2  pz     Cor( 2p)     1.99993      -1.25764
+  18   Na  2  pz     Ryd( 3p)     0.02540       0.83646
+
+
+ Summary of Natural Population Analysis:
+
+                                     Natural Population
+             Natural    ---------------------------------------------
+  Atom No    Charge        Core      Valence    Rydberg      Total
+ --------------------------------------------------------------------
+   Na  1    0.00000      9.99993     0.97467    0.02540    11.00000
+   Na  2    0.00000      9.99993     0.97467    0.02540    11.00000
+ ====================================================================
+ * Total *  0.00000     19.99985     1.94935    0.05080    22.00000
+
+                                 Natural Population
+ ---------------------------------------------------------
+   Core                      19.99985 ( 99.9993% of   20)
+   Valence                    1.94935 ( 97.4674% of    2)
+   Natural Minimal Basis     21.94920 ( 99.7691% of   22)
+   Natural Rydberg Basis      0.05080 (  0.2309% of   22)
+ ---------------------------------------------------------
+
+    Atom No         Natural Electron Configuration
+ ----------------------------------------------------------------------------
+     Na  1      [core]3s( 0.97)3p( 0.03)
+     Na  2      [core]3s( 0.97)3p( 0.03)
+
+
+ PNAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      0.9457 -0.4273  0.1515  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Na 1 (s)      0.1542  0.9912 -0.6095  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000  0.8942 -0.6867  0.0000  0.0000  0.0000
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.8942 -0.6867  0.0000
+   5. Na 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.8942
+   6. Na 1 (s)      0.0036  0.0748  1.1251  0.0000  0.0000  0.0000  0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000  0.1962  1.1102  0.0000  0.0000  0.0000
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.1962  1.1102  0.0000
+   9. Na 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1962
+  10. Na 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11. Na 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  14. Na 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  15. Na 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  18. Na 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Na 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5. Na 1 (pz)    -0.6867  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   6. Na 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   9. Na 1 (pz)     1.1102  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10. Na 2 (s)      0.0000  0.9457 -0.4273  0.1515  0.0000  0.0000  0.0000  0.0000
+  11. Na 2 (s)      0.0000  0.1542  0.9912 -0.6095  0.0000  0.0000  0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  0.0000  0.8942 -0.6867  0.0000  0.0000
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.8942 -0.6867
+  14. Na 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  15. Na 2 (s)      0.0000  0.0036  0.0748  1.1251  0.0000  0.0000  0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0000  0.0000  0.1962  1.1102  0.0000  0.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1962  1.1102
+  18. Na 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           AO         17      18
+      ------------ ------- -------
+   1. Na 1 (s)      0.0000  0.0000
+   2. Na 1 (s)      0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000
+   4. Na 1 (py)     0.0000  0.0000
+   5. Na 1 (pz)     0.0000  0.0000
+   6. Na 1 (s)      0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000
+   8. Na 1 (py)     0.0000  0.0000
+   9. Na 1 (pz)     0.0000  0.0000
+  10. Na 2 (s)      0.0000  0.0000
+  11. Na 2 (s)      0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000
+  13. Na 2 (py)     0.0000  0.0000
+  14. Na 2 (pz)     0.8942 -0.6867
+  15. Na 2 (s)      0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000
+  17. Na 2 (py)     0.0000  0.0000
+  18. Na 2 (pz)     0.1962  1.1102
+
+
+ PNAO overlap matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1( 1s )    1.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Na 1( 2s )    0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Na 1( 3s )    0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Na 1( 2px)    0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   7. Na 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000
+   8. Na 1( 2pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000
+   9. Na 1( 3pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10. Na 2( 1s )    0.0000  0.0001  0.0010  0.0000  0.0000  0.0000  0.0000 -0.0004
+  11. Na 2( 2s )    0.0001  0.0008  0.0078  0.0000  0.0000  0.0000  0.0000 -0.0027
+  12. Na 2( 3s )    0.0010  0.0078  0.0597  0.0000  0.0000  0.0000  0.0000 -0.0198
+  13. Na 2( 2px)    0.0000  0.0000  0.0000  0.0010  0.0049  0.0000  0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000  0.0000  0.0049  0.0225  0.0000  0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0010  0.0049  0.0000
+  16. Na 2( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0049  0.0225  0.0000
+  17. Na 2( 2pz)    0.0004  0.0027  0.0198  0.0000  0.0000  0.0000  0.0000 -0.0068
+  18. Na 2( 3pz)    0.0021  0.0139  0.0884  0.0000  0.0000  0.0000  0.0000 -0.0302
+
+           NAO         9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1( 1s )    0.0000  0.0000  0.0001  0.0010  0.0000  0.0000  0.0000  0.0000
+   2. Na 1( 2s )    0.0000  0.0001  0.0008  0.0078  0.0000  0.0000  0.0000  0.0000
+   3. Na 1( 3s )    0.0000  0.0010  0.0078  0.0597  0.0000  0.0000  0.0000  0.0000
+   4. Na 1( 2px)    0.0000  0.0000  0.0000  0.0000  0.0010  0.0049  0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000  0.0000  0.0000  0.0049  0.0225  0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0010  0.0049
+   7. Na 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0049  0.0225
+   8. Na 1( 2pz)    0.0000 -0.0004 -0.0027 -0.0198  0.0000  0.0000  0.0000  0.0000
+   9. Na 1( 3pz)    1.0000 -0.0021 -0.0139 -0.0884  0.0000  0.0000  0.0000  0.0000
+  10. Na 2( 1s )   -0.0021  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11. Na 2( 2s )   -0.0139  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12. Na 2( 3s )   -0.0884  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+  13. Na 2( 2px)    0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000
+  16. Na 2( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000
+  17. Na 2( 2pz)   -0.0302  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  18. Na 2( 3pz)   -0.1252  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           NAO        17      18
+      ------------ ------- -------
+   1. Na 1( 1s )    0.0004  0.0021
+   2. Na 1( 2s )    0.0027  0.0139
+   3. Na 1( 3s )    0.0198  0.0884
+   4. Na 1( 2px)    0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000
+   7. Na 1( 3py)    0.0000  0.0000
+   8. Na 1( 2pz)   -0.0068 -0.0302
+   9. Na 1( 3pz)   -0.0302 -0.1252
+  10. Na 2( 1s )    0.0000  0.0000
+  11. Na 2( 2s )    0.0000  0.0000
+  12. Na 2( 3s )    0.0000  0.0000
+  13. Na 2( 2px)    0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000
+  16. Na 2( 3py)    0.0000  0.0000
+  17. Na 2( 2pz)    1.0000  0.0000
+  18. Na 2( 3pz)    0.0000  1.0000
+
+
+ PNAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1( 1s )    2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Na 1( 2s )    0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Na 1( 3s )    0.0000  0.0000  1.0336  0.0000  0.0000  0.0000  0.0000  0.0058
+   4. Na 1( 2px)    0.0000  0.0000  0.0000  2.0000 -0.0002  0.0000  0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000  0.0000 -0.0002  0.0000  0.0000  0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  2.0000 -0.0002  0.0000
+   7. Na 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000 -0.0002  0.0000  0.0000
+   8. Na 1( 2pz)    0.0000  0.0000  0.0058  0.0000  0.0000  0.0000  0.0000  1.9999
+   9. Na 1( 3pz)    0.0003  0.0024 -0.2580  0.0000  0.0000  0.0000  0.0000  0.0003
+  10. Na 2( 1s )    0.0000  0.0002  0.0021  0.0000  0.0000  0.0000  0.0000 -0.0008
+  11. Na 2( 2s )    0.0002  0.0015  0.0165  0.0000  0.0000  0.0000  0.0000 -0.0055
+  12. Na 2( 3s )    0.0021  0.0165  1.0321  0.0000  0.0000  0.0000  0.0000 -0.0465
+  13. Na 2( 2px)    0.0000  0.0000  0.0000  0.0020  0.0087  0.0000  0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000  0.0000  0.0087  0.0000  0.0000  0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0020  0.0087  0.0000
+  16. Na 2( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0087  0.0000  0.0000
+  17. Na 2( 2pz)    0.0008  0.0055  0.0465  0.0000  0.0000  0.0000  0.0000 -0.0136
+  18. Na 2( 3pz)    0.0044  0.0248  0.2563  0.0000  0.0000  0.0000  0.0000 -0.0534
+
+           NAO         9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1( 1s )    0.0003  0.0000  0.0002  0.0021  0.0000  0.0000  0.0000  0.0000
+   2. Na 1( 2s )    0.0024  0.0002  0.0015  0.0165  0.0000  0.0000  0.0000  0.0000
+   3. Na 1( 3s )   -0.2580  0.0021  0.0165  1.0321  0.0000  0.0000  0.0000  0.0000
+   4. Na 1( 2px)    0.0000  0.0000  0.0000  0.0000  0.0020  0.0087  0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000  0.0000  0.0000  0.0087  0.0000  0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0020  0.0087
+   7. Na 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0087  0.0000
+   8. Na 1( 2pz)    0.0003 -0.0008 -0.0055 -0.0465  0.0000  0.0000  0.0000  0.0000
+   9. Na 1( 3pz)    0.0655 -0.0044 -0.0248 -0.2563  0.0000  0.0000  0.0000  0.0000
+  10. Na 2( 1s )   -0.0044  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11. Na 2( 2s )   -0.0248  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12. Na 2( 3s )   -0.2563  0.0000  0.0000  1.0336  0.0000  0.0000  0.0000  0.0000
+  13. Na 2( 2px)    0.0000  0.0000  0.0000  0.0000  2.0000 -0.0002  0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000  0.0000  0.0000 -0.0002  0.0000  0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000 -0.0002
+  16. Na 2( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0002  0.0000
+  17. Na 2( 2pz)   -0.0534  0.0000  0.0000 -0.0058  0.0000  0.0000  0.0000  0.0000
+  18. Na 2( 3pz)   -0.0637 -0.0003 -0.0024  0.2580  0.0000  0.0000  0.0000  0.0000
+
+           NAO        17      18
+      ------------ ------- -------
+   1. Na 1( 1s )    0.0008  0.0044
+   2. Na 1( 2s )    0.0055  0.0248
+   3. Na 1( 3s )    0.0465  0.2563
+   4. Na 1( 2px)    0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000
+   7. Na 1( 3py)    0.0000  0.0000
+   8. Na 1( 2pz)   -0.0136 -0.0534
+   9. Na 1( 3pz)   -0.0534 -0.0637
+  10. Na 2( 1s )    0.0000 -0.0003
+  11. Na 2( 2s )    0.0000 -0.0024
+  12. Na 2( 3s )   -0.0058  0.2580
+  13. Na 2( 2px)    0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000
+  16. Na 2( 3py)    0.0000  0.0000
+  17. Na 2( 2pz)    1.9999  0.0003
+  18. Na 2( 3pz)    0.0003  0.0655
+
+
+ NAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)      0.9457 -0.4273  0.1516  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Na 1 (s)      0.1542  0.9912 -0.6101  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000  0.8942 -0.6867  0.0000  0.0000  0.0000
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.8942 -0.6867  0.0000
+   5. Na 1 (pz)     0.0000  0.0000 -0.0007  0.0000  0.0000  0.0000  0.0000  0.8942
+   6. Na 1 (s)      0.0036  0.0748  1.1269  0.0000  0.0000  0.0000  0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000  0.1962  1.1104  0.0000  0.0000  0.0000
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.1962  1.1104  0.0000
+   9. Na 1 (pz)     0.0000  0.0000 -0.0001  0.0000  0.0000  0.0000  0.0000  0.1962
+  10. Na 2 (s)      0.0000  0.0001 -0.0022  0.0000  0.0000  0.0000  0.0000 -0.0004
+  11. Na 2 (s)      0.0000 -0.0004  0.0103  0.0000  0.0000  0.0000  0.0000  0.0014
+  12. Na 2 (px)     0.0000  0.0000  0.0000 -0.0005  0.0034  0.0000  0.0000  0.0000
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000 -0.0005  0.0034  0.0000
+  14. Na 2 (pz)    -0.0002 -0.0012 -0.0177  0.0000  0.0000  0.0000  0.0000  0.0030
+  15. Na 2 (s)      0.0000  0.0000 -0.0343  0.0000  0.0000  0.0000  0.0000  0.0001
+  16. Na 2 (px)     0.0000  0.0000  0.0000 -0.0001 -0.0135  0.0000  0.0000  0.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000 -0.0001 -0.0135  0.0000
+  18. Na 2 (pz)     0.0000 -0.0003 -0.0039  0.0000  0.0000  0.0000  0.0000  0.0007
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1 (s)     -0.0013  0.0000  0.0001 -0.0022  0.0000  0.0000  0.0000  0.0000
+   2. Na 1 (s)      0.0055  0.0000 -0.0004  0.0103  0.0000  0.0000  0.0000  0.0000
+   3. Na 1 (px)     0.0000  0.0000  0.0000  0.0000 -0.0005  0.0034  0.0000  0.0000
+   4. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0005  0.0034
+   5. Na 1 (pz)    -0.6904  0.0002  0.0012  0.0177  0.0000  0.0000  0.0000  0.0000
+   6. Na 1 (s)     -0.0134  0.0000  0.0000 -0.0343  0.0000  0.0000  0.0000  0.0000
+   7. Na 1 (px)     0.0000  0.0000  0.0000  0.0000 -0.0001 -0.0135  0.0000  0.0000
+   8. Na 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0001 -0.0135
+   9. Na 1 (pz)     1.1228  0.0000  0.0003  0.0039  0.0000  0.0000  0.0000  0.0000
+  10. Na 2 (s)      0.0096  0.9457 -0.4273  0.1516  0.0000  0.0000  0.0000  0.0000
+  11. Na 2 (s)     -0.0406  0.1542  0.9912 -0.6101  0.0000  0.0000  0.0000  0.0000
+  12. Na 2 (px)     0.0000  0.0000  0.0000  0.0000  0.8942 -0.6867  0.0000  0.0000
+  13. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.8942 -0.6867
+  14. Na 2 (pz)    -0.0167  0.0000  0.0000  0.0007  0.0000  0.0000  0.0000  0.0000
+  15. Na 2 (s)      0.1025  0.0036  0.0748  1.1269  0.0000  0.0000  0.0000  0.0000
+  16. Na 2 (px)     0.0000  0.0000  0.0000  0.0000  0.1962  1.1104  0.0000  0.0000
+  17. Na 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1962  1.1104
+  18. Na 2 (pz)     0.0776  0.0000  0.0000  0.0001  0.0000  0.0000  0.0000  0.0000
+
+           AO         17      18
+      ------------ ------- -------
+   1. Na 1 (s)      0.0004 -0.0096
+   2. Na 1 (s)     -0.0014  0.0406
+   3. Na 1 (px)     0.0000  0.0000
+   4. Na 1 (py)     0.0000  0.0000
+   5. Na 1 (pz)     0.0030 -0.0167
+   6. Na 1 (s)     -0.0001 -0.1025
+   7. Na 1 (px)     0.0000  0.0000
+   8. Na 1 (py)     0.0000  0.0000
+   9. Na 1 (pz)     0.0007  0.0776
+  10. Na 2 (s)      0.0000  0.0013
+  11. Na 2 (s)      0.0000 -0.0055
+  12. Na 2 (px)     0.0000  0.0000
+  13. Na 2 (py)     0.0000  0.0000
+  14. Na 2 (pz)     0.8942 -0.6904
+  15. Na 2 (s)      0.0000  0.0134
+  16. Na 2 (px)     0.0000  0.0000
+  17. Na 2 (py)     0.0000  0.0000
+  18. Na 2 (pz)     0.1962  1.1228
+
+
+ NAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1( 1s )    2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Na 1( 2s )    0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Na 1( 3s )    0.0000  0.0000  0.9747  0.0000  0.0000  0.0000  0.0000  0.0060
+   4. Na 1( 2px)    0.0000  0.0000  0.0000  2.0000 -0.0002  0.0000  0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000  0.0000 -0.0002  0.0000  0.0000  0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  2.0000 -0.0002  0.0000
+   7. Na 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000 -0.0002  0.0000  0.0000
+   8. Na 1( 2pz)    0.0000  0.0000  0.0060  0.0000  0.0000  0.0000  0.0000  1.9999
+   9. Na 1( 3pz)    0.0003  0.0023 -0.1572  0.0000  0.0000  0.0000  0.0000  0.0001
+  10. Na 2( 1s )    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11. Na 2( 2s )    0.0000  0.0000  0.0009  0.0000  0.0000  0.0000  0.0000  0.0000
+  12. Na 2( 3s )    0.0000  0.0009  0.9746  0.0000  0.0000  0.0000  0.0000 -0.0071
+  13. Na 2( 2px)    0.0000  0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000  0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0010  0.0000
+  16. Na 2( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000
+  17. Na 2( 2pz)    0.0000  0.0000  0.0071  0.0000  0.0000  0.0000  0.0000  0.0000
+  18. Na 2( 3pz)    0.0003 -0.0030  0.1573  0.0000  0.0000  0.0000  0.0000  0.0066
+
+           NAO         9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Na 1( 1s )    0.0003  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Na 1( 2s )    0.0023  0.0000  0.0000  0.0009  0.0000  0.0000  0.0000  0.0000
+   3. Na 1( 3s )   -0.1572  0.0000  0.0009  0.9746  0.0000  0.0000  0.0000  0.0000
+   4. Na 1( 2px)    0.0000  0.0000  0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000  0.0000  0.0000 -0.0010  0.0000  0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0010
+   7. Na 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0010  0.0000
+   8. Na 1( 2pz)    0.0001  0.0000  0.0000 -0.0071  0.0000  0.0000  0.0000  0.0000
+   9. Na 1( 3pz)    0.0254 -0.0003  0.0030 -0.1573  0.0000  0.0000  0.0000  0.0000
+  10. Na 2( 1s )   -0.0003  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11. Na 2( 2s )    0.0030  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12. Na 2( 3s )   -0.1573  0.0000  0.0000  0.9747  0.0000  0.0000  0.0000  0.0000
+  13. Na 2( 2px)    0.0000  0.0000  0.0000  0.0000  2.0000 -0.0002  0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000  0.0000  0.0000 -0.0002  0.0000  0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000 -0.0002
+  16. Na 2( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0002  0.0000
+  17. Na 2( 2pz)    0.0066  0.0000  0.0000 -0.0060  0.0000  0.0000  0.0000  0.0000
+  18. Na 2( 3pz)   -0.0254 -0.0003 -0.0023  0.1572  0.0000  0.0000  0.0000  0.0000
+
+           NAO        17      18
+      ------------ ------- -------
+   1. Na 1( 1s )    0.0000  0.0003
+   2. Na 1( 2s )    0.0000 -0.0030
+   3. Na 1( 3s )    0.0071  0.1573
+   4. Na 1( 2px)    0.0000  0.0000
+   5. Na 1( 3px)    0.0000  0.0000
+   6. Na 1( 2py)    0.0000  0.0000
+   7. Na 1( 3py)    0.0000  0.0000
+   8. Na 1( 2pz)    0.0000  0.0066
+   9. Na 1( 3pz)    0.0066 -0.0254
+  10. Na 2( 1s )    0.0000 -0.0003
+  11. Na 2( 2s )    0.0000 -0.0023
+  12. Na 2( 3s )   -0.0060  0.1572
+  13. Na 2( 2px)    0.0000  0.0000
+  14. Na 2( 3px)    0.0000  0.0000
+  15. Na 2( 2py)    0.0000  0.0000
+  16. Na 2( 3py)    0.0000  0.0000
+  17. Na 2( 2pz)    1.9999  0.0001
+  18. Na 2( 3pz)    0.0001  0.0254
+
+
+ NATURAL BOND ORBITAL ANALYSIS:
+
+ Initiate 2-center NBO search using THRESH = 1.900 and PRJTHR = 0.300
+
+ Search of NAO DM block for core orbitals on atom:   1
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 2) has occupancy 1.99999
+            0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 4) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 5) has occupancy 1.99993
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000
+            0.0000
+        5 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   2
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 2) has occupancy 1.99999
+            0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 4) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 5) has occupancy 1.99993
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000
+            0.0000
+        5 eigenvector(s) stashed in permanent list
+
+ Core orbitals projected from the NAO density matrix
+       2.000 electrons remain (>1.900); search continues
+
+ No NHOs identified in the 1-center search of the NAO density matrix
+       2.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+       0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.6981 0.0000 0.0000 0.0000 0.0000 0.0000
+           -0.1126 0.0000 0.0000 0.6981 0.0000 0.0000 0.0000 0.0000
+            0.0000 0.1126
+      1 hybrid on atom 1 stashed in prospective list
+      1 hybrid on atom 2 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000
+      0 hybrids eliminated in 1 pass
+      2 hybrids moved from prospective to permanent list
+
+ NHOs of 2-center eigenvectors projected from the NAO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+ Search of NHO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 2.000 2.000 2.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    1. Label:CR ( 1)   1
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    2. Label:CR ( 2)   1
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    3. Label:CR ( 3)   1
+      Eigenvector ( 4) has occupancy 1.99999
+            0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    4. Label:CR ( 4)   1
+      Eigenvector ( 5) has occupancy 1.99993
+            0.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    5. Label:CR ( 5)   1
+        5 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 2.000 2.000 2.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    6. Label:CR ( 1)   2
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    7. Label:CR ( 2)   2
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    8. Label:CR ( 3)   2
+      Eigenvector ( 4) has occupancy 1.99999
+            0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    9. Label:CR ( 4)   2
+      Eigenvector ( 5) has occupancy 1.99993
+            0.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:   10. Label:CR ( 5)   2
+        5 eigenvector(s) stashed in permanent list
+
+  1-center NBOs projected from the NHO density matrix
+       2.000 electrons remain (>1.900); search continues
+
+ Search of NHO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+       0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.7071 0.0000 0.0000
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.7071 0.0000
+            0.0000 0.0000
+      Occupancy is 2.000 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.7071 0.0000 0.0000
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.7071 0.0000
+            0.0000 0.0000
+           NBO accepted:   11. Label:BD ( 1)   1   2
+      Occupancy is 0.000 for antibonding component
+            0.0000 0.0000 0.0000 0.0000 0.0000-0.7071 0.0000 0.0000
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.7071 0.0000
+            0.0000 0.0000
+           NBO accepted:   12. Label:BD*( 1)   1   2
+        2 eigenvector(s) stashed in permanent list
+
+  2-center NBOs projected from the NHO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+                            Occupancies       Lewis Structure    Low   High
+         Max    Occ     -------------------  -----------------   occ   occ
+  Cycle  Ctr   Thresh    Lewis   non-Lewis     CR  BD  nC  LP    (L)   (NL)
+ ============================================================================
+    1     2     1.90    21.99985   0.00015     10   1   0   0     0      0
+ ----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ -------------------------------------------------------
+   Core                     19.99985 ( 99.999% of  20)
+   Valence Lewis             2.00000 (100.000% of   2)
+  ==================      =============================
+   Total Lewis              21.99985 ( 99.999% of  22)
+  -----------------------------------------------------
+   Valence non-Lewis         0.00007 (  0.000% of  22)
+   Rydberg non-Lewis         0.00008 (  0.000% of  22)
+  ==================      =============================
+   Total non-Lewis           0.00015 (  0.001% of  22)
+ -------------------------------------------------------
+
+
+     (Occupancy)   Bond orbital / Coefficients / Hybrids
+ ------------------ Lewis ------------------------------------------------------
+   1. (2.00000) CR ( 1)Na  1            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   2. (1.99999) CR ( 2)Na  1            s(100.00%)
+                                         0.0000  1.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   3. (2.00000) CR ( 3)Na  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  1.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   4. (2.00000) CR ( 4)Na  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  0.0000  0.0000
+                                         1.0000  0.0000  0.0000  0.0000
+   5. (1.99993) CR ( 5)Na  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  1.0000  0.0000
+   6. (2.00000) CR ( 1)Na  2            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   7. (1.99999) CR ( 2)Na  2            s(100.00%)
+                                         0.0000  1.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   8. (2.00000) CR ( 3)Na  2            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  1.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   9. (2.00000) CR ( 4)Na  2            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  0.0000  0.0000
+                                         1.0000  0.0000  0.0000  0.0000
+  10. (1.99993) CR ( 5)Na  2            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  1.0000  0.0000
+  11. (2.00000) BD ( 1)Na  1-Na  2
+               ( 50.00%)   0.7071*Na  1 s( 97.46%)p 0.03(  2.54%)
+                                         0.0000  0.0000  0.9872  0.0000  0.0000
+                                         0.0000  0.0000  0.0000 -0.1593
+               ( 50.00%)   0.7071*Na  2 s( 97.46%)p 0.03(  2.54%)
+                                         0.0000  0.0000  0.9872  0.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.1593
+ ---------------- non-Lewis ----------------------------------------------------
+  12. (0.00007) BD*( 1)Na  1-Na  2
+               ( 50.00%)   0.7071*Na  1 s( 97.46%)p 0.03(  2.54%)
+               ( 50.00%)  -0.7071*Na  2 s( 97.46%)p 0.03(  2.54%)
+  13. (0.00004) RY ( 1)Na  1            s(  2.54%)p38.42( 97.46%)
+  14. (0.00000) RY ( 2)Na  1            s(  0.00%)p 1.00(100.00%)
+  15. (0.00000) RY ( 3)Na  1            s(  0.00%)p 1.00(100.00%)
+  16. (0.00004) RY ( 1)Na  2            s(  2.54%)p38.42( 97.46%)
+  17. (0.00000) RY ( 2)Na  2            s(  0.00%)p 1.00(100.00%)
+  18. (0.00000) RY ( 3)Na  2            s(  0.00%)p 1.00(100.00%)
+
+
+ NHO DIRECTIONALITY AND BOND BENDING (deviation from line of nuclear centers at
+                                      the position of maximum hybrid amplitude)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    p- or d-character  > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                        Line of Centers        Hybrid 1             Hybrid 2
+                        ---------------  -------------------  ------------------
+           NBO            Theta   Phi    Theta   Phi    Dev   Theta   Phi    Dev
+ ===============================================================================
+    None exceeding thresholds
+
+
+ SECOND ORDER PERTURBATION THEORY ANALYSIS OF FOCK MATRIX IN NBO BASIS
+
+     Threshold for printing:   0.50 kcal/mol
+                                                          E(2) E(NL)-E(L) F(L,NL)
+      Donor (L) NBO              Acceptor (NL) NBO      kcal/mol   a.u.    a.u.
+ ===============================================================================
+
+ within unit  1
+       None above threshold
+
+
+ NATURAL BOND ORBITALS (Summary):
+
+                                                     Principal Delocalizations
+           NBO                 Occupancy    Energy   (geminal,vicinal,remote)
+ ===============================================================================
+ Molecular unit  1  (Na2)
+ ------ Lewis --------------------------------------
+    1. CR ( 1)Na  1             2.00000   -39.38711
+    2. CR ( 2)Na  1             1.99999    -3.26334
+    3. CR ( 3)Na  1             2.00000    -1.25842
+    4. CR ( 4)Na  1             2.00000    -1.25842
+    5. CR ( 5)Na  1             1.99993    -1.25764
+    6. CR ( 1)Na  2             2.00000   -39.38711
+    7. CR ( 2)Na  2             1.99999    -3.26334
+    8. CR ( 3)Na  2             2.00000    -1.25842
+    9. CR ( 4)Na  2             2.00000    -1.25842
+   10. CR ( 5)Na  2             1.99993    -1.25764
+   11. BD ( 1)Na  1-Na  2       2.00000     0.19702
+ ------ non-Lewis ----------------------------------
+   12. BD*( 1)Na  1-Na  2       0.00007     0.51013
+   13. RY ( 1)Na  1             0.00004     0.82390
+   14. RY ( 2)Na  1             0.00000     0.81298
+   15. RY ( 3)Na  1             0.00000     0.81298
+   16. RY ( 1)Na  2             0.00004     0.82390
+   17. RY ( 2)Na  2             0.00000     0.81298
+   18. RY ( 3)Na  2             0.00000     0.81298
+          -------------------------------
+                 Total Lewis   21.99985  ( 99.9993%)
+           Valence non-Lewis    0.00007  (  0.0003%)
+           Rydberg non-Lewis    0.00008  (  0.0003%)
+          -------------------------------
+               Total unit  1   22.00000  (100.0000%)
+              Charge unit  1    0.00000
+
+ $CHOOSE
+   BOND S 1 2 END
+ $END
+
+ NBO analysis completed in 0.16 CPU seconds (0 wall seconds)
+ Maximum scratch memory used by NBO was 263938 words (2.01 MB)
+ Maximum scratch memory used by G16NBO was 8661 words (0.07 MB)
+
+ Opening RunExU unformatted file "/cluster/work/users/beto93/mol39/Gau-1046219.EUF"
+ Read unf file /cluster/work/users/beto93/mol39/Gau-1046219.EUF:
+ Label Gaussian matrix elements                                         IVers= 2 NLab= 2 Version=ES64L-G16RevC.01
+ Title mol39-NBO                                                       
+ NAtoms=     2 NBasis=    18 NBsUse=    18 ICharg=     0 Multip=     1 NE=    22 Len12L=8 Len4L=8 IOpCl= 0 ICGU=111
+ GAUSSIAN SCALARS                    NI= 1 NR= 1 NTot=       1 LenBuf=    2 NRI=1 N=    1000
+ NPA CHARGES                         NI= 0 NR= 1 NTot=       2 LenBuf= 4000 NRI=1 N=       2
+ Recovered energy= -319.309162995     dipole=     -0.000000000000     -0.000000000000     -0.000000000000
+ Unable to Open any file for archive entry.
+ 1\1\GINC-C2-15\SP\RHF\STO-3G\Na2\BETO93\18-Nov-2024\0\\#RHF/STO-3G int
+ =nobasistransform Symmetry=None 5D 7F Pop=NBO7Read\\mol39-NBO\\0,1\Na,
+ 0,0.,0.,1.576262\Na,0,0.,0.,-1.576262\\Version=ES64L-G16RevC.01\HF=-31
+ 9.309163\RMSD=3.287e-09\Dipole=0.,0.,0.\Quadrupole=-1.730421,-1.730421
+ ,3.4608421,0.,0.,0.\PG=Unknown\\@
+ The archive entry for this job was punched.
+
+
+ EXPERIENCE IS A WONDERFUL THING.  IT ENABLES
+ YOU TO RECOGNIZE A MISTAKE WHEN YOU MAKE IT AGAIN.
+           - BACK OF A SUGAR PACKET
+ Job cpu time:       0 days  0 hours  0 minutes 17.9 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  5.9 seconds.
+ File lengths (MBytes):  RWF=     10 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 16 at Mon Nov 18 15:41:22 2024.

@@ -1,0 +1,54 @@
+molecule mol135.xyz
+System:, atNum: 1 coords [              0.0000               0.0000               0.6965]
+System:, atNum: 1 coords [              0.0000               0.0000              -0.6965]
+===== Original AO-S matrix =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+nbas 2
+ ===== CA ===== 
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.5485               1.2158
+[Row   2]               0.5485              -1.2158
+ ===== CB ===== 
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.5485               1.2158
+[Row   2]               0.5485              -1.2158
+ ===== P_psi ===== Dalpha+Dbeta 
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.6018               0.6018
+[Row   2]               0.6018               0.6018
+===== P_mu,nu local =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.6018               0.6018
+[Row   2]               0.6018               0.6018
+===== P_mu,nu psi4 =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               0.6018               0.6018
+[Row   2]               0.6018               0.6018
+====== P^(AO) = SPS =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.6617               1.6617
+[Row   2]               1.6617               1.6617
+====== S^(AO) = S =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000
+====== P^(AO) std gaussian m_l ordering SPS =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.6617               1.6617
+[Row   2]               1.6617               1.6617
+====== S^(AO) std gaussian m_l ordering =====
+
+                  [Col  1]              [Col  2]
+[Row   1]               1.0000               0.6617
+[Row   2]               0.6617               1.0000

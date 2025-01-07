@@ -1,0 +1,48 @@
+#!/bin/bash
+
+## Setting up account, job name, number of nodes, cores/node, time, and memory
+
+#SBATCH --account=nn4654k
+#SBATCH --job-name=mol81
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=00:15:00
+#SBATCH --mem-per-cpu=4GB
+#SBATCH --output=/cluster/home/beto93/logfiles/mol81.logfile
+#SBATCH --signal=B:USR1@120
+###################################################################
+
+## Modules for Gaussian and NBO7
+module purge
+module load Gaussian/g16_C.01
+
+## Scratch folder
+if [[ -d "/cluster/work/users/beto93/mol81" ]]
+then
+    rm -rf /cluster/work/users/beto93/mol81
+fi
+
+mkdir /cluster/work/users/beto93/mol81
+
+# Copying input files (also chk, if it exists) to scratch
+
+cd $SUBMITDIR
+cp mol81.* /cluster/work/users/beto93/mol81/
+cd /cluster/work/users/beto93/mol81
+
+#setting up optimized environment flags and variables
+export GAUSS_LFLAGS2="--LindaOptions -s 20000000"
+export PGI_FASTMATH_CPU=avx2
+
+# Running the calc with the parallel ib binary from the scratch folder
+
+time g16.ib < mol81.gjf > $SUBMITDIR/mol81.log
+
+# Recovering the relevant files and cleaning up
+
+formchk mol81.chk
+cp *.47 $SUBMITDIR
+
+cd $SUBMITDIR
+# rm -rf /cluster/work/users/beto93/mol81
+

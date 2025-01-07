@@ -1,0 +1,44 @@
+#!/bin/bash
+
+## Setting up account, job name, number of nodes, cores/node, time, and memory
+
+#SBATCH --account=nn4654k
+#SBATCH --job-name=LiBeH
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=00:15:00
+#SBATCH --mem-per-cpu=4GB
+#SBATCH --output=/cluster/home/beto93/logfiles/LiBeH.logfile
+#SBATCH --signal=B:USR1@120
+###################################################################
+
+## Modules for Gaussian and NBO7
+module purge
+module load Gaussian/g16_C.01
+
+## Scratch folder
+if [[ -d "/cluster/work/users/beto93/LiBeH" ]]
+then
+    rm -rf /cluster/work/users/beto93/LiBeH
+fi
+
+mkdir /cluster/work/users/beto93/LiBeH
+
+# Copying input files (also chk, if it exists) to scratch
+
+cd $SUBMITDIR
+cp LiBeH.* /cluster/work/users/beto93/LiBeH/
+cd /cluster/work/users/beto93/LiBeH
+
+# Running the calc with the parallel ib binary from the scratch folder
+
+g16.ib  < LiBeH.gjf > $SUBMITDIR/LiBeH.log
+
+# Recovering the relevant files and cleaning up
+
+formchk LiBeH.chk
+cp LiBeH.47 $SUBMITDIR
+
+cd $SUBMITDIR
+# rm -rf /cluster/work/users/beto93/LiBeH
+

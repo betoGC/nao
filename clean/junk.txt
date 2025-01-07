@@ -1,0 +1,172 @@
+#Geometries
+
+#BeLi hydride
+#Be    0.000000   0.000000    0.731519
+#Li    0.000000   0.000000   -1.652391
+#H     0.000000   0.000000    2.031099
+#Silane
+#Si     0.000000   0.000000    0.000000
+#H     -1.082690  -0.040735   -0.920190
+#H     -0.506095  -0.017942    1.328221
+#H      0.751370   1.189180   -0.204740
+#H      0.837414  -1.130503   -0.203291
+#Silane
+#Si    0.000000   0.000000    0.000000
+#H     0.000000   0.000000    1.070000
+#H     1.008807   0.000000   -0.356663
+#H    -0.504401   0.873651   -0.356669
+#H    -0.504401  -0.873651   -0.356669
+#Methyl Lithium
+#C     0.398109  -0.000000   -0.000000
+#Li   -1.610325  -0.000000   -0.000000
+#H     0.814106  -0.542451   -0.839607
+#H     0.814106  -0.455895    0.889580
+#H     0.814106   0.998347   -0.049973
+#Lithium fluoride
+#Li    0.000000   0.000000   -1.055268
+#F     0.000000   0.000000    0.351756
+#Lithium hydride
+ Li    0.000000   0.000000    0.039594
+ H     0.000000   0.000000    1.550406
+#Li    0.000000   0.000000    0.377703   
+#H     0.000000   0.000000   -1.133109  
+#Li    0.000000   0.000000    0.000000
+#H     0.000000   0.000000    1.590000
+#a Lithium hydride zz inversion
+#Li   0.000000   0.000000    0.189768
+#H    0.000000   0.000000   -1.321079
+#b Lithium hydride zz
+#Li   0.000000   0.000000   -0.189768
+#H    0.000000   0.000000    1.321079
+#c Lithium hydride yy
+#Li   0.000000  -0.189768    0.000000   
+#H    0.000000   1.321079    0.000000   
+#c Lithium hydride xx
+#Li  -0.189768   0.000000    0.000000 
+#H    1.321079   0.000000    0.000000 
+#Atomic systems
+#Fluorine
+#F    0.000000   0.000000    0.000000
+#Carbon
+#C    0.000000   0.000000    0.000000
+#Molecular Hydrogen
+#H    0.000000   0.000000    0.364980 
+#H    0.000000   0.000000   -0.364980
+
+
+
+  #for ishell in range(nsh):
+  #  il=ilmap[ishell]
+  #  im=int(2.0*il+1.0)
+  #  ifirst = int(shellmap[ishell])
+  #  suma_ca = np.zeros(im)
+  #  suma_cb = np.zeros(im)
+  #  for jshell in range(nsh):
+  #    jl=ilmap[jshell]
+  #    jm=int(2.0*jl+1.0)
+  #    jfirst = int(shellmap[jshell])
+  #    suma_ra = np.zeros(jm)
+  #    suma_rb = np.zeros(jm)
+  #    if ishell == jshell:
+  #      eigvals,eigvecs = eigh(P_av[ifirst:ifirst+im,jfirst:jfirst+jm],S_av[ifirst:ifirst+im,jfirst:jfirst+jm])
+  #      idx = eigvals.argsort()[::-1]
+  #      eigvals = eigvals[idx]
+  #      eigvecs = eigvecs[:,idx]
+  #      W_vec[ifirst:ifirst+im] = eigvals[0:im]
+  #      N_mat[ifirst:ifirst+im,jfirst:jfirst+jm] = eigvecs[0:im,0:jm]
+  #    #print("eigvals","\n",eigvals)
+  #    #print("eigvecs","\n",eigvecs)
+  #    #print("====================")
+
+
+
+#Define occupation vector for some atomic examples, this is to clarify NMB counting
+#N_el  = 10
+#N_fun = 10
+#N_alpha = int(N_fun/2)
+#N_beta  = int(N_fun/2)
+#
+#occ_alpha = np.zeros(N_alpha)
+#occ_beta = np.zeros(N_beta)
+# Checking definition of spherical averaging
+##Fluorine
+#occ_alpha[0] = 1.0  #1Sa
+#occ_alpha[1] = 1.0  #2sa
+#
+#occ_beta[0]  = 1.0  #1sb
+#occ_beta[1]  = 1.0  #2sb
+#
+##hydrogen
+#for i in range(2,N_alpha):
+#  occ_alpha[i] = 5/6
+#
+#for i in range(2,N_beta):
+#  occ_beta[i]  = 5/6
+###Carbon
+#occ_alpha[0] = 1.0  #1s
+#occ_alpha[1] = 1.0  #2s
+#
+#occ_beta[0] = 1.0  #1s
+#occ_beta[1] = 1.0  #2s
+#
+#for i in range(2,N_alpha):
+#  occ_alpha[i] = 2/6
+#
+#for i in range(2,N_beta):
+#  occ_beta[i]  = 2/6
+#
+#print("alpha",occ_alpha)
+#print("beta",occ_beta)
+#
+#N_alpha=np.sum(occ_alpha)
+#print("alpha_e",N_alpha)
+#
+#N_beta=np.sum(occ_beta)
+#print("beta_e",N_beta)
+
+
+#averaging using trace
+#if lctrl > 0:         
+#  sum_a = np.trace(cA) 
+#  sum_b = np.trace(cB) 
+#  av_a = sum_a/ml_up
+#  av_b = sum_b/ml_up
+#  for i in range(ntrue):
+#    cA[i,i] = av_a
+#    cB[i,i] = av_b
+
+
+
+#sum_r = np.zeros(ntrue)
+#sum_c = np.zeros(ntrue)
+#for i in range(ntrue):
+#  sum_r[i] = np.sum(cA[:,i])
+#for j in range(ntrue):
+#  sum_c[j] = np.sum(cA[j,:])
+#for i in range(ntrue):
+#  for j in range(ntrue):
+#    if i==j:
+#      cA[i,j] = (sum_c[j]+sum_r[i])/2.0         #average of two numbers
+#print("===== cB before average =====","\n",cB)
+#sum_r = np.zeros(ntrue)
+#sum_c = np.zeros(ntrue)
+#for i in range(ntrue):
+#  sum_r[i] = np.sum(cB[:,i])
+#for j in range(ntrue):
+#  sum_c[j] = np.sum(cB[j,:])
+#for i in range(ntrue):
+#  for j in range(ntrue):
+#    if i==j:
+#      cB[i,j] = (sum_c[i]+sum_r[j])/2.0
+
+
+
+
+
+            #ave_a=np.trace(cA[ifirst:ifirst+ml_up,jfirst:jfirst+ml_up])/ml_up
+            #ave_b=np.trace(cB[ifirst:ifirst+ml_up,jfirst:jfirst+ml_up])/ml_up
+            #for im in range(ml_up):
+            #  for jm in range(ml_up):
+            #    if im == jm:
+            #      cA[ifirst+im,jfirst+jm] = ave_a
+            #      cB[ifirst+im,jfirst+jm] = ave_b

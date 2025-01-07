@@ -1,0 +1,1060 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /cluster/software/Gaussian/g16_C.01/l1.exe "/cluster/work/users/beto93/mol16/Gau-322661.inp" -scrdir="/cluster/work/users/beto93/mol16/"
+ Entering Link 1 = /cluster/software/Gaussian/g16_C.01/l1.exe PID=    322666.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                18-Nov-2024 
+ ******************************************
+ %LindaWorkers=c3-22-ib
+ %NProcShared=4
+ Will use up to    4 processors via shared memory.
+ %mem=25GB
+ %chk=mol16.chk
+ SetLPE:    new flags="-opt 'Tsnet.Node.lindarsharg: ssh'  -nodelist 'c3-22-ib.saga' -env GAUSS_MDEF=3355443200 -env GAUSS_EXEDIR="/cluster/software/Gaussian/g16_C.01/bsd:/cluster/software/Gaussian/g16_C.01""
+ Will use up to    1 processors via Linda.
+ -----------------------------------------------------------------
+ #RHF/STO-3G int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read
+ -----------------------------------------------------------------
+ 1/38=1,163=2,172=1/1;
+ 2/12=2,15=3,17=6,18=5,40=1/2;
+ 3/6=3,8=11,11=1,25=1,30=1,60=-1,116=1/1,2,3;
+ 4//1;
+ 5/5=2,38=5/2;
+ 6/7=2,8=2,9=2,10=2,28=1,40=2,113=1,114=1,124=2103/1,12;
+ 99/5=1,9=1/99;
+ ---------
+ mol16-NBO
+ ---------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ Si                    0.        0.        0. 
+ H                     0.85614   0.85614   0.85614 
+ H                    -0.85614  -0.85614   0.85614 
+ H                    -0.85614   0.85614  -0.85614 
+ H                     0.85614  -0.85614  -0.85614 
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1         14           0        0.000000    0.000000    0.000000
+      2          1           0        0.856135    0.856135    0.856135
+      3          1           0       -0.856135   -0.856135    0.856135
+      4          1           0       -0.856135    0.856135   -0.856135
+      5          1           0        0.856135   -0.856135   -0.856135
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  Si   0.000000
+     2  H    1.482869   0.000000
+     3  H    1.482869   2.421515   0.000000
+     4  H    1.482869   2.421515   2.421515   0.000000
+     5  H    1.482869   2.421515   2.421515   2.421515   0.000000
+ Symmetry turned off by external request.
+ Stoichiometry    H4Si
+ Rotational constants (GHZ):          85.5180059          85.5180059          85.5180059
+ Standard basis: STO-3G (5D, 7F)
+    13 basis functions,    39 primitive gaussians,    13 cartesian basis functions
+     9 alpha electrons        9 beta electrons
+       nuclear repulsion energy        21.2953661194 Hartrees.
+ NAtoms=    5 NActive=    5 NUniq=    5 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=    13 RedAO= T EigKep=  2.93D-01  NBF=    13
+ NBsUse=    13 1.00D-06 EigRej= -1.00D+00 NBFU=    13
+ ExpMin= 1.61D-01 ExpMax= 4.08D+02 ExpMxC= 4.08D+02 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=       500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Keep R1 ints in memory in canonical form, NReq=809473.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -287.909495852     A.U. after    6 cycles
+            NFock=  6  Conv=0.21D-09     -V/T= 2.0148
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Alpha  occ. eigenvalues --  -67.97101  -5.95404  -3.97936  -3.97936  -3.97936
+ Alpha  occ. eigenvalues --   -0.68738  -0.42075  -0.42075  -0.42075
+ Alpha virt. eigenvalues --    0.51802   0.55147   0.55147   0.55147
+          Condensed to atoms (all electrons):
+               1          2          3          4          5
+     1  Si  12.017076   0.340410   0.340410   0.340410   0.340410
+     2  H    0.340410   0.841935  -0.009008  -0.009008  -0.009008
+     3  H    0.340410  -0.009008   0.841935  -0.009008  -0.009008
+     4  H    0.340410  -0.009008  -0.009008   0.841935  -0.009008
+     5  H    0.340410  -0.009008  -0.009008  -0.009008   0.841935
+ Mulliken charges:
+               1
+     1  Si   0.621284
+     2  H   -0.155321
+     3  H   -0.155321
+     4  H   -0.155321
+     5  H   -0.155321
+ Sum of Mulliken charges =   0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  Si   0.000000
+ Electronic spatial extent (au):  <R**2>=             64.5661
+ Charge=              0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              0.0000    Y=             -0.0000    Z=              0.0000  Tot=              0.0000
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=            -14.8655   YY=            -14.8655   ZZ=            -14.8655
+   XY=              0.0000   XZ=             -0.0000   YZ=              0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              0.0000   YY=             -0.0000   ZZ=              0.0000
+   XY=              0.0000   XZ=             -0.0000   YZ=              0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=              0.0000  YYY=             -0.0000  ZZZ=              0.0000  XYY=              0.0000
+  XXY=             -0.0000  XXZ=              0.0000  XZZ=              0.0000  YZZ=             -0.0000
+  YYZ=              0.0000  XYZ=             -1.3730
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=            -32.1475 YYYY=            -32.1475 ZZZZ=            -32.1475 XXXY=              0.0000
+ XXXZ=             -0.0000 YYYX=              0.0000 YYYZ=              0.0000 ZZZX=             -0.0000
+ ZZZY=              0.0000 XXYY=            -11.0442 XXZZ=            -11.0442 YYZZ=            -11.0442
+ XXYZ=              0.0000 YYXZ=             -0.0000 ZZXY=              0.0000
+ N-N= 2.129536611936D+01 E-N=-7.265074855101D+02  KE= 2.837232651778D+02
+ Running external command "gaunbo7 R"
+         input file       "/cluster/work/users/beto93/mol16/Gau-322666.EIn"
+         output file      "/cluster/work/users/beto93/mol16/Gau-322666.EOu"
+         message file     "/cluster/work/users/beto93/mol16/Gau-322666.EMs"
+         fchk file        "/cluster/work/users/beto93/mol16/Gau-322666.EFC"
+         mat. el file     "/cluster/work/users/beto93/mol16/Gau-322666.EUF"
+
+ Writing WrtUnf unformatted file "/cluster/work/users/beto93/mol16/Gau-322666.EUF"
+ Gaussian matrix elements                                         Version   2 NLab=11 Len12L=8 Len4L=8
+ Write SHELL TO ATOM MAP                   from file      0 offset           0 length                   7 to matrix element file.
+ Write SHELL TYPES                         from file      0 offset           0 length                   7 to matrix element file.
+ Write NUMBER OF PRIMITIVES PER SHELL      from file      0 offset           0 length                   7 to matrix element file.
+ Write PRIMITIVE EXPONENTS                 from file      0 offset           0 length                  21 to matrix element file.
+ Write CONTRACTION COEFFICIENTS            from file      0 offset           0 length                  21 to matrix element file.
+ Write P(S=P) CONTRACTION COEFFICIENTS     from file      0 offset           0 length                  21 to matrix element file.
+ Write COORDINATES OF EACH SHELL           from file      0 offset           0 length                  21 to matrix element file.
+ Write BONDS PER ATOM                      from file      0 offset           0 length                   5 to matrix element file.
+ Write BONDED ATOMS                        from file      0 offset           0 length                   8 to matrix element file.
+ Write BOND TYPES                          from file      0 offset           0 length                   8 to matrix element file.
+ Write ONIOM CHARGE/MULT                   from file      0 offset           0 length                  32 to matrix element file.
+ Write ONIOM ATOM LAYERS                   from file      0 offset           0 length                   5 to matrix element file.
+ Write ONIOM ATOM MODIFIERS                from file      0 offset           0 length                   5 to matrix element file.
+ Write ONIOM ATOM TYPES                    from file      0 offset           0 length                   5 to matrix element file.
+ Write ONIOM LINK ATOMS                    from file      0 offset           0 length                   5 to matrix element file.
+ Write ONIOM LINK CHARGES                  from file      0 offset           0 length                   5 to matrix element file.
+ Write ONIOM LINK DISTANCES                from file      0 offset           0 length                  20 to matrix element file.
+ Write SYMINF INTS                         from file      0 offset           0 length                  26 to matrix element file.
+ Write ROTTR TO SO                         from file      0 offset           0 length                  12 to matrix element file.
+ Write GAUSSIAN SCALARS                    from file    501 offset           0 to matrix element file.
+ Write OPTIMIZATION FLAGS                  from file      0 offset           0 length                   5 to matrix element file.
+ Write INTEGER ISO                         from file      0 offset           0 length                   5 to matrix element file.
+ Write INTEGER SPIN                        from file      0 offset           0 length                   5 to matrix element file.
+ Write REAL ZEFFECTIVE                     from file      0 offset           0 length                   5 to matrix element file.
+ Write REAL GFACTOR                        from file      0 offset           0 length                   5 to matrix element file.
+ Write REAL ZNUCLEAR                       from file      0 offset           0 length                   5 to matrix element file.
+ Write MULLIKEN CHARGES                    from file      0 offset           0 length                   5 to matrix element file.
+ Write NUCLEAR GRADIENT                    from file  10584 offset           0 length                  15 to matrix element file.
+ Array NUCLEAR FORCE CONSTANTS              on  file  10585 does not exist.
+ Write ELECTRIC DIPOLE MOMENT              from file      0 offset           0 length                   3 to matrix element file.
+ Write NON-ADIABATIC COUPLING              from file  10810 offset           0 length                  15 to matrix element file.
+ Write FINITE EM FIELD                     from file  10521 offset           0 length                  35 to matrix element file.
+ Write OVERLAP                             from file  10514 offset           0 length                  91 to matrix element file.
+ Write CORE HAMILTONIAN ALPHA              from file  10515 offset           0 length                  91 to matrix element file.
+ Write CORE HAMILTONIAN BETA               from file  10515 offset          91 length                  91 to matrix element file.
+ Write KINETIC ENERGY                      from file  10516 offset           0 length                  91 to matrix element file.
+ Write ORTHOGONAL BASIS                    from file  10685 offset           0 length                 169 to matrix element file.
+ Write DIPOLE INTEGRALS                    from file  10518 offset           0 length                 273 to matrix element file.
+ Array DIP VEL INTEGRALS                    on  file  10572 does not exist.
+ Array R X DEL INTEGRALS                    on  file  10572 does not exist.
+ Write ALPHA ORBITAL ENERGIES              from file      0 offset           0 length                  13 to matrix element file.
+ Write ALPHA MO COEFFICIENTS               from file  10524 offset           0 length                 169 to matrix element file.
+ Write ALPHA DENSITY MATRIX                from file      0 offset           0 length                  91 to matrix element file.
+ Write ALPHA FOCK MATRIX                   from file  10536 offset           0 length                  91 to matrix element file.
+ Write ENERGY-WEIGHTED DENSITY             from file  10571 offset           0 length                  91 to matrix element file.
+ Write ALPHA SCF DENSITY MATRIX            from file      0 offset           0 length                  91 to matrix element file.
+ No 2e integrals to process.
+ Perform NBO analysis...executing G16NBO...
+
+ *********************************** NBO 7.0 ***********************************
+             N A T U R A L   A T O M I C   O R B I T A L   A N D
+          N A T U R A L   B O N D   O R B I T A L   A N A L Y S I S
+ **************************** Espen Tangen (S101595) ***************************
+  (c) Copyright 1996-2021 Board of Regents of the University of Wisconsin System
+      on behalf of the Theoretical Chemistry Institute.  All rights reserved.
+
+          Cite this program [NBO 7.0.10 (8-Feb-2021)] as:
+
+          NBO 7.0.  E. D. Glendening, J. K. Badenhoop, A. E. Reed,
+          J. E. Carpenter, J. A. Bohmann, C. M. Morales, P. Karafiloglou,
+          C. R. Landis, and F. Weinhold, Theoretical Chemistry Institute,
+          University of Wisconsin, Madison, WI (2018)
+
+       /NPA    / : Natural Population Analysis
+       /AOPNAO / : Print the AO to PNAO transformation
+       /AONAO  / : Print the AO to NAO transformation
+       /AOMO   / : Print the MOs in the AO basis
+       /BOAO   / : Print the AO bond-order matrix
+       /DMAO   / : Print the AO density matrix
+       /DMPNAO / : Print the PNAO density matrix
+       /DMNAO  / : Print the NAO density matrix
+       /DMMO   / : Print the MO density matrix
+       /SAO    / : Print the AO overlap matrix
+       /SPNAO  / : Print the PNAO overlap matrix
+       /DETAIL / : Write details of NBO search
+       /ARCHIVE/ : Write the archive file to lfn47
+       /AOINFO / : Write AO information to lfn31
+       /FILE   / : Set to mol16.gen*
+
+ Filename set to mol16.gen1
+
+ Job title: mol16-NBO
+
+
+ MOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.9939 -0.3436  0.0000  0.0000  0.0000  0.0727  0.0000  0.0000
+   2. Si 1 (s)      0.0189  1.0377  0.0000  0.0000  0.0000 -0.2692  0.0000  0.0000
+   3. Si 1 (px)     0.0000  0.0000 -0.3981  0.4015  0.7958  0.0000  0.0818 -0.0659
+   4. Si 1 (py)     0.0000  0.0000 -0.2836  0.7692 -0.5300  0.0000 -0.1768 -0.0412
+   5. Si 1 (pz)     0.0000  0.0000  0.8451  0.4473  0.1970  0.0000  0.0105 -0.1789
+   6. Si 1 (s)     -0.0039  0.0606  0.0000  0.0000  0.0000  0.6401  0.0000  0.0000
+   7. Si 1 (px)     0.0000  0.0000 -0.0336  0.0339  0.0672  0.0000 -0.1930  0.1555
+   8. Si 1 (py)     0.0000  0.0000 -0.0240  0.0650 -0.0448  0.0000  0.4170  0.0971
+   9. Si 1 (pz)     0.0000  0.0000  0.0714  0.0378  0.0166  0.0000 -0.0248  0.4220
+  10.  H 2 (s)      0.0009 -0.0098 -0.0019 -0.0184 -0.0053  0.2149  0.1529  0.5179
+  11.  H 3 (s)      0.0009 -0.0098 -0.0174  0.0082  0.0008  0.2149 -0.1910  0.1301
+  12.  H 4 (s)      0.0009 -0.0098  0.0083  0.0009  0.0173  0.2149  0.4873 -0.3688
+  13.  H 5 (s)      0.0009 -0.0098  0.0109  0.0093 -0.0128  0.2149 -0.4492 -0.2792
+
+           AO          9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.0000  0.0769  0.0000  0.0000  0.0000
+   2. Si 1 (s)      0.0000 -0.2406  0.0000  0.0000  0.0000
+   3. Si 1 (px)     0.1644  0.0000  0.1842  0.1013 -0.2466
+   4. Si 1 (py)     0.0715  0.0000 -0.2666  0.0735 -0.1689
+   5. Si 1 (pz)    -0.0770  0.0000 -0.0031 -0.2989 -0.1251
+   6. Si 1 (s)      0.0000  1.3168  0.0000  0.0000  0.0000
+   7. Si 1 (px)    -0.3877  0.0000 -0.6522 -0.3588  0.8733
+   8. Si 1 (py)    -0.1687  0.0000  0.9441 -0.2602  0.5982
+   9. Si 1 (pz)     0.1816  0.0000  0.0110  1.0585  0.4431
+  10.  H 2 (s)     -0.2877 -0.6206 -0.1329 -0.1928 -0.8400
+  11.  H 3 (s)      0.5665 -0.6206  0.1232 -0.7360  0.4512
+  12.  H 4 (s)      0.0287 -0.6206 -0.6955  0.4211  0.3151
+  13.  H 5 (s)     -0.3075 -0.6206  0.7052  0.5077  0.0737
+
+
+ AO overlap matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1 (s)      1.0000  0.3142  0.0000  0.0000  0.0000  0.0136  0.0000  0.0000
+   2. Si 1 (s)      0.3142  1.0000  0.0000  0.0000  0.0000  0.2542  0.0000  0.0000
+   3. Si 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.2685  0.0000
+   4. Si 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.2685
+   5. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   6. Si 1 (s)      0.0136  0.2542  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   7. Si 1 (px)     0.0000  0.0000  0.2685  0.0000  0.0000  0.0000  1.0000  0.0000
+   8. Si 1 (py)     0.0000  0.0000  0.0000  0.2685  0.0000  0.0000  0.0000  1.0000
+   9. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.2685  0.0000  0.0000  0.0000
+  10.  H 2 (s)      0.0067  0.0582  0.0187  0.0187  0.0187  0.3824  0.2602  0.2602
+  11.  H 3 (s)      0.0067  0.0582 -0.0187 -0.0187  0.0187  0.3824 -0.2602 -0.2602
+  12.  H 4 (s)      0.0067  0.0582 -0.0187  0.0187 -0.0187  0.3824 -0.2602  0.2602
+  13.  H 5 (s)      0.0067  0.0582  0.0187 -0.0187 -0.0187  0.3824  0.2602 -0.2602
+
+           AO          9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.0000  0.0067  0.0067  0.0067  0.0067
+   2. Si 1 (s)      0.0000  0.0582  0.0582  0.0582  0.0582
+   3. Si 1 (px)     0.0000  0.0187 -0.0187 -0.0187  0.0187
+   4. Si 1 (py)     0.0000  0.0187 -0.0187  0.0187 -0.0187
+   5. Si 1 (pz)     0.2685  0.0187  0.0187 -0.0187 -0.0187
+   6. Si 1 (s)      0.0000  0.3824  0.3824  0.3824  0.3824
+   7. Si 1 (px)     0.0000  0.2602 -0.2602 -0.2602  0.2602
+   8. Si 1 (py)     0.0000  0.2602 -0.2602  0.2602 -0.2602
+   9. Si 1 (pz)     1.0000  0.2602  0.2602 -0.2602 -0.2602
+  10.  H 2 (s)      0.2602  1.0000  0.0573  0.0573  0.0573
+  11.  H 3 (s)      0.2602  0.0573  1.0000  0.0573  0.0573
+  12.  H 4 (s)     -0.2602  0.0573  0.0573  1.0000  0.0573
+  13.  H 5 (s)     -0.2602  0.0573  0.0573  0.0573  1.0000
+
+
+ AO bond-order matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1 (s)      2.2225 -0.7147  0.0000  0.0000  0.0000  0.0435  0.0000  0.0000
+   2. Si 1 (s)     -0.7147  2.2993  0.0000  0.0000  0.0000 -0.2190  0.0000  0.0000
+   3. Si 1 (px)     0.0000  0.0000  1.9822  0.0000  0.0000  0.0000 -0.0185  0.0000
+   4. Si 1 (py)     0.0000  0.0000  0.0000  1.9822  0.0000  0.0000  0.0000 -0.0185
+   5. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.9822  0.0000  0.0000  0.0000
+   6. Si 1 (s)      0.0435 -0.2190  0.0000  0.0000  0.0000  0.8267  0.0000  0.0000
+   7. Si 1 (px)     0.0000  0.0000 -0.0185  0.0000  0.0000  0.0000  0.4370  0.0000
+   8. Si 1 (py)     0.0000  0.0000  0.0000 -0.0185  0.0000  0.0000  0.0000  0.4370
+   9. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000 -0.0185  0.0000  0.0000  0.0000
+  10.  H 2 (s)      0.0397 -0.1359 -0.1595 -0.1595 -0.1595  0.2739  0.3232  0.3232
+  11.  H 3 (s)      0.0397 -0.1359  0.1595  0.1595 -0.1595  0.2739 -0.3232 -0.3232
+  12.  H 4 (s)      0.0397 -0.1359  0.1595 -0.1595  0.1595  0.2739 -0.3232  0.3232
+  13.  H 5 (s)      0.0397 -0.1359 -0.1595  0.1595  0.1595  0.2739  0.3232 -0.3232
+
+           AO          9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.0000  0.0397  0.0397  0.0397  0.0397
+   2. Si 1 (s)      0.0000 -0.1359 -0.1359 -0.1359 -0.1359
+   3. Si 1 (px)     0.0000 -0.1595  0.1595  0.1595 -0.1595
+   4. Si 1 (py)     0.0000 -0.1595  0.1595 -0.1595  0.1595
+   5. Si 1 (pz)    -0.0185 -0.1595 -0.1595  0.1595  0.1595
+   6. Si 1 (s)      0.0000  0.2739  0.2739  0.2739  0.2739
+   7. Si 1 (px)     0.0000  0.3232 -0.3232 -0.3232  0.3232
+   8. Si 1 (py)     0.0000  0.3232 -0.3232  0.3232 -0.3232
+   9. Si 1 (pz)     0.4370  0.3232  0.3232 -0.3232 -0.3232
+  10.  H 2 (s)      0.3232  0.8419 -0.1572 -0.1572 -0.1572
+  11.  H 3 (s)      0.3232 -0.1572  0.8419 -0.1572 -0.1572
+  12.  H 4 (s)     -0.3232 -0.1572 -0.1572  0.8419 -0.1572
+  13.  H 5 (s)     -0.3232 -0.1572 -0.1572 -0.1572  0.8419
+
+
+ AO density matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1 (s)      2.0000  0.6286  0.0000  0.0000  0.0000  0.0256  0.0000  0.0000
+   2. Si 1 (s)      0.6286  1.9986  0.0000  0.0000  0.0000  0.5245  0.0000  0.0000
+   3. Si 1 (px)     0.0000  0.0000  1.9942  0.0000  0.0000  0.0000  0.5946  0.0000
+   4. Si 1 (py)     0.0000  0.0000  0.0000  1.9942  0.0000  0.0000  0.0000  0.5946
+   5. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.9942  0.0000  0.0000  0.0000
+   6. Si 1 (s)      0.0256  0.5245  0.0000  0.0000  0.0000  1.8111  0.0000  0.0000
+   7. Si 1 (px)     0.0000  0.0000  0.5946  0.0000  0.0000  0.0000  1.4241  0.0000
+   8. Si 1 (py)     0.0000  0.0000  0.0000  0.5946  0.0000  0.0000  0.0000  1.4241
+   9. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.5946  0.0000  0.0000  0.0000
+  10.  H 2 (s)      0.0146  0.1039  0.0179  0.0179  0.0179  0.9106  0.7158  0.7158
+  11.  H 3 (s)      0.0146  0.1039 -0.0179 -0.0179  0.0179  0.9106 -0.7158 -0.7158
+  12.  H 4 (s)      0.0146  0.1039 -0.0179  0.0179 -0.0179  0.9106 -0.7158  0.7158
+  13.  H 5 (s)      0.0146  0.1039  0.0179 -0.0179 -0.0179  0.9106  0.7158 -0.7158
+
+           AO          9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.0000  0.0146  0.0146  0.0146  0.0146
+   2. Si 1 (s)      0.0000  0.1039  0.1039  0.1039  0.1039
+   3. Si 1 (px)     0.0000  0.0179 -0.0179 -0.0179  0.0179
+   4. Si 1 (py)     0.0000  0.0179 -0.0179  0.0179 -0.0179
+   5. Si 1 (pz)     0.5946  0.0179  0.0179 -0.0179 -0.0179
+   6. Si 1 (s)      0.0000  0.9106  0.9106  0.9106  0.9106
+   7. Si 1 (px)     0.0000  0.7158 -0.7158 -0.7158  0.7158
+   8. Si 1 (py)     0.0000  0.7158 -0.7158  0.7158 -0.7158
+   9. Si 1 (pz)     1.4241  0.7158  0.7158 -0.7158 -0.7158
+  10.  H 2 (s)      0.7158  1.6884  0.0684  0.0684  0.0684
+  11.  H 3 (s)      0.7158  0.0684  1.6884  0.0684  0.0684
+  12.  H 4 (s)     -0.7158  0.0684  0.0684  1.6884  0.0684
+  13.  H 5 (s)     -0.7158  0.0684  0.0684  0.0684  1.6884
+
+
+ MO density matrix:
+
+      MO     1       2       3       4       5       6       7       8       9
+     ---- ------  ------  ------  ------  ------  ------  ------  ------  ------
+   1.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000
+  10.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+      MO    10      11      12      13
+     ---- ------  ------  ------  ------
+   1.     0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000
+  10.     0.0000  0.0000  0.0000  0.0000
+  11.     0.0000  0.0000  0.0000  0.0000
+  12.     0.0000  0.0000  0.0000  0.0000
+  13.     0.0000  0.0000  0.0000  0.0000
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies
+
+  NAO Atom No lang   Type(AO)    Occupancy      Energy
+ -------------------------------------------------------
+   1   Si  1  s      Cor( 1s)     2.00000     -43.67393
+   2   Si  1  s      Cor( 2s)     2.00000     -30.23919
+   3   Si  1  s      Val( 3s)     1.12322      -0.16565
+   4   Si  1  px     Cor( 2p)     2.00000      -3.97584
+   5   Si  1  px     Val( 3p)     0.72002       0.20020
+   6   Si  1  py     Cor( 2p)     2.00000      -3.97584
+   7   Si  1  py     Val( 3p)     0.72002       0.20020
+   8   Si  1  pz     Cor( 2p)     2.00000      -3.97584
+   9   Si  1  pz     Val( 3p)     0.72002       0.20020
+
+  10    H  2  s      Val( 1s)     1.17918      -0.05865
+
+  11    H  3  s      Val( 1s)     1.17918      -0.05865
+
+  12    H  4  s      Val( 1s)     1.17918      -0.05865
+
+  13    H  5  s      Val( 1s)     1.17918      -0.05865
+
+
+ Summary of Natural Population Analysis:
+
+                                     Natural Population
+             Natural    ---------------------------------------------
+  Atom No    Charge        Core      Valence    Rydberg      Total
+ --------------------------------------------------------------------
+   Si  1    0.71673     10.00000     3.28327    0.00000    13.28327
+    H  2   -0.17918      0.00000     1.17918    0.00000     1.17918
+    H  3   -0.17918      0.00000     1.17918    0.00000     1.17918
+    H  4   -0.17918      0.00000     1.17918    0.00000     1.17918
+    H  5   -0.17918      0.00000     1.17918    0.00000     1.17918
+ ====================================================================
+ * Total *  0.00000     10.00000     8.00000    0.00000    18.00000
+
+                                 Natural Population
+ ---------------------------------------------------------
+   Core                      10.00000 (100.0000% of   10)
+   Valence                    8.00000 (100.0000% of    8)
+   Natural Minimal Basis     18.00000 (100.0000% of   18)
+   Natural Rydberg Basis      0.00000 (  0.0000% of   18)
+ ---------------------------------------------------------
+
+    Atom No         Natural Electron Configuration
+ ----------------------------------------------------------------------------
+     Si  1      [core]3s( 1.12)3p( 2.16)
+      H  2            1s( 1.18)
+      H  3            1s( 1.18)
+      H  4            1s( 1.18)
+      H  5            1s( 1.18)
+
+
+ PNAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.9877  0.3567  0.1123  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Si 1 (s)     -0.6254  0.8116 -0.3774  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Si 1 (px)     0.0000  0.0000  0.0000  0.9696 -0.3709  0.0000  0.0000  0.0000
+   4. Si 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.9696 -0.3709  0.0000
+   5. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.9696
+   6. Si 1 (s)     -0.0611  0.0658  1.0328  0.0000  0.0000  0.0000  0.0000  0.0000
+   7. Si 1 (px)     0.0000  0.0000  0.0000  0.0969  1.0336  0.0000  0.0000  0.0000
+   8. Si 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0969  1.0336  0.0000
+   9. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0969
+  10.  H 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.  H 3 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.  H 4 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13.  H 5 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           AO          9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Si 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Si 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Si 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000
+   5. Si 1 (pz)    -0.3709  0.0000  0.0000  0.0000  0.0000
+   6. Si 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000
+   7. Si 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000
+   8. Si 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000
+   9. Si 1 (pz)     1.0336  0.0000  0.0000  0.0000  0.0000
+  10.  H 2 (s)      0.0000  1.0000  0.0000  0.0000  0.0000
+  11.  H 3 (s)      0.0000  0.0000  1.0000  0.0000  0.0000
+  12.  H 4 (s)      0.0000  0.0000  0.0000  1.0000  0.0000
+  13.  H 5 (s)      0.0000  0.0000  0.0000  0.0000  1.0000
+
+
+ PNAO overlap matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1( 1s )    1.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Si 1( 2s )    0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Si 1( 3s )    0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Si 1( 2px)    0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Si 1( 3px)    0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   6. Si 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   7. Si 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000
+   8. Si 1( 2pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000
+   9. Si 1( 3pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.  H 2( 1s )   -0.0531  0.0748  0.3738  0.0434  0.2619  0.0434  0.2619  0.0434
+  11.  H 3( 1s )   -0.0531  0.0748  0.3738 -0.0434 -0.2619 -0.0434 -0.2619  0.0434
+  12.  H 4( 1s )   -0.0531  0.0748  0.3738 -0.0434 -0.2619  0.0434  0.2619 -0.0434
+  13.  H 5( 1s )   -0.0531  0.0748  0.3738  0.0434  0.2619 -0.0434 -0.2619 -0.0434
+
+           NAO         9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1( 1s )    0.0000 -0.0531 -0.0531 -0.0531 -0.0531
+   2. Si 1( 2s )    0.0000  0.0748  0.0748  0.0748  0.0748
+   3. Si 1( 3s )    0.0000  0.3738  0.3738  0.3738  0.3738
+   4. Si 1( 2px)    0.0000  0.0434 -0.0434 -0.0434  0.0434
+   5. Si 1( 3px)    0.0000  0.2619 -0.2619 -0.2619  0.2619
+   6. Si 1( 2py)    0.0000  0.0434 -0.0434  0.0434 -0.0434
+   7. Si 1( 3py)    0.0000  0.2619 -0.2619  0.2619 -0.2619
+   8. Si 1( 2pz)    0.0000  0.0434  0.0434 -0.0434 -0.0434
+   9. Si 1( 3pz)    1.0000  0.2619  0.2619 -0.2619 -0.2619
+  10.  H 2( 1s )    0.2619  1.0000  0.0573  0.0573  0.0573
+  11.  H 3( 1s )    0.2619  0.0573  1.0000  0.0573  0.0573
+  12.  H 4( 1s )   -0.2619  0.0573  0.0573  1.0000  0.0573
+  13.  H 5( 1s )   -0.2619  0.0573  0.0573  0.0573  1.0000
+
+
+ PNAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1( 1s )    2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Si 1( 2s )    0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Si 1( 3s )    0.0000  0.0000  1.7855  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Si 1( 2px)    0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   5. Si 1( 3px)    0.0000  0.0000  0.0000  0.0000  1.3398  0.0000  0.0000  0.0000
+   6. Si 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   7. Si 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.3398  0.0000
+   8. Si 1( 2pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000
+   9. Si 1( 3pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.  H 2( 1s )   -0.1062  0.1495  0.9029  0.0867  0.7332  0.0867  0.7332  0.0867
+  11.  H 3( 1s )   -0.1062  0.1495  0.9029 -0.0867 -0.7332 -0.0867 -0.7332  0.0867
+  12.  H 4( 1s )   -0.1062  0.1495  0.9029 -0.0867 -0.7332  0.0867  0.7332 -0.0867
+  13.  H 5( 1s )   -0.1062  0.1495  0.9029  0.0867  0.7332 -0.0867 -0.7332 -0.0867
+
+           NAO         9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1( 1s )    0.0000 -0.1062 -0.1062 -0.1062 -0.1062
+   2. Si 1( 2s )    0.0000  0.1495  0.1495  0.1495  0.1495
+   3. Si 1( 3s )    0.0000  0.9029  0.9029  0.9029  0.9029
+   4. Si 1( 2px)    0.0000  0.0867 -0.0867 -0.0867  0.0867
+   5. Si 1( 3px)    0.0000  0.7332 -0.7332 -0.7332  0.7332
+   6. Si 1( 2py)    0.0000  0.0867 -0.0867  0.0867 -0.0867
+   7. Si 1( 3py)    0.0000  0.7332 -0.7332  0.7332 -0.7332
+   8. Si 1( 2pz)    0.0000  0.0867  0.0867 -0.0867 -0.0867
+   9. Si 1( 3pz)    1.3398  0.7332  0.7332 -0.7332 -0.7332
+  10.  H 2( 1s )    0.7332  1.6884  0.0684  0.0684  0.0684
+  11.  H 3( 1s )    0.7332  0.0684  1.6884  0.0684  0.0684
+  12.  H 4( 1s )   -0.7332  0.0684  0.0684  1.6884  0.0684
+  13.  H 5( 1s )   -0.7332  0.0684  0.0684  0.0684  1.6884
+
+
+ NAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.9877  0.3567  0.1200  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Si 1 (s)     -0.6254  0.8116 -0.3961  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Si 1 (px)     0.0000  0.0000  0.0000  0.9696 -0.3946  0.0000  0.0000  0.0000
+   4. Si 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.9696 -0.3946  0.0000
+   5. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.9696
+   6. Si 1 (s)     -0.0611  0.0658  1.3490  0.0000  0.0000  0.0000  0.0000  0.0000
+   7. Si 1 (px)     0.0000  0.0000  0.0000  0.0969  1.1924  0.0000  0.0000  0.0000
+   8. Si 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0969  1.1924  0.0000
+   9. Si 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0969
+  10.  H 2 (s)      0.0000  0.0000 -0.2497  0.0000 -0.1907  0.0000 -0.1907  0.0000
+  11.  H 3 (s)      0.0000  0.0000 -0.2497  0.0000  0.1907  0.0000  0.1907  0.0000
+  12.  H 4 (s)      0.0000  0.0000 -0.2497  0.0000  0.1907  0.0000 -0.1907  0.0000
+  13.  H 5 (s)      0.0000  0.0000 -0.2497  0.0000 -0.1907  0.0000  0.1907  0.0000
+
+           AO          9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1 (s)      0.0000  0.0017  0.0017  0.0017  0.0017
+   2. Si 1 (s)      0.0000 -0.0144 -0.0144 -0.0144 -0.0144
+   3. Si 1 (px)     0.0000  0.0069 -0.0069 -0.0069  0.0069
+   4. Si 1 (py)     0.0000  0.0069 -0.0069  0.0069 -0.0069
+   5. Si 1 (pz)    -0.3946  0.0069  0.0069 -0.0069 -0.0069
+   6. Si 1 (s)      0.0000 -0.2827 -0.2827 -0.2827 -0.2827
+   7. Si 1 (px)     0.0000 -0.1613  0.1613  0.1613 -0.1613
+   8. Si 1 (py)     0.0000 -0.1613  0.1613 -0.1613  0.1613
+   9. Si 1 (pz)     1.1924 -0.1613 -0.1613  0.1613  0.1613
+  10.  H 2 (s)     -0.1907  1.1810  0.0114  0.0114  0.0114
+  11.  H 3 (s)     -0.1907  0.0114  1.1810  0.0114  0.0114
+  12.  H 4 (s)      0.1907  0.0114  0.0114  1.1810  0.0114
+  13.  H 5 (s)      0.1907  0.0114  0.0114  0.0114  1.1810
+
+
+ NAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Si 1( 1s )    2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Si 1( 2s )    0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Si 1( 3s )    0.0000  0.0000  1.1232  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Si 1( 2px)    0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   5. Si 1( 3px)    0.0000  0.0000  0.0000  0.0000  0.7200  0.0000  0.0000  0.0000
+   6. Si 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   7. Si 1( 3py)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.7200  0.0000
+   8. Si 1( 2pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000
+   9. Si 1( 3pz)    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.  H 2( 1s )    0.0000  0.0000  0.4962  0.0000  0.4800  0.0000  0.4800  0.0000
+  11.  H 3( 1s )    0.0000  0.0000  0.4962  0.0000 -0.4800  0.0000 -0.4800  0.0000
+  12.  H 4( 1s )    0.0000  0.0000  0.4962  0.0000 -0.4800  0.0000  0.4800  0.0000
+  13.  H 5( 1s )    0.0000  0.0000  0.4962  0.0000  0.4800  0.0000 -0.4800  0.0000
+
+           NAO         9      10      11      12      13
+      ------------ ------- ------- ------- ------- -------
+   1. Si 1( 1s )    0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Si 1( 2s )    0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Si 1( 3s )    0.0000  0.4962  0.4962  0.4962  0.4962
+   4. Si 1( 2px)    0.0000  0.0000  0.0000  0.0000  0.0000
+   5. Si 1( 3px)    0.0000  0.4800 -0.4800 -0.4800  0.4800
+   6. Si 1( 2py)    0.0000  0.0000  0.0000  0.0000  0.0000
+   7. Si 1( 3py)    0.0000  0.4800 -0.4800  0.4800 -0.4800
+   8. Si 1( 2pz)    0.0000  0.0000  0.0000  0.0000  0.0000
+   9. Si 1( 3pz)    0.7200  0.4800  0.4800 -0.4800 -0.4800
+  10.  H 2( 1s )    0.4800  1.1792 -0.1008 -0.1008 -0.1008
+  11.  H 3( 1s )    0.4800 -0.1008  1.1792 -0.1008 -0.1008
+  12.  H 4( 1s )   -0.4800 -0.1008 -0.1008  1.1792 -0.1008
+  13.  H 5( 1s )   -0.4800 -0.1008 -0.1008 -0.1008  1.1792
+
+
+ NATURAL BOND ORBITAL ANALYSIS:
+
+ Initiate 2-center NBO search using THRESH = 1.900 and PRJTHR = 0.300
+
+ Search of NAO DM block for core orbitals on atom:   1
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 4) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000
+            0.0000
+      Eigenvector ( 5) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000
+            0.0000
+        5 eigenvector(s) stashed in permanent list
+
+ Core orbitals projected from the NAO density matrix
+       8.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       1.123 0.720 0.720 0.720 0.000 0.000 0.000 0.000 0.000
+
+ No NHOs identified in the 1-center search of the NAO density matrix
+       8.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.022 0.720 0.720 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.4288 0.0000 0.2841 0.0000 0.2841 0.0000
+            0.2841 0.7576
+      1 hybrid on atom 1 stashed in prospective list
+      1 hybrid on atom 2 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   1   3
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.022 0.720 0.720 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.4288 0.0000-0.2841 0.0000-0.2841 0.0000
+            0.2841 0.7576
+      1 hybrid on atom 1 stashed in prospective list
+      1 hybrid on atom 3 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   1   4
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.022 0.720 0.720 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.4288 0.0000-0.2841 0.0000 0.2841 0.0000
+           -0.2841 0.7576
+      1 hybrid on atom 1 stashed in prospective list
+      1 hybrid on atom 4 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   1   5
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.022 0.720 0.720 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.4288 0.0000 0.2841 0.0000-0.2841 0.0000
+           -0.2841 0.7576
+      1 hybrid on atom 1 stashed in prospective list
+      1 hybrid on atom 5 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       0.882 0.882 0.882 0.882 0.882 0.882 0.882 0.882
+      0 hybrids eliminated in 1 pass
+      8 hybrids moved from prospective to permanent list
+
+ NHOs of 2-center eigenvectors projected from the NAO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+ Search of NHO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 2.000 2.000 2.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    1. Label:CR ( 1)   1
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    2. Label:CR ( 2)   1
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    3. Label:CR ( 3)   1
+      Eigenvector ( 4) has occupancy 2.00000
+            0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    4. Label:CR ( 4)   1
+      Eigenvector ( 5) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.0000 1.0000 0.0000 0.0000 0.0000
+            0.0000
+           NBO accepted:    5. Label:CR ( 5)   1
+        5 eigenvector(s) stashed in permanent list
+
+  1-center NBOs projected from the NHO density matrix
+       8.000 electrons remain (>1.900); search continues
+
+ Search of NHO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       1.985 0.015 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.98454
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.6395 0.0000 0.0000
+            0.0000 0.7688
+      Occupancy is 1.985 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.6395 0.0000 0.0000
+            0.0000 0.7688
+           NBO accepted:    6. Label:BD ( 1)   1   2
+      Occupancy is 0.015 for antibonding component
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.7688 0.0000 0.0000
+            0.0000-0.6395
+           NBO accepted:    7. Label:BD*( 1)   1   2
+        2 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   1   3
+      Select eigenvectors with eigenvalue > 1.900
+       1.985 0.015 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.98454
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.6395 0.0000
+            0.0000 0.7688
+      Occupancy is 1.985 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.6395 0.0000
+            0.0000 0.7688
+           NBO accepted:    8. Label:BD ( 1)   1   3
+      Occupancy is 0.015 for antibonding component
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.7688 0.0000
+            0.0000-0.6395
+           NBO accepted:    9. Label:BD*( 1)   1   3
+        2 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   1   4
+      Select eigenvectors with eigenvalue > 1.900
+       1.985 0.015 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.98454
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.6395
+            0.0000 0.7688
+      Occupancy is 1.985 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.6395
+            0.0000 0.7688
+           NBO accepted:   10. Label:BD ( 1)   1   4
+      Occupancy is 0.015 for antibonding component
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.7688
+            0.0000-0.6395
+           NBO accepted:   11. Label:BD*( 1)   1   4
+        2 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   1   5
+      Select eigenvectors with eigenvalue > 1.900
+       1.985 0.015 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.98454
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.6395 0.7688
+      Occupancy is 1.985 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.6395 0.7688
+           NBO accepted:   12. Label:BD ( 1)   1   5
+      Occupancy is 0.015 for antibonding component
+            0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.7688-0.6395
+           NBO accepted:   13. Label:BD*( 1)   1   5
+        2 eigenvector(s) stashed in permanent list
+
+  2-center NBOs projected from the NHO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+                            Occupancies       Lewis Structure    Low   High
+         Max    Occ     -------------------  -----------------   occ   occ
+  Cycle  Ctr   Thresh    Lewis   non-Lewis     CR  BD  nC  LP    (L)   (NL)
+ ============================================================================
+    1     2     1.90    17.93816   0.06184      5   4   0   0     0      0
+ ----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ -------------------------------------------------------
+   Core                     10.00000 (100.000% of  10)
+   Valence Lewis             7.93816 ( 99.227% of   8)
+  ==================      =============================
+   Total Lewis              17.93816 ( 99.656% of  18)
+  -----------------------------------------------------
+   Valence non-Lewis         0.06184 (  0.344% of  18)
+   Rydberg non-Lewis         0.00000 (  0.000% of  18)
+  ==================      =============================
+   Total non-Lewis           0.06184 (  0.344% of  18)
+ -------------------------------------------------------
+
+
+     (Occupancy)   Bond orbital / Coefficients / Hybrids
+ ------------------ Lewis ------------------------------------------------------
+   1. (2.00000) CR ( 1)Si  1            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   2. (2.00000) CR ( 2)Si  1            s(100.00%)
+                                         0.0000  1.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   3. (2.00000) CR ( 3)Si  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  1.0000  0.0000
+                                         0.0000  0.0000  0.0000  0.0000
+   4. (2.00000) CR ( 4)Si  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  0.0000  0.0000
+                                         1.0000  0.0000  0.0000  0.0000
+   5. (2.00000) CR ( 5)Si  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  0.0000  0.0000
+                                         0.0000  0.0000  1.0000  0.0000
+   6. (1.98454) BD ( 1)Si  1- H  2
+               ( 40.90%)   0.6395*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000  0.5000  0.0000  0.5000
+                                         0.0000  0.5000  0.0000  0.5000
+               ( 59.10%)   0.7688* H  2 s(100.00%)
+                                         1.0000
+   7. (1.98454) BD ( 1)Si  1- H  3
+               ( 40.90%)   0.6395*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000  0.5000  0.0000 -0.5000
+                                         0.0000 -0.5000  0.0000  0.5000
+               ( 59.10%)   0.7688* H  3 s(100.00%)
+                                         1.0000
+   8. (1.98454) BD ( 1)Si  1- H  4
+               ( 40.90%)   0.6395*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000  0.5000  0.0000 -0.5000
+                                         0.0000  0.5000  0.0000 -0.5000
+               ( 59.10%)   0.7688* H  4 s(100.00%)
+                                         1.0000
+   9. (1.98454) BD ( 1)Si  1- H  5
+               ( 40.90%)   0.6395*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000  0.5000  0.0000  0.5000
+                                         0.0000 -0.5000  0.0000 -0.5000
+               ( 59.10%)   0.7688* H  5 s(100.00%)
+                                         1.0000
+ ---------------- non-Lewis ----------------------------------------------------
+  10. (0.01546) BD*( 1)Si  1- H  2
+               ( 59.10%)   0.7688*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000 -0.5000  0.0000 -0.5000
+                                         0.0000 -0.5000  0.0000 -0.5000
+               ( 40.90%)  -0.6395* H  2 s(100.00%)
+                                        -1.0000
+  11. (0.01546) BD*( 1)Si  1- H  3
+               ( 59.10%)   0.7688*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000 -0.5000  0.0000  0.5000
+                                         0.0000  0.5000  0.0000 -0.5000
+               ( 40.90%)  -0.6395* H  3 s(100.00%)
+                                        -1.0000
+  12. (0.01546) BD*( 1)Si  1- H  4
+               ( 59.10%)   0.7688*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000 -0.5000  0.0000  0.5000
+                                         0.0000 -0.5000  0.0000  0.5000
+               ( 40.90%)  -0.6395* H  4 s(100.00%)
+                                        -1.0000
+  13. (0.01546) BD*( 1)Si  1- H  5
+               ( 59.10%)   0.7688*Si  1 s( 25.00%)p 3.00( 75.00%)
+                                         0.0000  0.0000 -0.5000  0.0000 -0.5000
+                                         0.0000  0.5000  0.0000  0.5000
+               ( 40.90%)  -0.6395* H  5 s(100.00%)
+                                        -1.0000
+
+
+ NHO DIRECTIONALITY AND BOND BENDING (deviation from line of nuclear centers at
+                                      the position of maximum hybrid amplitude)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    p- or d-character  > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                        Line of Centers        Hybrid 1             Hybrid 2
+                        ---------------  -------------------  ------------------
+           NBO            Theta   Phi    Theta   Phi    Dev   Theta   Phi    Dev
+ ===============================================================================
+    None exceeding thresholds
+
+
+ SECOND ORDER PERTURBATION THEORY ANALYSIS OF FOCK MATRIX IN NBO BASIS
+
+     Threshold for printing:   0.50 kcal/mol
+                                                          E(2) E(NL)-E(L) F(L,NL)
+      Donor (L) NBO              Acceptor (NL) NBO      kcal/mol   a.u.    a.u.
+ ===============================================================================
+
+ within unit  1
+    6. BD ( 1)Si  1- H  2      11. BD*( 1)Si  1- H  3      4.17    1.02   0.058
+    6. BD ( 1)Si  1- H  2      12. BD*( 1)Si  1- H  4      4.17    1.02   0.058
+    6. BD ( 1)Si  1- H  2      13. BD*( 1)Si  1- H  5      4.17    1.02   0.058
+    7. BD ( 1)Si  1- H  3      10. BD*( 1)Si  1- H  2      4.17    1.02   0.058
+    7. BD ( 1)Si  1- H  3      12. BD*( 1)Si  1- H  4      4.17    1.02   0.058
+    7. BD ( 1)Si  1- H  3      13. BD*( 1)Si  1- H  5      4.17    1.02   0.058
+    8. BD ( 1)Si  1- H  4      10. BD*( 1)Si  1- H  2      4.17    1.02   0.058
+    8. BD ( 1)Si  1- H  4      11. BD*( 1)Si  1- H  3      4.17    1.02   0.058
+    8. BD ( 1)Si  1- H  4      13. BD*( 1)Si  1- H  5      4.17    1.02   0.058
+    9. BD ( 1)Si  1- H  5      10. BD*( 1)Si  1- H  2      4.17    1.02   0.058
+    9. BD ( 1)Si  1- H  5      11. BD*( 1)Si  1- H  3      4.17    1.02   0.058
+    9. BD ( 1)Si  1- H  5      12. BD*( 1)Si  1- H  4      4.17    1.02   0.058
+
+
+ NATURAL BOND ORBITALS (Summary):
+
+                                                     Principal Delocalizations
+           NBO                 Occupancy    Energy   (geminal,vicinal,remote)
+ ===============================================================================
+ Molecular unit  1  (H4Si)
+ ------ Lewis --------------------------------------
+    1. CR ( 1)Si  1             2.00000   -43.67393
+    2. CR ( 2)Si  1             2.00000   -30.23919
+    3. CR ( 3)Si  1             2.00000    -3.97584
+    4. CR ( 4)Si  1             2.00000    -3.97584
+    5. CR ( 5)Si  1             2.00000    -3.97584
+    6. BD ( 1)Si  1- H  2       1.98454    -0.48408  11(g),12(g),13(g)
+    7. BD ( 1)Si  1- H  3       1.98454    -0.48408  10(g),12(g),13(g)
+    8. BD ( 1)Si  1- H  4       1.98454    -0.48408  10(g),11(g),13(g)
+    9. BD ( 1)Si  1- H  5       1.98454    -0.48408  10(g),11(g),12(g)
+ ------ non-Lewis ----------------------------------
+   10. BD*( 1)Si  1- H  2       0.01546     0.53416
+   11. BD*( 1)Si  1- H  3       0.01546     0.53416
+   12. BD*( 1)Si  1- H  4       0.01546     0.53416
+   13. BD*( 1)Si  1- H  5       0.01546     0.53416
+          -------------------------------
+                 Total Lewis   17.93816  ( 99.6565%)
+           Valence non-Lewis    0.06184  (  0.3435%)
+           Rydberg non-Lewis    0.00000  (  0.0000%)
+          -------------------------------
+               Total unit  1   18.00000  (100.0000%)
+              Charge unit  1    0.00000
+
+ $CHOOSE
+   BOND S 1 2 S 1 3 S 1 4 S 1 5 END
+ $END
+
+ NBO analysis completed in 0.13 CPU seconds (1 wall second)
+ Maximum scratch memory used by NBO was 262570 words (2.00 MB)
+ Maximum scratch memory used by G16NBO was 8427 words (0.06 MB)
+
+ Opening RunExU unformatted file "/cluster/work/users/beto93/mol16/Gau-322666.EUF"
+ Read unf file /cluster/work/users/beto93/mol16/Gau-322666.EUF:
+ Label Gaussian matrix elements                                         IVers= 2 NLab= 2 Version=ES64L-G16RevC.01
+ Title mol16-NBO                                                       
+ NAtoms=     5 NBasis=    13 NBsUse=    13 ICharg=     0 Multip=     1 NE=    18 Len12L=8 Len4L=8 IOpCl= 0 ICGU=111
+ GAUSSIAN SCALARS                    NI= 1 NR= 1 NTot=       1 LenBuf=    2 NRI=1 N=    1000
+ NPA CHARGES                         NI= 0 NR= 1 NTot=       5 LenBuf= 4000 NRI=1 N=       5
+ Recovered energy= -287.909495852     dipole=      0.000000000000     -0.000000000000      0.000000000000
+ Unable to Open any file for archive entry.
+ 1\1\GINC-C3-22\SP\RHF\STO-3G\H4Si1\BETO93\18-Nov-2024\0\\#RHF/STO-3G i
+ nt=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read\\mol16-NBO\\0,1\S
+ i,0,0.,0.,0.\H,0,0.856135,0.856135,0.856135\H,0,-0.856135,-0.856135,0.
+ 856135\H,0,-0.856135,0.856135,-0.856135\H,0,0.856135,-0.856135,-0.8561
+ 35\\Version=ES64L-G16RevC.01\HF=-287.9094959\RMSD=2.062e-10\Dipole=0.,
+ 0.,0.\Quadrupole=0.,0.,0.,0.,0.,0.\PG=Unknown\\@
+ The archive entry for this job was punched.
+
+
+ NOTHING WILL BE ATTEMPTED IF ALL POSSIBLE OBJECTIONS
+ MUST FIRST BE OVERCOME.
+
+                               -- THE GOLDEN PRINCIPLE,
+                    PAUL DICKSON'S "THE OFFICIAL RULES"
+ Job cpu time:       0 days  0 hours  0 minutes  7.3 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  2.5 seconds.
+ File lengths (MBytes):  RWF=     10 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 16 at Mon Nov 18 15:41:33 2024.

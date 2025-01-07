@@ -1,0 +1,3 @@
+#!/bin/sh
+
+"$AMSBIN/gennbo6" FILE47

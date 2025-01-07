@@ -1,0 +1,44 @@
+#!/bin/bash
+
+## Setting up account, job name, number of nodes, cores/node, time, and memory
+
+#SBATCH --account=nn4654k
+#SBATCH --job-name=LiNH2
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=00:15:00
+#SBATCH --mem-per-cpu=4GB
+#SBATCH --output=/cluster/home/beto93/logfiles/LiNH2.logfile
+#SBATCH --signal=B:USR1@120
+###################################################################
+
+## Modules for Gaussian and NBO7
+module purge
+module load Gaussian/g16_C.01
+
+## Scratch folder
+if [[ -d "/cluster/work/users/beto93/LiNH2" ]]
+then
+    rm -rf /cluster/work/users/beto93/LiNH2
+fi
+
+mkdir /cluster/work/users/beto93/LiNH2
+
+# Copying input files (also chk, if it exists) to scratch
+
+cd $SUBMITDIR
+cp LiNH2.* /cluster/work/users/beto93/LiNH2/
+cd /cluster/work/users/beto93/LiNH2
+
+# Running the calc with the parallel ib binary from the scratch folder
+
+g16.ib  < LiNH2.gjf > $SUBMITDIR/LiNH2.log
+
+# Recovering the relevant files and cleaning up
+
+formchk LiNH2.chk
+cp LiNH2.47 $SUBMITDIR
+
+cd $SUBMITDIR
+# rm -rf /cluster/work/users/beto93/LiNH2
+

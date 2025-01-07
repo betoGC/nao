@@ -1,0 +1,44 @@
+#!/bin/bash
+
+## Setting up account, job name, number of nodes, cores/node, time, and memory
+
+#SBATCH --account=nn4654k
+#SBATCH --job-name=LiOH.gjf
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=00:15:00
+#SBATCH --mem-per-cpu=4GB
+#SBATCH --output=/cluster/home/beto93/logfiles/LiOH.gjf.logfile
+#SBATCH --signal=B:USR1@120
+###################################################################
+
+## Modules for Gaussian and NBO7
+module purge
+module load Gaussian/g16_C.01
+
+## Scratch folder
+if [[ -d "/cluster/work/users/beto93/LiOH.gjf" ]]
+then
+    rm -rf /cluster/work/users/beto93/LiOH.gjf
+fi
+
+mkdir /cluster/work/users/beto93/LiOH.gjf
+
+# Copying input files (also chk, if it exists) to scratch
+
+cd $SUBMITDIR
+cp LiOH.gjf.* /cluster/work/users/beto93/LiOH.gjf/
+cd /cluster/work/users/beto93/LiOH.gjf
+
+# Running the calc with the parallel ib binary from the scratch folder
+
+g16.ib  < LiOH.gjf.gjf > $SUBMITDIR/LiOH.gjf.log
+
+# Recovering the relevant files and cleaning up
+
+formchk LiOH.gjf.chk
+cp LiOH.gjf.47 $SUBMITDIR
+
+cd $SUBMITDIR
+# rm -rf /cluster/work/users/beto93/LiOH.gjf
+

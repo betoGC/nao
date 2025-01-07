@@ -1,0 +1,1991 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /cluster/software/Gaussian/g16_C.01/l1.exe "/cluster/work/users/beto93/LiF/Gau-1553492.inp" -scrdir="/cluster/work/users/beto93/LiF/"
+ Entering Link 1 = /cluster/software/Gaussian/g16_C.01/l1.exe PID=   1553493.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                24-Jul-2024 
+ ******************************************
+ %LindaWorkers=c1-1-ib
+ %NProcShared=4
+ Will use up to    4 processors via shared memory.
+ %mem=25GB
+ %chk=LiF.chk
+ SetLPE:    new flags="-opt 'Tsnet.Node.lindarsharg: ssh'  -nodelist 'c1-1-ib.saga' -env GAUSS_MDEF=3355443200 -env GAUSS_EXEDIR="/cluster/software/Gaussian/g16_C.01/bsd:/cluster/software/Gaussian/g16_C.01""
+ Will use up to    1 processors via Linda.
+ -----------------------------------------------------
+ ##OPT=VeryTight Int=UltraFine RHF/STO-3G Pop=NBO7Read
+ -----------------------------------------------------
+ 1/7=1,18=20,19=15,38=1,163=2/1,3;
+ 2/9=110,12=2,17=6,18=5,40=1/2;
+ 3/6=3,11=1,25=1,30=1,71=1,75=-5,116=1/1,2,3;
+ 4//1;
+ 5/5=2,38=5/2;
+ 6/7=2,8=2,9=2,10=2,28=1,40=2,113=1,114=1,124=2103/1,12;
+ 7//1,2,3,16;
+ 1/7=1,18=20,19=15/3(2);
+ 2/9=110/2;
+ 99//99;
+ 2/9=110/2;
+ 3/6=3,11=1,25=1,30=1,71=1,75=-5,116=1/1,2,3;
+ 4/5=5,16=3,69=1/1;
+ 5/5=2,38=5/2;
+ 7//1,2,3,16;
+ 1/7=1,18=20,19=15/3(-5);
+ 2/9=110/2;
+ 6/7=2,8=2,9=2,10=2,19=2,28=1,40=2,113=1,114=1,124=2103/1,12;
+ 99/9=1/99;
+ -------
+ NBO-LiF
+ -------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ Li                    0.        0.        0. 
+ F                     0.        0.        1.407 
+ 
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Initialization pass.
+                           ----------------------------
+                           !    Initial Parameters    !
+                           ! (Angstroms and Degrees)  !
+ --------------------------                            --------------------------
+ ! Name  Definition              Value          Derivative Info.                !
+ --------------------------------------------------------------------------------
+ ! R1    R(1,2)                  1.407          estimate D2E/DX2                !
+ --------------------------------------------------------------------------------
+ Trust Radius=3.00D-01 FncErr=1.00D-07 GrdErr=1.00D-07 EigMax=2.50D+02 EigMin=1.00D-04
+ Number of steps in this run=     20 maximum allowed number of steps=    100.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000    0.000000
+      2          9           0        0.000000    0.000000    1.407000
+ ---------------------------------------------------------------------
+ Stoichiometry    FLi
+ Framework group  C*V[C*(LiF)]
+ Deg. of freedom     1
+ Full point group                 C*V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000   -1.055250
+      2          9           0        0.000000    0.000000    0.351750
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):           0.0000000          49.8237013          49.8237013
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted cartesian basis functions of A1  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of A2  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B1  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B2  symmetry.
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     2 symmetry adapted basis functions of B2  symmetry.
+    10 basis functions,    30 primitive gaussians,    10 cartesian basis functions
+     6 alpha electrons        6 beta electrons
+       nuclear repulsion energy        10.1547865635 Hartrees.
+ NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+ One-electron integrals computed using PRISM.
+ NBasis=    10 RedAO= T EigKep=  4.09D-01  NBF=     6     0     2     2
+ NBsUse=    10 1.00D-06 EigRej= -1.00D+00 NBFU=     6     0     2     2
+ ExpMin= 4.81D-02 ExpMax= 1.67D+02 ExpMxC= 1.67D+02 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=       500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Petite list used in FoFCou.
+ Initial guess orbital symmetries:
+       Occupied  (SG) (SG) (SG) (SG) (PI) (PI)
+       Virtual   (SG) (PI) (PI) (SG)
+ The electronic state of the initial guess is 1-SG.
+ Keep R1 ints in memory in symmetry-blocked form, NReq=804500.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -105.373081934     A.U. after   10 cycles
+            NFock= 10  Conv=0.16D-08     -V/T= 2.0085
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (SG) (SG) (SG) (SG) (PI) (PI)
+       Virtual   (SG) (PI) (PI) (SG)
+ The electronic state is 1-SG.
+ Alpha  occ. eigenvalues --  -25.82035  -2.33686  -1.34073  -0.40674  -0.36629
+ Alpha  occ. eigenvalues --   -0.36629
+ Alpha virt. eigenvalues --    0.08606   0.24382   0.24382   0.40532
+          Condensed to atoms (all electrons):
+               1          2
+     1  Li   2.511880   0.262701
+     2  F    0.262701   8.962717
+ Mulliken charges:
+               1
+     1  Li   0.225418
+     2  F   -0.225418
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  Li   0.225418
+     2  F   -0.225418
+ Electronic spatial extent (au):  <R**2>=             30.0004
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              0.0000    Y=              0.0000    Z=             -3.1155  Tot=              3.1155
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -7.7819   YY=             -7.7819   ZZ=             -3.3931
+   XY=              0.0000   XZ=              0.0000   YZ=              0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -1.4629   YY=             -1.4629   ZZ=              2.9259
+   XY=              0.0000   XZ=              0.0000   YZ=              0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=              0.0000  YYY=              0.0000  ZZZ=             -1.5731  XYY=              0.0000
+  XXY=              0.0000  XXZ=              1.9486  XZZ=              0.0000  YZZ=              0.0000
+  YYZ=              1.9486  XYZ=              0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=            -13.6564 YYYY=            -13.6564 ZZZZ=            -17.5787 XXXY=              0.0000
+ XXXZ=              0.0000 YYYX=              0.0000 YYYZ=              0.0000 ZZZX=              0.0000
+ ZZZY=              0.0000 XXYY=             -4.5521 XXZZ=             -7.1116 YYZZ=             -7.1116
+ XXYZ=              0.0000 YYXZ=              0.0000 ZZXY=              0.0000
+ N-N= 1.015478656350D+01 E-N=-2.742648558906D+02  KE= 1.044836440238D+02
+ Symmetry A1   KE= 9.381742569308D+01
+ Symmetry A2   KE= 0.000000000000D+00
+ Symmetry B1   KE= 5.333109165342D+00
+ Symmetry B2   KE= 5.333109165342D+00
+ Running external command "gaunbo7 R"
+         input file       "/cluster/work/users/beto93/LiF/Gau-1553493.EIn"
+         output file      "/cluster/work/users/beto93/LiF/Gau-1553493.EOu"
+         message file     "/cluster/work/users/beto93/LiF/Gau-1553493.EMs"
+         fchk file        "/cluster/work/users/beto93/LiF/Gau-1553493.EFC"
+         mat. el file     "/cluster/work/users/beto93/LiF/Gau-1553493.EUF"
+
+ Writing WrtUnf unformatted file "/cluster/work/users/beto93/LiF/Gau-1553493.EUF"
+ Gaussian matrix elements                                         Version   2 NLab=11 Len12L=8 Len4L=8
+ Write SHELL TO ATOM MAP                   from file      0 offset           0 length                   4 to matrix element file.
+ Write SHELL TYPES                         from file      0 offset           0 length                   4 to matrix element file.
+ Write NUMBER OF PRIMITIVES PER SHELL      from file      0 offset           0 length                   4 to matrix element file.
+ Write PRIMITIVE EXPONENTS                 from file      0 offset           0 length                  12 to matrix element file.
+ Write CONTRACTION COEFFICIENTS            from file      0 offset           0 length                  12 to matrix element file.
+ Write P(S=P) CONTRACTION COEFFICIENTS     from file      0 offset           0 length                  12 to matrix element file.
+ Write COORDINATES OF EACH SHELL           from file      0 offset           0 length                  12 to matrix element file.
+ Write BONDS PER ATOM                      from file      0 offset           0 length                   2 to matrix element file.
+ Write BONDED ATOMS                        from file      0 offset           0 length                   2 to matrix element file.
+ Write BOND TYPES                          from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM CHARGE/MULT                   from file      0 offset           0 length                  32 to matrix element file.
+ Write ONIOM ATOM LAYERS                   from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM MODIFIERS                from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM TYPES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK ATOMS                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK CHARGES                  from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK DISTANCES                from file      0 offset           0 length                   8 to matrix element file.
+ Write SYMINF INTS                         from file      0 offset           0 length                  26 to matrix element file.
+ Write ROTTR TO SO                         from file      0 offset           0 length                  12 to matrix element file.
+ Write GAUSSIAN SCALARS                    from file    501 offset           0 to matrix element file.
+ Write OPTIMIZATION FLAGS                  from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER ISO                         from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER SPIN                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZEFFECTIVE                     from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL QUADRUPOLEMOMENT               from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL GFACTOR                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZNUCLEAR                       from file      0 offset           0 length                   2 to matrix element file.
+ Write MULLIKEN CHARGES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write NUCLEAR GRADIENT                    from file  10584 offset           0 length                   6 to matrix element file.
+ Array NUCLEAR FORCE CONSTANTS              on  file  10585 does not exist.
+ Write ELECTRIC DIPOLE MOMENT              from file      0 offset           0 length                   3 to matrix element file.
+ Write NON-ADIABATIC COUPLING              from file  10810 offset           0 length                   6 to matrix element file.
+ Write RED INT COORD DIMS                  from file      0 offset           0 length                   4 to matrix element file.
+ Write RED INT COORD ATOMS                 from file      0 offset           0 length                   4 to matrix element file.
+ Write RED INT COORD VALS                  from file      0 offset           0 length                   1 to matrix element file.
+ Write RED INT COORD IFLAGS                from file      0 offset           0 length                   1 to matrix element file.
+ Write RED INT COORD RFLAGS                from file      0 offset           0 length                   1 to matrix element file.
+ Write RED INT COORD CONSTRAINT            from file      0 offset           0 length                   2 to matrix element file.
+ Write FINITE EM FIELD                     from file  10521 offset           0 length                  35 to matrix element file.
+ Write OVERLAP                             from file  10514 offset           0 length                  55 to matrix element file.
+ Write CORE HAMILTONIAN ALPHA              from file  10515 offset           0 length                  55 to matrix element file.
+ Write CORE HAMILTONIAN BETA               from file  10515 offset          55 length                  55 to matrix element file.
+ Write KINETIC ENERGY                      from file  10516 offset           0 length                  55 to matrix element file.
+ Write ORTHOGONAL BASIS                    from file  10685 offset           0 length                 100 to matrix element file.
+ Write DIPOLE INTEGRALS                    from file  10518 offset           0 length                 165 to matrix element file.
+ Array DIP VEL INTEGRALS                    on  file  10572 does not exist.
+ Array R X DEL INTEGRALS                    on  file  10572 does not exist.
+ Write ALPHA ORBITAL ENERGIES              from file      0 offset           0 length                  10 to matrix element file.
+ Write ALPHA MO COEFFICIENTS               from file  10524 offset           0 length                 100 to matrix element file.
+ Write ALPHA DENSITY MATRIX                from file      0 offset           0 length                  55 to matrix element file.
+ Write ALPHA FOCK MATRIX                   from file  10536 offset           0 length                  55 to matrix element file.
+ Write ENERGY-WEIGHTED DENSITY             from file  10571 offset           0 length                  55 to matrix element file.
+ Write ALPHA SCF DENSITY MATRIX            from file      0 offset           0 length                  55 to matrix element file.
+ No 2e integrals to process.
+ Perform NBO analysis...executing G16NBO...
+
+ *********************************** NBO 7.0 ***********************************
+             N A T U R A L   A T O M I C   O R B I T A L   A N D
+          N A T U R A L   B O N D   O R B I T A L   A N A L Y S I S
+ **************************** Espen Tangen (S101595) ***************************
+  (c) Copyright 1996-2021 Board of Regents of the University of Wisconsin System
+      on behalf of the Theoretical Chemistry Institute.  All rights reserved.
+
+          Cite this program [NBO 7.0.10 (8-Feb-2021)] as:
+
+          NBO 7.0.  E. D. Glendening, J. K. Badenhoop, A. E. Reed,
+          J. E. Carpenter, J. A. Bohmann, C. M. Morales, P. Karafiloglou,
+          C. R. Landis, and F. Weinhold, Theoretical Chemistry Institute,
+          University of Wisconsin, Madison, WI (2018)
+
+       /NPA    / : Natural Population Analysis
+       /AOPNAO / : Print the AO to PNAO transformation
+       /AONAO  / : Print the AO to NAO transformation
+       /AONO   / : Print the NOs in the AO basis
+       /AOMO   / : Print the MOs in the AO basis
+       /BOAO   / : Print the AO bond-order matrix
+       /DMAO   / : Print the AO density matrix
+       /DMPNAO / : Print the PNAO density matrix
+       /DMNAO  / : Print the NAO density matrix
+       /DMMO   / : Print the MO density matrix
+       /SAO    / : Print the AO overlap matrix
+       /SPNAO  / : Print the PNAO overlap matrix
+       /DETAIL / : Write details of NBO search
+       /ARCHIVE/ : Write the archive file to lfn47
+       /AOINFO / : Write AO information to lfn31
+       /FILE   / : Set to LiF
+
+ Filename set to LiF
+
+ Job title: NBO-LiF
+
+
+ MOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)     -0.0002  0.9850 -0.1197  0.1289  0.0000  0.0000 -0.2410  0.0000
+   2. Li 1 (s)     -0.0039  0.0336  0.0505 -0.1179  0.0000  0.0000  0.9140  0.0000
+   3. Li 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.3254  0.0000  0.9592
+   4. Li 1 (py)     0.0000  0.0000  0.0000  0.0000  0.3254  0.0000  0.0000  0.0000
+   5. Li 1 (pz)    -0.0053 -0.0062  0.0579 -0.1277  0.0000  0.0000 -0.4632  0.0000
+   6.  F 2 (s)      0.9946 -0.0135 -0.2579 -0.0271  0.0000  0.0000  0.0145  0.0000
+   7.  F 2 (s)      0.0237  0.0460  0.9840  0.1526  0.0000  0.0000 -0.0739  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.8952  0.0000 -0.4738
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.0000  0.8952  0.0000  0.0000  0.0000
+  10.  F 2 (pz)    -0.0014 -0.0274 -0.0401  0.9681  0.0000  0.0000  0.0625  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000 -0.0838
+   2. Li 1 (s)      0.0000  0.6013
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.9592  0.0000
+   5. Li 1 (pz)     0.0000  1.0417
+   6.  F 2 (s)      0.0000  0.1025
+   7.  F 2 (s)      0.0000 -0.7231
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)    -0.4738  0.0000
+  10.  F 2 (pz)     0.0000  0.2997
+
+
+ NOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      0.1792 -0.0687  0.8999 -0.3929  0.0017 -0.0072  0.1911  0.0964
+   2. Li 1 (s)     -0.0344 -0.0550  0.0589  0.0987  0.0108  0.0062 -0.6892 -0.2919
+   3. Li 1 (px)    -0.0097 -0.0565 -0.0015  0.0051 -0.2258 -0.2271  0.0733 -0.1569
+   4. Li 1 (py)     0.0089 -0.0200  0.0000  0.0024 -0.2279  0.2312  0.5061 -0.7824
+   5. Li 1 (pz)    -0.0424 -0.0553  0.0234  0.1189  0.0114  0.0068  0.5184  0.4978
+   6.  F 2 (s)     -0.6635  0.7504  0.1832 -0.0494 -0.1271 -0.0343  0.0007  0.0195
+   7.  F 2 (s)     -0.5569 -0.7689 -0.1106 -0.2395  0.1278  0.0834 -0.0290 -0.1517
+   8.  F 2 (px)    -0.0268 -0.1555 -0.0042  0.0141 -0.6212 -0.6249 -0.0362  0.0775
+   9.  F 2 (py)     0.0245 -0.0550  0.0000  0.0066 -0.6270  0.6361 -0.2500  0.3865
+  10.  F 2 (pz)     0.1212  0.0922 -0.2998 -0.9084 -0.0300 -0.0169 -0.0146  0.0473
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)     -0.0230 -0.1370
+   2. Li 1 (s)      0.1439  0.7849
+   3. Li 1 (px)     0.9290 -0.1643
+   4. Li 1 (py)    -0.1404  0.1792
+   5. Li 1 (pz)     0.1958  0.8631
+   6.  F 2 (s)      0.0208  0.0995
+   7.  F 2 (s)     -0.1462 -0.6950
+   8.  F 2 (px)    -0.4589  0.0812
+   9.  F 2 (py)     0.0693 -0.0885
+  10.  F 2 (pz)     0.0615  0.2958
+
+
+ AO overlap matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      1.0000  0.2411  0.0000  0.0000  0.0000  0.0007  0.0514  0.0000
+   2. Li 1 (s)      0.2411  1.0000  0.0000  0.0000  0.0000  0.0321  0.3032  0.0000
+   3. Li 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.1590
+   4. Li 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0544  0.4513  0.0000
+   6.  F 2 (s)      0.0007  0.0321  0.0000  0.0000  0.0544  1.0000  0.2380  0.0000
+   7.  F 2 (s)      0.0514  0.3032  0.0000  0.0000  0.4513  0.2380  1.0000  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)    -0.0828 -0.0979  0.0000  0.0000 -0.1034  0.0000  0.0000  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000 -0.0828
+   2. Li 1 (s)      0.0000 -0.0979
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.1590  0.0000
+   5. Li 1 (pz)     0.0000 -0.1034
+   6.  F 2 (s)      0.0000  0.0000
+   7.  F 2 (s)      0.0000  0.0000
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.0000  0.0000
+  10.  F 2 (pz)     0.0000  1.0000
+
+
+ AO bond-order matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      2.0023  0.0236  0.0000  0.0000 -0.0590  0.0277 -0.1056  0.0000
+   2. Li 1 (s)      0.0236  0.0352  0.0000  0.0000  0.0356 -0.0282  0.0664  0.0000
+   3. Li 1 (px)     0.0000  0.0000  0.2118  0.0000  0.0000  0.0000  0.0000  0.5826
+   4. Li 1 (py)     0.0000  0.0000  0.0000  0.2118  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)    -0.0590  0.0356  0.0000  0.0000  0.0394 -0.0333  0.0742  0.0000
+   6.  F 2 (s)      0.0277 -0.0282  0.0000  0.0000 -0.0333  2.1132 -0.4700  0.0000
+   7.  F 2 (s)     -0.1056  0.0664  0.0000  0.0000  0.0742 -0.4700  1.9884  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.5826  0.0000  0.0000  0.0000  0.0000  1.6029
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.5826  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)     0.2052 -0.2341  0.0000  0.0000 -0.2515 -0.0338  0.2141  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000  0.2052
+   2. Li 1 (s)      0.0000 -0.2341
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.5826  0.0000
+   5. Li 1 (pz)     0.0000 -0.2515
+   6.  F 2 (s)      0.0000 -0.0338
+   7.  F 2 (s)      0.0000  0.2141
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.6029  0.0000
+  10.  F 2 (pz)     0.0000  1.8790
+
+
+ AO density matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      1.9983  0.5317  0.0000  0.0000 -0.0286  0.0015  0.1018  0.0000
+   2. Li 1 (s)      0.5317  0.4039  0.0000  0.0000  0.3681  0.0584  0.6647  0.0000
+   3. Li 1 (px)     0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000  0.8859
+   4. Li 1 (py)     0.0000  0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)    -0.0286  0.3681  0.0000  0.0000  0.5433  0.1010  0.9576  0.0000
+   6.  F 2 (s)      0.0015  0.0584  0.0000  0.0000  0.1010  1.9999  0.4767  0.0000
+   7.  F 2 (s)      0.1018  0.6647  0.0000  0.0000  0.9576  0.4767  1.9945  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000  1.7936
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)    -0.1630 -0.3574  0.0000  0.0000 -0.3591 -0.0019  0.0154  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000 -0.1630
+   2. Li 1 (s)      0.0000 -0.3574
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.8859  0.0000
+   5. Li 1 (pz)     0.0000 -0.3591
+   6.  F 2 (s)      0.0000 -0.0019
+   7.  F 2 (s)      0.0000  0.0154
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.7936  0.0000
+  10.  F 2 (pz)     0.0000  1.9574
+
+
+ MO density matrix:
+
+      MO     1       2       3       4       5       6       7       8       9
+     ---- ------  ------  ------  ------  ------  ------  ------  ------  ------
+   1.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+      MO    10
+     ---- ------
+   1.     0.0000
+   2.     0.0000
+   3.     0.0000
+   4.     0.0000
+   5.     0.0000
+   6.     0.0000
+   7.     0.0000
+   8.     0.0000
+   9.     0.0000
+  10.     0.0000
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies
+
+  NAO Atom No lang   Type(AO)    Occupancy      Energy
+ -------------------------------------------------------
+   1   Li  1  s      Cor( 1s)     1.99979      -2.33368
+   2   Li  1  s      Val( 2s)     0.03212       0.11991
+   3   Li  1  px     Ryd( 2p)     0.20641       0.18086
+   4   Li  1  py     Ryd( 2p)     0.20641       0.18086
+   5   Li  1  pz     Ryd( 2p)     0.02990       0.33831
+
+   6    F  2  s      Cor( 1s)     2.00000     -25.60349
+   7    F  2  s      Val( 2s)     1.98573      -1.54262
+   8    F  2  px     Val( 2p)     1.79359      -0.30333
+   9    F  2  py     Val( 2p)     1.79359      -0.30333
+  10    F  2  pz     Val( 2p)     1.95247      -0.39172
+
+
+ Summary of Natural Population Analysis:
+
+                                     Natural Population
+             Natural    ---------------------------------------------
+  Atom No    Charge        Core      Valence    Rydberg      Total
+ --------------------------------------------------------------------
+   Li  1    0.52538      1.99979     0.03212    0.44271     2.47462
+    F  2   -0.52538      2.00000     7.52538    0.00000     9.52538
+ ====================================================================
+ * Total *  0.00000      3.99979     7.55750    0.44271    12.00000
+
+                                 Natural Population
+ ---------------------------------------------------------
+   Core                       3.99979 ( 99.9946% of    4)
+   Valence                    7.55750 ( 94.4688% of    8)
+   Natural Minimal Basis     11.55729 ( 96.3108% of   12)
+   Natural Rydberg Basis      0.44271 (  3.6892% of   12)
+ ---------------------------------------------------------
+
+    Atom No         Natural Electron Configuration
+ ----------------------------------------------------------------------------
+     Li  1      [core]2s( 0.03)2p( 0.44)
+      F  2      [core]2s( 1.99)2p( 5.54)
+
+
+ PNAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      0.9921 -0.2782  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Li 1 (s)      0.0307  1.0299  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Li 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   6.  F 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.9657 -0.3569  0.0000
+   7.  F 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.1168  1.0229  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000  0.0000
+   2. Li 1 (s)      0.0000  0.0000
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000
+   6.  F 2 (s)      0.0000  0.0000
+   7.  F 2 (s)      0.0000  0.0000
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.0000  0.0000
+  10.  F 2 (pz)     0.0000  1.0000
+
+
+ PNAO overlap matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1( 1s )    1.0000  0.0000  0.0000  0.0000  0.0000  0.0087  0.0611  0.0000
+   2. Li 1( 2s )    0.0000  1.0000  0.0000  0.0000  0.0000  0.0666  0.2931  0.0000
+   3. Li 1( 2px)    0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.1590
+   4. Li 1( 2py)    0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Li 1( 2pz)    0.0000  0.0000  0.0000  0.0000  1.0000  0.1053  0.4422  0.0000
+   6.  F 2( 1s )    0.0087  0.0666  0.0000  0.0000  0.1053  1.0000  0.0000  0.0000
+   7.  F 2( 2s )    0.0611  0.2931  0.0000  0.0000  0.4422  0.0000  1.0000  0.0000
+   8.  F 2( 2px)    0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2( 2py)    0.0000  0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000
+  10.  F 2( 2pz)   -0.0852 -0.0778  0.0000  0.0000 -0.1034  0.0000  0.0000  0.0000
+
+           NAO         9      10
+      ------------ ------- -------
+   1. Li 1( 1s )    0.0000 -0.0852
+   2. Li 1( 2s )    0.0000 -0.0778
+   3. Li 1( 2px)    0.0000  0.0000
+   4. Li 1( 2py)    0.1590  0.0000
+   5. Li 1( 2pz)    0.0000 -0.1034
+   6.  F 2( 1s )    0.0000  0.0000
+   7.  F 2( 2s )    0.0000  0.0000
+   8.  F 2( 2px)    0.0000  0.0000
+   9.  F 2( 2py)    1.0000  0.0000
+  10.  F 2( 2pz)    0.0000  1.0000
+
+
+ PNAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1( 1s )    1.9998  0.0000  0.0000  0.0000 -0.0171  0.0173  0.1231  0.0000
+   2. Li 1( 2s )    0.0000  0.2785  0.0000  0.0000  0.3871  0.1344  0.6500  0.0000
+   3. Li 1( 2px)    0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000  0.8859
+   4. Li 1( 2py)    0.0000  0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000
+   5. Li 1( 2pz)   -0.0171  0.3871  0.0000  0.0000  0.5433  0.2094  0.9435  0.0000
+   6.  F 2( 1s )    0.0173  0.1344  0.0000  0.0000  0.2094  2.0000  0.0000  0.0000
+   7.  F 2( 2s )    0.1231  0.6500  0.0000  0.0000  0.9435  0.0000  1.9937  0.0000
+   8.  F 2( 2px)    0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000  1.7936
+   9.  F 2( 2py)    0.0000  0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000
+  10.  F 2( 2pz)   -0.1727 -0.3228  0.0000  0.0000 -0.3591  0.0000  0.0164  0.0000
+
+           NAO         9      10
+      ------------ ------- -------
+   1. Li 1( 1s )    0.0000 -0.1727
+   2. Li 1( 2s )    0.0000 -0.3228
+   3. Li 1( 2px)    0.0000  0.0000
+   4. Li 1( 2py)    0.8859  0.0000
+   5. Li 1( 2pz)    0.0000 -0.3591
+   6.  F 2( 1s )    0.0000  0.0000
+   7.  F 2( 2s )    0.0000  0.0164
+   8.  F 2( 2px)    0.0000  0.0000
+   9.  F 2( 2py)    1.7936  0.0000
+  10.  F 2( 2pz)    0.0000  1.9574
+
+
+ NAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      0.9922 -0.2692  0.0000  0.0000 -0.0045 -0.0043 -0.0512  0.0000
+   2. Li 1 (s)      0.0307  1.0838  0.0000  0.0000  0.1922 -0.0001 -0.0413  0.0000
+   3. Li 1 (px)     0.0000  0.0000  1.0129  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000  0.0000  1.0129  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.1487  0.0000  0.0000  0.0000
+   6.  F 2 (s)     -0.0042  0.0298  0.0000  0.0000  0.0726  0.9658 -0.3584  0.0000
+   7.  F 2 (s)     -0.0005 -0.2880  0.0000  0.0000 -0.5937  0.1169  1.0361  0.0000
+   8.  F 2 (px)     0.0000  0.0000 -0.1611  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2 (py)     0.0000  0.0000  0.0000 -0.1611  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)     0.0000  0.0734  0.0000  0.0000  0.1372  0.0000 -0.0054  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000  0.0822
+   2. Li 1 (s)      0.0000  0.0140
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000
+   6.  F 2 (s)      0.0000  0.0006
+   7.  F 2 (s)      0.0000 -0.0061
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.0000  0.0000
+  10.  F 2 (pz)     0.0000  1.0045
+
+
+ NAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1( 1s )    1.9998 -0.0004  0.0000  0.0000 -0.0205  0.0000  0.0010  0.0000
+   2. Li 1( 2s )   -0.0004  0.0321  0.0000  0.0000  0.0300  0.0013  0.1422  0.0000
+   3. Li 1( 2px)    0.0000  0.0000  0.2064  0.0000  0.0000  0.0000  0.0000  0.6084
+   4. Li 1( 2py)    0.0000  0.0000  0.0000  0.2064  0.0000  0.0000  0.0000  0.0000
+   5. Li 1( 2pz)   -0.0205  0.0300  0.0000  0.0000  0.0299 -0.0010  0.0866  0.0000
+   6.  F 2( 1s )    0.0000  0.0013  0.0000  0.0000 -0.0010  2.0000  0.0000  0.0000
+   7.  F 2( 2s )    0.0010  0.1422  0.0000  0.0000  0.0866  0.0000  1.9857  0.0000
+   8.  F 2( 2px)    0.0000  0.0000  0.6084  0.0000  0.0000  0.0000  0.0000  1.7936
+   9.  F 2( 2py)    0.0000  0.0000  0.0000  0.6084  0.0000  0.0000  0.0000  0.0000
+  10.  F 2( 2pz)   -0.0024 -0.2052  0.0000  0.0000 -0.2238  0.0000  0.0250  0.0000
+
+           NAO         9      10
+      ------------ ------- -------
+   1. Li 1( 1s )    0.0000 -0.0024
+   2. Li 1( 2s )    0.0000 -0.2052
+   3. Li 1( 2px)    0.0000  0.0000
+   4. Li 1( 2py)    0.6084  0.0000
+   5. Li 1( 2pz)    0.0000 -0.2238
+   6.  F 2( 1s )    0.0000  0.0000
+   7.  F 2( 2s )    0.0000  0.0250
+   8.  F 2( 2px)    0.0000  0.0000
+   9.  F 2( 2py)    1.7936  0.0000
+  10.  F 2( 2pz)    0.0000  1.9525
+
+
+ NATURAL BOND ORBITAL ANALYSIS:
+
+ Initiate 2-center NBO search using THRESH = 1.900 and PRJTHR = 0.300
+
+ Search of NAO DM block for core orbitals on atom:   1
+      Eigenvector ( 1) has occupancy 1.99979
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   2
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Core orbitals projected from the NAO density matrix
+       8.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.900
+       1.999 1.939 1.794 1.794 0.000
+      Eigenvector ( 1) has occupancy 1.99917
+            0.0000 0.8812 0.0000 0.0000 0.4727
+      Eigenvector ( 2) has occupancy 1.93903
+            0.0000-0.4727 0.0000 0.0000 0.8812
+      2 hybrids on atom 2 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000
+      0 hybrids eliminated in 1 pass
+      2 hybrids moved from prospective to permanent list
+
+ NHOs of 1-center eigenvectors projected from the NAO density matrix
+       4.062 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 0.061 0.001 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.3213 0.0002 0.0000 0.0000 0.0000 0.9470
+            0.0007 0.0000
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.0000-0.0002 0.3213 0.0000 0.0000 0.0000-0.0007
+            0.9470 0.0000
+      2 hybrids on atom 1 stashed in prospective list
+      2 hybrids on atom 2 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000 1.000 1.000
+      0 hybrids eliminated in 1 pass
+      4 hybrids moved from prospective to permanent list
+
+ NHOs of 2-center eigenvectors projected from the NAO density matrix
+       0.062 electrons remain in the fully projected matrix
+
+ Search of NHO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.061 0.001 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.99979
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    1. Label:CR ( 1)   1
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.999 1.939 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    2. Label:CR ( 1)   2
+      Eigenvector ( 2) has occupancy 1.99917
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    3. Label:LP ( 1)   2
+      Eigenvector ( 3) has occupancy 1.93903
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:    4. Label:LP ( 2)   2
+        3 eigenvector(s) stashed in permanent list
+
+  1-center NBOs projected from the NHO density matrix
+       4.062 electrons remain (>1.900); search continues
+
+ Search of NHO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000 0.9470
+      Occupancy is 2.000 after deleting minor hybrid components
+            0.0000 0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000 0.9470
+           NBO accepted:    5. Label:BD ( 1)   1   2
+      Occupancy is 0.000 for antibonding component
+            0.0000 0.0000 0.9470 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000-0.3213
+           NBO accepted:    6. Label:BD*( 1)   1   2
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.9470 0.0000
+      Occupancy is 2.000 after deleting minor hybrid components
+            0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.9470 0.0000
+           NBO accepted:    7. Label:BD ( 2)   1   2
+      Occupancy is 0.000 for antibonding component
+            0.0000 0.9470 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+           -0.3213 0.0000
+           NBO accepted:    8. Label:BD*( 2)   1   2
+        4 eigenvector(s) stashed in permanent list
+
+  2-center NBOs projected from the NHO density matrix
+       0.062 electrons remain in the fully projected matrix
+
+                            Occupancies       Lewis Structure    Low   High
+         Max    Occ     -------------------  -----------------   occ   occ
+  Cycle  Ctr   Thresh    Lewis   non-Lewis     CR  BD  nC  LP    (L)   (NL)
+ ============================================================================
+    1     2     1.90    11.93798   0.06202      2   2   0   2     0      0
+ ----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ -------------------------------------------------------
+   Core                      3.99979 ( 99.995% of   4)
+   Valence Lewis             7.93820 ( 99.227% of   8)
+  ==================      =============================
+   Total Lewis              11.93798 ( 99.483% of  12)
+  -----------------------------------------------------
+   Valence non-Lewis         0.00000 (  0.000% of  12)
+   Rydberg non-Lewis         0.06202 (  0.517% of  12)
+  ==================      =============================
+   Total non-Lewis           0.06202 (  0.517% of  12)
+ -------------------------------------------------------
+
+
+     (Occupancy)   Bond orbital / Coefficients / Hybrids
+ ------------------ Lewis ------------------------------------------------------
+   1. (1.99979) CR ( 1)Li  1            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   2. (2.00000) CR ( 1) F  2            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   3. (1.99917) LP ( 1) F  2            s( 77.66%)p 0.29( 22.34%)
+                                         0.0000  0.8812  0.0000  0.0000  0.4727
+   4. (1.93903) LP ( 2) F  2            s( 22.34%)p 3.48( 77.66%)
+                                         0.0000  0.4727  0.0000  0.0000 -0.8812
+   5. (2.00000) BD ( 1)Li  1- F  2
+               ( 10.32%)   0.3213*Li  1 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000 -0.0007  1.0000  0.0000
+               ( 89.68%)   0.9470* F  2 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000 -0.0007  1.0000  0.0000
+   6. (2.00000) BD ( 2)Li  1- F  2
+               ( 10.32%)   0.3213*Li  1 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  1.0000  0.0007  0.0000
+               ( 89.68%)   0.9470* F  2 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  1.0000  0.0007  0.0000
+ ---------------- non-Lewis ----------------------------------------------------
+   7. (0.00000) BD*( 1)Li  1- F  2
+               ( 89.68%)   0.9470*Li  1 s(  0.00%)p 1.00(100.00%)
+               ( 10.32%)  -0.3213* F  2 s(  0.00%)p 1.00(100.00%)
+   8. (0.00000) BD*( 2)Li  1- F  2
+               ( 89.68%)   0.9470*Li  1 s(  0.00%)p 1.00(100.00%)
+               ( 10.32%)  -0.3213* F  2 s(  0.00%)p 1.00(100.00%)
+   9. (0.06108) RY ( 1)Li  1            s( 51.85%)p 0.93( 48.15%)
+                                         0.0000  0.7201  0.0000  0.0000  0.6939
+  10. (0.00094) RY ( 2)Li  1            s( 48.15%)p 1.08( 51.85%)
+                                         0.0000  0.6939  0.0000  0.0000 -0.7201
+
+
+ NHO DIRECTIONALITY AND BOND BENDING (deviation from line of nuclear centers at
+                                      the position of maximum hybrid amplitude)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    p- or d-character  > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                        Line of Centers        Hybrid 1             Hybrid 2
+                        ---------------  -------------------  ------------------
+           NBO            Theta   Phi    Theta   Phi    Dev   Theta   Phi    Dev
+ ===============================================================================
+   4. LP ( 2) F  2          --     --    180.0    0.0   --      --     --    --
+   5. BD ( 1)Li  1- F  2    0.0    0.0    90.8   90.0  90.8    90.0   90.0  90.0
+   6. BD ( 2)Li  1- F  2    0.0    0.0    90.8  180.0  90.8    90.0  180.0  90.0
+
+
+ SECOND ORDER PERTURBATION THEORY ANALYSIS OF FOCK MATRIX IN NBO BASIS
+
+     Threshold for printing:   0.50 kcal/mol
+                                                          E(2) E(NL)-E(L) F(L,NL)
+      Donor (L) NBO              Acceptor (NL) NBO      kcal/mol   a.u.    a.u.
+ ===============================================================================
+
+ within unit  1
+    2. CR ( 1) F  2             9. RY ( 1)Li  1            1.64   25.93   0.184
+    3. LP ( 1) F  2             9. RY ( 1)Li  1            5.81    1.58   0.086
+    3. LP ( 1) F  2            10. RY ( 2)Li  1            0.66    1.39   0.027
+    4. LP ( 2) F  2             9. RY ( 1)Li  1           41.89    1.00   0.183
+
+
+ NATURAL BOND ORBITALS (Summary):
+
+                                                     Principal Delocalizations
+           NBO                 Occupancy    Energy   (geminal,vicinal,remote)
+ ===============================================================================
+ Molecular unit  1  (FLi)
+ ------ Lewis --------------------------------------
+    1. CR ( 1)Li  1             1.99979    -2.33368
+    2. CR ( 1) F  2             2.00000   -25.60349  9(v)
+    3. LP ( 1) F  2             1.99917    -1.25679  9(v),10(v)
+    4. LP ( 2) F  2             1.93903    -0.67754  9(v)
+    5. BD ( 1)Li  1- F  2       2.00000    -0.36629
+    6. BD ( 2)Li  1- F  2       2.00000    -0.36629
+ ------ non-Lewis ----------------------------------
+    7. BD*( 1)Li  1- F  2       0.00000     0.24382
+    8. BD*( 2)Li  1- F  2       0.00000     0.24382
+    9. RY ( 1)Li  1             0.06108     0.32597
+   10. RY ( 2)Li  1             0.00094     0.13225
+          -------------------------------
+                 Total Lewis   11.93798  ( 99.4832%)
+           Valence non-Lewis    0.00000  (  0.0000%)
+           Rydberg non-Lewis    0.06202  (  0.5168%)
+          -------------------------------
+               Total unit  1   12.00000  (100.0000%)
+              Charge unit  1    0.00000
+
+ $CHOOSE
+   LONE 2 2 END
+   BOND D 1 2 END
+ $END
+
+ NBO analysis completed in 0.13 CPU seconds (1 wall second)
+ Maximum scratch memory used by NBO was 221550 words (1.69 MB)
+ Maximum scratch memory used by G16NBO was 8259 words (0.06 MB)
+
+ Opening RunExU unformatted file "/cluster/work/users/beto93/LiF/Gau-1553493.EUF"
+ Read unf file /cluster/work/users/beto93/LiF/Gau-1553493.EUF:
+ Label Gaussian matrix elements                                         IVers= 2 NLab= 2 Version=ES64L-G16RevC.01
+ Title NBO-LiF                                                         
+ NAtoms=     2 NBasis=    10 NBsUse=    10 ICharg=     0 Multip=     1 NE=    12 Len12L=8 Len4L=8 IOpCl= 0 ICGU=111
+ GAUSSIAN SCALARS                    NI= 1 NR= 1 NTot=       1 LenBuf=    2 NRI=1 N=    1000
+ NPA CHARGES                         NI= 0 NR= 1 NTot=       2 LenBuf= 4000 NRI=1 N=       2
+ Recovered energy= -105.373081934     dipole=      0.000000000000      0.000000000000     -1.225735448300
+ Calling FoFJK, ICntrl=      2127 FMM=F ISym2X=1 I1Cent= 0 IOpClX= 0 NMat=1 NMatS=1 NMatT=0.
+ ***** Axes restored to original set *****
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        3          -0.000000000   -0.000000000   -0.000015064
+      2        9          -0.000000000   -0.000000000    0.000015064
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.000015064 RMS     0.000008697
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ FormGI is forming the generalized inverse of G from B-inverse, IUseBI=4.
+ Internal  Forces:  Max     0.000015064 RMS     0.000015064
+ Search for a local minimum.
+ Step number   1 out of a maximum of   20
+ All quantities printed in internal units (Hartrees-Bohrs-Radians)
+ Mixed Optimization -- En-DIIS/RFO-DIIS
+ Second derivative matrix not updated -- first step.
+ The second derivative matrix:
+                          R1
+           R1           0.44480
+ ITU=  0
+     Eigenvalues ---    0.44480
+ RFO step:  Lambda=-5.10150977D-10 EMin= 4.44798691D-01
+ Linear search not attempted -- first point.
+ Iteration  1 RMS(Cart)=  0.00002395 RMS(Int)=  0.00000000
+ Iteration  2 RMS(Cart)=  0.00000000 RMS(Int)=  0.00000000
+ ClnCor:  largest displacement from symmetrization is 0.00D+00 for atom     0.
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.65884   0.00002   0.00000   0.00003   0.00003   2.65888
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.000015     0.000002     NO 
+ RMS     Force            0.000015     0.000001     NO 
+ Maximum Displacement     0.000017     0.000006     NO 
+ RMS     Displacement     0.000024     0.000004     NO 
+ Predicted change in Energy=-2.550755D-10
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000   -0.000009
+      2          9           0        0.000000    0.000000    1.407009
+ ---------------------------------------------------------------------
+ Stoichiometry    FLi
+ Framework group  C*V[C*(LiF)]
+ Deg. of freedom     1
+ Full point group                 C*V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000   -1.055263
+      2          9           0        0.000000    0.000000    0.351754
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):           0.0000000          49.8224321          49.8224321
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted cartesian basis functions of A1  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of A2  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B1  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B2  symmetry.
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     2 symmetry adapted basis functions of B2  symmetry.
+    10 basis functions,    30 primitive gaussians,    10 cartesian basis functions
+     6 alpha electrons        6 beta electrons
+       nuclear repulsion energy        10.1546572214 Hartrees.
+ NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+ One-electron integrals computed using PRISM.
+ NBasis=    10 RedAO= T EigKep=  4.09D-01  NBF=     6     0     2     2
+ NBsUse=    10 1.00D-06 EigRej= -1.00D+00 NBFU=     6     0     2     2
+ Initial guess from the checkpoint file:  "LiF.chk"
+ B after Tr=     0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (SG) (SG) (SG) (SG) (PI) (PI)
+       Virtual   (SG) (PI) (PI) (SG)
+ Keep R1 ints in memory in symmetry-blocked form, NReq=804500.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -105.373081935     A.U. after    5 cycles
+            NFock=  5  Conv=0.87D-08     -V/T= 2.0085
+ Calling FoFJK, ICntrl=      2127 FMM=F ISym2X=1 I1Cent= 0 IOpClX= 0 NMat=1 NMatS=1 NMatT=0.
+ ***** Axes restored to original set *****
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        3          -0.000000000   -0.000000000   -0.000003989
+      2        9          -0.000000000   -0.000000000    0.000003989
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.000003989 RMS     0.000002303
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Using GEDIIS/GDIIS optimizer.
+ Internal  Forces:  Max     0.000003989 RMS     0.000003989
+ Search for a local minimum.
+ Step number   2 out of a maximum of   20
+ All quantities printed in internal units (Hartrees-Bohrs-Radians)
+ Mixed Optimization -- En-DIIS/RFO-DIIS
+ Swapping is turned off.
+ Update second derivatives using D2CorX and points    1    2
+ DE= -3.23D-10 DEPred=-2.55D-10 R= 1.27D+00
+ Trust test= 1.27D+00 RLast= 3.39D-05 DXMaxT set to 3.00D-01
+ The second derivative matrix:
+                          R1
+           R1           0.32702
+ ITU=  0  0
+     Eigenvalues ---    0.32702
+ En-DIIS/RFO-DIIS/Sim-DIIS IScMMF=       -3 using points:     2    1
+ RFO step:  Lambda=-4.86496954D-11.
+ DIIS inversion failure, remove point   2.
+ Use linear search instead of GDIIS.
+ RFO step:  Lambda= 0.00000000D+00 EMin= 3.27021638D-01
+ Quartic linear search produced a step of  0.35927.
+ Iteration  1 RMS(Cart)=  0.00000860 RMS(Int)=  0.00000000
+ Iteration  2 RMS(Cart)=  0.00000000 RMS(Int)=  0.00000000
+ ClnCor:  largest displacement from symmetrization is 0.00D+00 for atom     0.
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.65888   0.00000   0.00001  -0.00000   0.00001   2.65889
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.000004     0.000002     NO 
+ RMS     Force            0.000004     0.000001     NO 
+ Maximum Displacement     0.000006     0.000006     NO 
+ RMS     Displacement     0.000009     0.000004     NO 
+ Predicted change in Energy=-2.432470D-11
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000   -0.000012
+      2          9           0        0.000000    0.000000    1.407012
+ ---------------------------------------------------------------------
+ Stoichiometry    FLi
+ Framework group  C*V[C*(LiF)]
+ Deg. of freedom     1
+ Full point group                 C*V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000   -1.055268
+      2          9           0        0.000000    0.000000    0.351756
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):           0.0000000          49.8219761          49.8219761
+ Standard basis: STO-3G (5D, 7F)
+ There are     6 symmetry adapted cartesian basis functions of A1  symmetry.
+ There are     0 symmetry adapted cartesian basis functions of A2  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B1  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B2  symmetry.
+ There are     6 symmetry adapted basis functions of A1  symmetry.
+ There are     0 symmetry adapted basis functions of A2  symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     2 symmetry adapted basis functions of B2  symmetry.
+    10 basis functions,    30 primitive gaussians,    10 cartesian basis functions
+     6 alpha electrons        6 beta electrons
+       nuclear repulsion energy        10.1546107531 Hartrees.
+ NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+ One-electron integrals computed using PRISM.
+ NBasis=    10 RedAO= T EigKep=  4.09D-01  NBF=     6     0     2     2
+ NBsUse=    10 1.00D-06 EigRej= -1.00D+00 NBFU=     6     0     2     2
+ Initial guess from the checkpoint file:  "LiF.chk"
+ B after Tr=     0.000000    0.000000    0.000000
+         Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+ Initial guess orbital symmetries:
+       Occupied  (SG) (SG) (SG) (SG) (PI) (PI)
+       Virtual   (SG) (PI) (PI) (SG)
+ Keep R1 ints in memory in symmetry-blocked form, NReq=804500.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -105.373081935     A.U. after    5 cycles
+            NFock=  5  Conv=0.31D-08     -V/T= 2.0085
+ Calling FoFJK, ICntrl=      2127 FMM=F ISym2X=1 I1Cent= 0 IOpClX= 0 NMat=1 NMatS=1 NMatT=0.
+ ***** Axes restored to original set *****
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        3          -0.000000000   -0.000000000   -0.000000011
+      2        9          -0.000000000   -0.000000000    0.000000011
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.000000011 RMS     0.000000006
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Using GEDIIS/GDIIS optimizer.
+ Internal  Forces:  Max     0.000000011 RMS     0.000000011
+ Search for a local minimum.
+ Step number   3 out of a maximum of   20
+ All quantities printed in internal units (Hartrees-Bohrs-Radians)
+ Mixed Optimization -- En-DIIS/RFO-DIIS
+ Swapping is turned off.
+ Update second derivatives using D2CorX and points    2    3
+ DE= -2.43D-11 DEPred=-2.43D-11 R= 9.98D-01
+ Trust test= 9.98D-01 RLast= 1.22D-05 DXMaxT set to 3.00D-01
+ The second derivative matrix:
+                          R1
+           R1           0.32691
+ ITU=  0  0
+     Eigenvalues ---    0.32691
+ En-DIIS/RFO-DIIS/Sim-DIIS IScMMF=       -3 using points:     3    2
+ RFO step:  Lambda=-3.60822483D-16.
+ DIIS inversion failure, remove point   2.
+ Use linear search instead of GDIIS.
+ RFO step:  Lambda=-3.60822483D-16 EMin= 3.26911366D-01
+ Skip linear search -- no minimum in search direction.
+ Iteration  1 RMS(Cart)=  0.00000002 RMS(Int)=  0.00000000
+ ClnCor:  largest displacement from symmetrization is 0.00D+00 for atom     0.
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.65889   0.00000   0.00000   0.00000   0.00000   2.65889
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.000000     0.000002     YES
+ RMS     Force            0.000000     0.000001     YES
+ Maximum Displacement     0.000000     0.000006     YES
+ RMS     Displacement     0.000000     0.000004     YES
+ Predicted change in Energy=-1.871033D-16
+ Optimization completed.
+    -- Stationary point found.
+                           ----------------------------
+                           !   Optimized Parameters   !
+                           ! (Angstroms and Degrees)  !
+ --------------------------                            --------------------------
+ ! Name  Definition              Value          Derivative Info.                !
+ --------------------------------------------------------------------------------
+ ! R1    R(1,2)                  1.407          -DE/DX =    0.0                 !
+ --------------------------------------------------------------------------------
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000   -0.000012
+      2          9           0        0.000000    0.000000    1.407012
+ ---------------------------------------------------------------------
+ Stoichiometry    FLi
+ Framework group  C*V[C*(LiF)]
+ Deg. of freedom     1
+ Full point group                 C*V     NOp   4
+ Largest Abelian subgroup         C2V     NOp   4
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          3           0        0.000000    0.000000   -1.055268
+      2          9           0        0.000000    0.000000    0.351756
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):           0.0000000          49.8219761          49.8219761
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Orbital symmetries:
+       Occupied  (SG) (SG) (SG) (SG) (PI) (PI)
+       Virtual   (SG) (PI) (PI) (SG)
+ The electronic state is 1-SG.
+ Alpha  occ. eigenvalues --  -25.82034  -2.33686  -1.34072  -0.40674  -0.36629
+ Alpha  occ. eigenvalues --   -0.36629
+ Alpha virt. eigenvalues --    0.08606   0.24382   0.24382   0.40532
+          Condensed to atoms (all electrons):
+               1          2
+     1  Li   2.511882   0.262700
+     2  F    0.262700   8.962719
+ Mulliken charges:
+               1
+     1  Li   0.225419
+     2  F   -0.225419
+ Sum of Mulliken charges =   0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  Li   0.225419
+     2  F   -0.225419
+ Electronic spatial extent (au):  <R**2>=             30.0008
+ Charge=              0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=              0.0000    Y=              0.0000    Z=             -3.1156  Tot=              3.1156
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -7.7819   YY=             -7.7819   ZZ=             -3.3930
+   XY=              0.0000   XZ=              0.0000   YZ=              0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -1.4630   YY=             -1.4630   ZZ=              2.9260
+   XY=              0.0000   XZ=              0.0000   YZ=              0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=              0.0000  YYY=              0.0000  ZZZ=             -1.5734  XYY=              0.0000
+  XXY=              0.0000  XXZ=              1.9486  XZZ=              0.0000  YZZ=              0.0000
+  YYZ=              1.9486  XYZ=              0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=            -13.6564 YYYY=            -13.6564 ZZZZ=            -17.5788 XXXY=              0.0000
+ XXXZ=              0.0000 YYYX=              0.0000 YYYZ=              0.0000 ZZZX=              0.0000
+ ZZZY=              0.0000 XXYY=             -4.5521 XXZZ=             -7.1117 YYZZ=             -7.1117
+ XXYZ=              0.0000 YYXZ=              0.0000 ZZXY=              0.0000
+ N-N= 1.015461075306D+01 E-N=-2.742645354584D+02  KE= 1.044836313581D+02
+ Symmetry A1   KE= 9.381736579282D+01
+ Symmetry A2   KE= 0.000000000000D+00
+ Symmetry B1   KE= 5.333132782663D+00
+ Symmetry B2   KE= 5.333132782663D+00
+ Running external command "gaunbo7 R"
+         input file       "/cluster/work/users/beto93/LiF/Gau-1553493.EIn"
+         output file      "/cluster/work/users/beto93/LiF/Gau-1553493.EOu"
+         message file     "/cluster/work/users/beto93/LiF/Gau-1553493.EMs"
+         fchk file        "/cluster/work/users/beto93/LiF/Gau-1553493.EFC"
+         mat. el file     "/cluster/work/users/beto93/LiF/Gau-1553493.EUF"
+
+ Writing WrtUnf unformatted file "/cluster/work/users/beto93/LiF/Gau-1553493.EUF"
+ Gaussian matrix elements                                         Version   2 NLab=11 Len12L=8 Len4L=8
+ Write SHELL TO ATOM MAP                   from file      0 offset           0 length                   4 to matrix element file.
+ Write SHELL TYPES                         from file      0 offset           0 length                   4 to matrix element file.
+ Write NUMBER OF PRIMITIVES PER SHELL      from file      0 offset           0 length                   4 to matrix element file.
+ Write PRIMITIVE EXPONENTS                 from file      0 offset           0 length                  12 to matrix element file.
+ Write CONTRACTION COEFFICIENTS            from file      0 offset           0 length                  12 to matrix element file.
+ Write P(S=P) CONTRACTION COEFFICIENTS     from file      0 offset           0 length                  12 to matrix element file.
+ Write COORDINATES OF EACH SHELL           from file      0 offset           0 length                  12 to matrix element file.
+ Write BONDS PER ATOM                      from file      0 offset           0 length                   2 to matrix element file.
+ Write BONDED ATOMS                        from file      0 offset           0 length                   2 to matrix element file.
+ Write BOND TYPES                          from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM CHARGE/MULT                   from file      0 offset           0 length                  32 to matrix element file.
+ Write ONIOM ATOM LAYERS                   from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM MODIFIERS                from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM TYPES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK ATOMS                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK CHARGES                  from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK DISTANCES                from file      0 offset           0 length                   8 to matrix element file.
+ Write SYMINF INTS                         from file      0 offset           0 length                  26 to matrix element file.
+ Write ROTTR TO SO                         from file      0 offset           0 length                  12 to matrix element file.
+ Write GAUSSIAN SCALARS                    from file    501 offset           0 to matrix element file.
+ Write OPTIMIZATION FLAGS                  from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER ISO                         from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER SPIN                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZEFFECTIVE                     from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL QUADRUPOLEMOMENT               from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL GFACTOR                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZNUCLEAR                       from file      0 offset           0 length                   2 to matrix element file.
+ Write MULLIKEN CHARGES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write NUCLEAR GRADIENT                    from file  10584 offset           0 length                   6 to matrix element file.
+ Array NUCLEAR FORCE CONSTANTS              on  file  10585 does not exist.
+ Write ELECTRIC DIPOLE MOMENT              from file      0 offset           0 length                   3 to matrix element file.
+ Write NON-ADIABATIC COUPLING              from file  10810 offset           0 length                   6 to matrix element file.
+ Write TRAJ SCALARS                        from file      0 offset           0 length                  16 to matrix element file.
+ Write TRAJ NSTEP                          from file      0 offset           0 length                   1 to matrix element file.
+ Write TRAJ RESULTS                        from file      0 offset           0 length                  42 to matrix element file.
+ Write RED INT COORD DIMS                  from file      0 offset           0 length                   4 to matrix element file.
+ Write RED INT COORD ATOMS                 from file      0 offset           0 length                   4 to matrix element file.
+ Write RED INT COORD VALS                  from file      0 offset           0 length                   1 to matrix element file.
+ Write RED INT COORD IFLAGS                from file      0 offset           0 length                   1 to matrix element file.
+ Write RED INT COORD RFLAGS                from file      0 offset           0 length                   1 to matrix element file.
+ Write RED INT COORD CONSTRAINT            from file      0 offset           0 length                   2 to matrix element file.
+ Write FINITE EM FIELD                     from file  10521 offset           0 length                  35 to matrix element file.
+ Write OVERLAP                             from file  10514 offset           0 length                  55 to matrix element file.
+ Write CORE HAMILTONIAN ALPHA              from file  10515 offset           0 length                  55 to matrix element file.
+ Write CORE HAMILTONIAN BETA               from file  10515 offset          55 length                  55 to matrix element file.
+ Write KINETIC ENERGY                      from file  10516 offset           0 length                  55 to matrix element file.
+ Write ORTHOGONAL BASIS                    from file  10685 offset           0 length                 100 to matrix element file.
+ Write DIPOLE INTEGRALS                    from file  10518 offset           0 length                 165 to matrix element file.
+ Array DIP VEL INTEGRALS                    on  file  10572 does not exist.
+ Array R X DEL INTEGRALS                    on  file  10572 does not exist.
+ Write ALPHA ORBITAL ENERGIES              from file      0 offset           0 length                  10 to matrix element file.
+ Write ALPHA MO COEFFICIENTS               from file  10524 offset           0 length                 100 to matrix element file.
+ Write ALPHA DENSITY MATRIX                from file      0 offset           0 length                  55 to matrix element file.
+ Write ALPHA FOCK MATRIX                   from file  10536 offset           0 length                  55 to matrix element file.
+ Write ENERGY-WEIGHTED DENSITY             from file  10571 offset           0 length                  55 to matrix element file.
+ Write ALPHA SCF DENSITY MATRIX            from file      0 offset           0 length                  55 to matrix element file.
+ No 2e integrals to process.
+ Perform NBO analysis...executing G16NBO...
+
+ *********************************** NBO 7.0 ***********************************
+             N A T U R A L   A T O M I C   O R B I T A L   A N D
+          N A T U R A L   B O N D   O R B I T A L   A N A L Y S I S
+ **************************** Espen Tangen (S101595) ***************************
+  (c) Copyright 1996-2021 Board of Regents of the University of Wisconsin System
+      on behalf of the Theoretical Chemistry Institute.  All rights reserved.
+
+          Cite this program [NBO 7.0.10 (8-Feb-2021)] as:
+
+          NBO 7.0.  E. D. Glendening, J. K. Badenhoop, A. E. Reed,
+          J. E. Carpenter, J. A. Bohmann, C. M. Morales, P. Karafiloglou,
+          C. R. Landis, and F. Weinhold, Theoretical Chemistry Institute,
+          University of Wisconsin, Madison, WI (2018)
+
+       /NPA    / : Natural Population Analysis
+       /AOPNAO / : Print the AO to PNAO transformation
+       /AONAO  / : Print the AO to NAO transformation
+       /AONO   / : Print the NOs in the AO basis
+       /AOMO   / : Print the MOs in the AO basis
+       /BOAO   / : Print the AO bond-order matrix
+       /DMAO   / : Print the AO density matrix
+       /DMPNAO / : Print the PNAO density matrix
+       /DMNAO  / : Print the NAO density matrix
+       /DMMO   / : Print the MO density matrix
+       /SAO    / : Print the AO overlap matrix
+       /SPNAO  / : Print the PNAO overlap matrix
+       /DETAIL / : Write details of NBO search
+       /ARCHIVE/ : Write the archive file to lfn47
+       /AOINFO / : Write AO information to lfn31
+       /FILE   / : Set to LiF
+
+ Filename set to LiF
+
+ Job title: NBO-LiF
+
+
+ MOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)     -0.0002  0.9850 -0.1197  0.1289  0.0000  0.0000 -0.2410  0.0000
+   2. Li 1 (s)     -0.0039  0.0336  0.0505 -0.1179  0.0000  0.0000  0.9140  0.0000
+   3. Li 1 (px)     0.0000  0.0000  0.0000  0.0000  0.3254  0.0000  0.0000  0.9592
+   4. Li 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.3254  0.0000  0.0000
+   5. Li 1 (pz)    -0.0053 -0.0062  0.0579 -0.1277  0.0000  0.0000 -0.4632  0.0000
+   6.  F 2 (s)      0.9946 -0.0135 -0.2579 -0.0271  0.0000  0.0000  0.0145  0.0000
+   7.  F 2 (s)      0.0237  0.0460  0.9840  0.1527  0.0000  0.0000 -0.0739  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.0000  0.0000  0.8952  0.0000  0.0000 -0.4738
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.8952  0.0000  0.0000
+  10.  F 2 (pz)    -0.0014 -0.0274 -0.0401  0.9681  0.0000  0.0000  0.0625  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000 -0.0838
+   2. Li 1 (s)      0.0000  0.6013
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.9592  0.0000
+   5. Li 1 (pz)     0.0000  1.0417
+   6.  F 2 (s)      0.0000  0.1025
+   7.  F 2 (s)      0.0000 -0.7231
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)    -0.4738  0.0000
+  10.  F 2 (pz)     0.0000  0.2997
+
+
+ NOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      0.3762 -0.0415  0.9094 -0.0028  0.0658 -0.1631  0.2549 -0.0004
+   2. Li 1 (s)     -0.0384 -0.0325  0.0076 -0.0160 -0.0228 -0.1192 -1.0704  0.0024
+   3. Li 1 (px)     0.0585  0.1598  0.0020 -0.0755 -0.2669 -0.0010  0.0011  0.9590
+   4. Li 1 (py)    -0.0157  0.0929 -0.0011 -0.2820  0.1319 -0.0077  0.0230  0.0187
+   5. Li 1 (pz)    -0.0567 -0.0316 -0.0295 -0.0163 -0.0265 -0.1169  0.0496  0.0034
+   6.  F 2 (s)      0.8559 -0.3958 -0.3660 -0.1762 -0.0019 -0.0489 -0.0511  0.0004
+   7.  F 2 (s)     -0.5335 -0.6055  0.1956 -0.3529 -0.3789  0.1911  0.3334 -0.0025
+   8.  F 2 (px)     0.1611  0.4395  0.0054 -0.2077 -0.7343 -0.0028 -0.0005 -0.4737
+   9.  F 2 (py)    -0.0432  0.2556 -0.0029 -0.7759  0.3630 -0.0211 -0.0114 -0.0092
+  10.  F 2 (pz)     0.1421  0.0325  0.2191 -0.0006  0.0488  0.9316 -0.1678  0.0011
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)     -0.0051 -0.0107
+   2. Li 1 (s)      0.0469 -0.2214
+   3. Li 1 (px)    -0.0189  0.0012
+   4. Li 1 (py)     0.9544  0.0912
+   5. Li 1 (pz)     0.1071 -1.1339
+   6.  F 2 (s)      0.0098 -0.0896
+   7.  F 2 (s)     -0.0693  0.6421
+   8.  F 2 (px)     0.0093 -0.0006
+   9.  F 2 (py)    -0.4714 -0.0450
+  10.  F 2 (pz)     0.0283 -0.2545
+
+
+ AO overlap matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      1.0000  0.2411  0.0000  0.0000  0.0000  0.0007  0.0514  0.0000
+   2. Li 1 (s)      0.2411  1.0000  0.0000  0.0000  0.0000  0.0321  0.3032  0.0000
+   3. Li 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.1590
+   4. Li 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0544  0.4513  0.0000
+   6.  F 2 (s)      0.0007  0.0321  0.0000  0.0000  0.0544  1.0000  0.2380  0.0000
+   7.  F 2 (s)      0.0514  0.3032  0.0000  0.0000  0.4513  0.2380  1.0000  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)    -0.0828 -0.0979  0.0000  0.0000 -0.1034  0.0000  0.0000  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000 -0.0828
+   2. Li 1 (s)      0.0000 -0.0979
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.1590  0.0000
+   5. Li 1 (pz)     0.0000 -0.1034
+   6.  F 2 (s)      0.0000  0.0000
+   7.  F 2 (s)      0.0000  0.0000
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.0000  0.0000
+  10.  F 2 (pz)     0.0000  1.0000
+
+
+ AO bond-order matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      2.0023  0.0236  0.0000  0.0000 -0.0590  0.0277 -0.1056  0.0000
+   2. Li 1 (s)      0.0236  0.0352  0.0000  0.0000  0.0356 -0.0282  0.0664  0.0000
+   3. Li 1 (px)     0.0000  0.0000  0.2118  0.0000  0.0000  0.0000  0.0000  0.5826
+   4. Li 1 (py)     0.0000  0.0000  0.0000  0.2118  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)    -0.0590  0.0356  0.0000  0.0000  0.0395 -0.0333  0.0742  0.0000
+   6.  F 2 (s)      0.0277 -0.0282  0.0000  0.0000 -0.0333  2.1132 -0.4700  0.0000
+   7.  F 2 (s)     -0.1056  0.0664  0.0000  0.0000  0.0742 -0.4700  1.9884  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.5826  0.0000  0.0000  0.0000  0.0000  1.6029
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.5826  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)     0.2052 -0.2341  0.0000  0.0000 -0.2515 -0.0338  0.2141  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000  0.2052
+   2. Li 1 (s)      0.0000 -0.2341
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.5826  0.0000
+   5. Li 1 (pz)     0.0000 -0.2515
+   6.  F 2 (s)      0.0000 -0.0338
+   7.  F 2 (s)      0.0000  0.2141
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.6029  0.0000
+  10.  F 2 (pz)     0.0000  1.8790
+
+
+ AO density matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      1.9983  0.5317  0.0000  0.0000 -0.0286  0.0015  0.1018  0.0000
+   2. Li 1 (s)      0.5317  0.4039  0.0000  0.0000  0.3681  0.0584  0.6647  0.0000
+   3. Li 1 (px)     0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000  0.8859
+   4. Li 1 (py)     0.0000  0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)    -0.0286  0.3681  0.0000  0.0000  0.5433  0.1010  0.9576  0.0000
+   6.  F 2 (s)      0.0015  0.0584  0.0000  0.0000  0.1010  1.9999  0.4767  0.0000
+   7.  F 2 (s)      0.1018  0.6647  0.0000  0.0000  0.9576  0.4767  1.9945  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000  1.7936
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)    -0.1630 -0.3575  0.0000  0.0000 -0.3591 -0.0019  0.0154  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000 -0.1630
+   2. Li 1 (s)      0.0000 -0.3575
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.8859  0.0000
+   5. Li 1 (pz)     0.0000 -0.3591
+   6.  F 2 (s)      0.0000 -0.0019
+   7.  F 2 (s)      0.0000  0.0154
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.7936  0.0000
+  10.  F 2 (pz)     0.0000  1.9574
+
+
+ MO density matrix:
+
+      MO     1       2       3       4       5       6       7       8       9
+     ---- ------  ------  ------  ------  ------  ------  ------  ------  ------
+   1.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+      MO    10
+     ---- ------
+   1.     0.0000
+   2.     0.0000
+   3.     0.0000
+   4.     0.0000
+   5.     0.0000
+   6.     0.0000
+   7.     0.0000
+   8.     0.0000
+   9.     0.0000
+  10.     0.0000
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies
+
+  NAO Atom No lang   Type(AO)    Occupancy      Energy
+ -------------------------------------------------------
+   1   Li  1  s      Cor( 1s)     1.99979      -2.33369
+   2   Li  1  s      Val( 2s)     0.03213       0.11991
+   3   Li  1  px     Ryd( 2p)     0.20640       0.18086
+   4   Li  1  py     Ryd( 2p)     0.20640       0.18086
+   5   Li  1  pz     Ryd( 2p)     0.02990       0.33830
+
+   6    F  2  s      Cor( 1s)     2.00000     -25.60350
+   7    F  2  s      Val( 2s)     1.98573      -1.54261
+   8    F  2  px     Val( 2p)     1.79360      -0.30332
+   9    F  2  py     Val( 2p)     1.79360      -0.30332
+  10    F  2  pz     Val( 2p)     1.95246      -0.39171
+
+
+ Summary of Natural Population Analysis:
+
+                                     Natural Population
+             Natural    ---------------------------------------------
+  Atom No    Charge        Core      Valence    Rydberg      Total
+ --------------------------------------------------------------------
+   Li  1    0.52538      1.99979     0.03213    0.44271     2.47462
+    F  2   -0.52538      2.00000     7.52538    0.00000     9.52538
+ ====================================================================
+ * Total *  0.00000      3.99979     7.55751    0.44271    12.00000
+
+                                 Natural Population
+ ---------------------------------------------------------
+   Core                       3.99979 ( 99.9946% of    4)
+   Valence                    7.55751 ( 94.4688% of    8)
+   Natural Minimal Basis     11.55729 ( 96.3108% of   12)
+   Natural Rydberg Basis      0.44271 (  3.6892% of   12)
+ ---------------------------------------------------------
+
+    Atom No         Natural Electron Configuration
+ ----------------------------------------------------------------------------
+     Li  1      [core]2s( 0.03)2p( 0.44)
+      F  2      [core]2s( 1.99)2p( 5.54)
+
+
+ PNAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      0.9921 -0.2782  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2. Li 1 (s)      0.0307  1.0299  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3. Li 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   6.  F 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.9657 -0.3569  0.0000
+   7.  F 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.1168  1.0229  0.0000
+   8.  F 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000  0.0000
+   2. Li 1 (s)      0.0000  0.0000
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000
+   6.  F 2 (s)      0.0000  0.0000
+   7.  F 2 (s)      0.0000  0.0000
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.0000  0.0000
+  10.  F 2 (pz)     0.0000  1.0000
+
+
+ PNAO overlap matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1( 1s )    1.0000  0.0000  0.0000  0.0000  0.0000  0.0087  0.0611  0.0000
+   2. Li 1( 2s )    0.0000  1.0000  0.0000  0.0000  0.0000  0.0666  0.2931  0.0000
+   3. Li 1( 2px)    0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.1590
+   4. Li 1( 2py)    0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5. Li 1( 2pz)    0.0000  0.0000  0.0000  0.0000  1.0000  0.1053  0.4422  0.0000
+   6.  F 2( 1s )    0.0087  0.0666  0.0000  0.0000  0.1053  1.0000  0.0000  0.0000
+   7.  F 2( 2s )    0.0611  0.2931  0.0000  0.0000  0.4422  0.0000  1.0000  0.0000
+   8.  F 2( 2px)    0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2( 2py)    0.0000  0.0000  0.0000  0.1590  0.0000  0.0000  0.0000  0.0000
+  10.  F 2( 2pz)   -0.0852 -0.0778  0.0000  0.0000 -0.1034  0.0000  0.0000  0.0000
+
+           NAO         9      10
+      ------------ ------- -------
+   1. Li 1( 1s )    0.0000 -0.0852
+   2. Li 1( 2s )    0.0000 -0.0778
+   3. Li 1( 2px)    0.0000  0.0000
+   4. Li 1( 2py)    0.1590  0.0000
+   5. Li 1( 2pz)    0.0000 -0.1034
+   6.  F 2( 1s )    0.0000  0.0000
+   7.  F 2( 2s )    0.0000  0.0000
+   8.  F 2( 2px)    0.0000  0.0000
+   9.  F 2( 2py)    1.0000  0.0000
+  10.  F 2( 2pz)    0.0000  1.0000
+
+
+ PNAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1( 1s )    1.9998  0.0000  0.0000  0.0000 -0.0171  0.0173  0.1231  0.0000
+   2. Li 1( 2s )    0.0000  0.2785  0.0000  0.0000  0.3871  0.1344  0.6500  0.0000
+   3. Li 1( 2px)    0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000  0.8859
+   4. Li 1( 2py)    0.0000  0.0000  0.0000  0.4376  0.0000  0.0000  0.0000  0.0000
+   5. Li 1( 2pz)   -0.0171  0.3871  0.0000  0.0000  0.5433  0.2094  0.9435  0.0000
+   6.  F 2( 1s )    0.0173  0.1344  0.0000  0.0000  0.2094  2.0000  0.0000  0.0000
+   7.  F 2( 2s )    0.1231  0.6500  0.0000  0.0000  0.9435  0.0000  1.9937  0.0000
+   8.  F 2( 2px)    0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000  1.7936
+   9.  F 2( 2py)    0.0000  0.0000  0.0000  0.8859  0.0000  0.0000  0.0000  0.0000
+  10.  F 2( 2pz)   -0.1727 -0.3228  0.0000  0.0000 -0.3591  0.0000  0.0164  0.0000
+
+           NAO         9      10
+      ------------ ------- -------
+   1. Li 1( 1s )    0.0000 -0.1727
+   2. Li 1( 2s )    0.0000 -0.3228
+   3. Li 1( 2px)    0.0000  0.0000
+   4. Li 1( 2py)    0.8859  0.0000
+   5. Li 1( 2pz)    0.0000 -0.3591
+   6.  F 2( 1s )    0.0000  0.0000
+   7.  F 2( 2s )    0.0000  0.0164
+   8.  F 2( 2px)    0.0000  0.0000
+   9.  F 2( 2py)    1.7936  0.0000
+  10.  F 2( 2pz)    0.0000  1.9574
+
+
+ NAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1 (s)      0.9922 -0.2692  0.0000  0.0000 -0.0045 -0.0043 -0.0512  0.0000
+   2. Li 1 (s)      0.0307  1.0838  0.0000  0.0000  0.1922 -0.0001 -0.0413  0.0000
+   3. Li 1 (px)     0.0000  0.0000  1.0129  0.0000  0.0000  0.0000  0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000  0.0000  1.0129  0.0000  0.0000  0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.1487  0.0000  0.0000  0.0000
+   6.  F 2 (s)     -0.0042  0.0298  0.0000  0.0000  0.0726  0.9658 -0.3584  0.0000
+   7.  F 2 (s)     -0.0005 -0.2880  0.0000  0.0000 -0.5937  0.1168  1.0361  0.0000
+   8.  F 2 (px)     0.0000  0.0000 -0.1611  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  F 2 (py)     0.0000  0.0000  0.0000 -0.1611  0.0000  0.0000  0.0000  0.0000
+  10.  F 2 (pz)     0.0000  0.0734  0.0000  0.0000  0.1372  0.0000 -0.0054  0.0000
+
+           AO          9      10
+      ------------ ------- -------
+   1. Li 1 (s)      0.0000  0.0822
+   2. Li 1 (s)      0.0000  0.0140
+   3. Li 1 (px)     0.0000  0.0000
+   4. Li 1 (py)     0.0000  0.0000
+   5. Li 1 (pz)     0.0000  0.0000
+   6.  F 2 (s)      0.0000  0.0006
+   7.  F 2 (s)      0.0000 -0.0061
+   8.  F 2 (px)     0.0000  0.0000
+   9.  F 2 (py)     1.0000  0.0000
+  10.  F 2 (pz)     0.0000  1.0045
+
+
+ NAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1. Li 1( 1s )    1.9998 -0.0004  0.0000  0.0000 -0.0205  0.0000  0.0010  0.0000
+   2. Li 1( 2s )   -0.0004  0.0321  0.0000  0.0000  0.0301  0.0013  0.1422  0.0000
+   3. Li 1( 2px)    0.0000  0.0000  0.2064  0.0000  0.0000  0.0000  0.0000  0.6084
+   4. Li 1( 2py)    0.0000  0.0000  0.0000  0.2064  0.0000  0.0000  0.0000  0.0000
+   5. Li 1( 2pz)   -0.0205  0.0301  0.0000  0.0000  0.0299 -0.0010  0.0866  0.0000
+   6.  F 2( 1s )    0.0000  0.0013  0.0000  0.0000 -0.0010  2.0000  0.0000  0.0000
+   7.  F 2( 2s )    0.0010  0.1422  0.0000  0.0000  0.0866  0.0000  1.9857  0.0000
+   8.  F 2( 2px)    0.0000  0.0000  0.6084  0.0000  0.0000  0.0000  0.0000  1.7936
+   9.  F 2( 2py)    0.0000  0.0000  0.0000  0.6084  0.0000  0.0000  0.0000  0.0000
+  10.  F 2( 2pz)   -0.0024 -0.2052  0.0000  0.0000 -0.2238  0.0000  0.0251  0.0000
+
+           NAO         9      10
+      ------------ ------- -------
+   1. Li 1( 1s )    0.0000 -0.0024
+   2. Li 1( 2s )    0.0000 -0.2052
+   3. Li 1( 2px)    0.0000  0.0000
+   4. Li 1( 2py)    0.6084  0.0000
+   5. Li 1( 2pz)    0.0000 -0.2238
+   6.  F 2( 1s )    0.0000  0.0000
+   7.  F 2( 2s )    0.0000  0.0251
+   8.  F 2( 2px)    0.0000  0.0000
+   9.  F 2( 2py)    1.7936  0.0000
+  10.  F 2( 2pz)    0.0000  1.9525
+
+
+ NATURAL BOND ORBITAL ANALYSIS:
+
+ Initiate 2-center NBO search using THRESH = 1.900 and PRJTHR = 0.300
+
+ Search of NAO DM block for core orbitals on atom:   1
+      Eigenvector ( 1) has occupancy 1.99979
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   2
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Core orbitals projected from the NAO density matrix
+       8.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.900
+       1.999 1.939 1.794 1.794 0.000
+      Eigenvector ( 1) has occupancy 1.99917
+            0.0000 0.8812 0.0000 0.0000 0.4727
+      Eigenvector ( 2) has occupancy 1.93902
+            0.0000-0.4727 0.0000 0.0000 0.8812
+      2 hybrids on atom 2 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000
+      0 hybrids eliminated in 1 pass
+      2 hybrids moved from prospective to permanent list
+
+ NHOs of 1-center eigenvectors projected from the NAO density matrix
+       4.062 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 0.061 0.001 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000-0.0572 0.3161 0.0000 0.0000 0.0000-0.1686
+            0.9319 0.0000
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.0000 0.3161 0.0572 0.0000 0.0000 0.0000 0.9319
+            0.1686 0.0000
+      2 hybrids on atom 1 stashed in prospective list
+      2 hybrids on atom 2 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000 1.000 1.000
+      0 hybrids eliminated in 1 pass
+      4 hybrids moved from prospective to permanent list
+
+ NHOs of 2-center eigenvectors projected from the NAO density matrix
+       0.062 electrons remain in the fully projected matrix
+
+ Search of NHO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.061 0.001 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.99979
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    1. Label:CR ( 1)   1
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.999 1.939 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    2. Label:CR ( 1)   2
+      Eigenvector ( 2) has occupancy 1.99917
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    3. Label:LP ( 1)   2
+      Eigenvector ( 3) has occupancy 1.93902
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:    4. Label:LP ( 2)   2
+        3 eigenvector(s) stashed in permanent list
+
+  1-center NBOs projected from the NHO density matrix
+       4.062 electrons remain (>1.900); search continues
+
+ Search of NHO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.9470 0.0000
+      Occupancy is 2.000 after deleting minor hybrid components
+            0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.9470 0.0000
+           NBO accepted:    5. Label:BD ( 1)   1   2
+      Occupancy is 0.000 for antibonding component
+            0.0000 0.9470 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+           -0.3213 0.0000
+           NBO accepted:    6. Label:BD*( 1)   1   2
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000 0.9470
+      Occupancy is 2.000 after deleting minor hybrid components
+            0.0000 0.0000 0.3213 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000 0.9470
+           NBO accepted:    7. Label:BD ( 2)   1   2
+      Occupancy is 0.000 for antibonding component
+            0.0000 0.0000 0.9470 0.0000 0.0000 0.0000 0.0000 0.0000
+            0.0000-0.3213
+           NBO accepted:    8. Label:BD*( 2)   1   2
+        4 eigenvector(s) stashed in permanent list
+
+  2-center NBOs projected from the NHO density matrix
+       0.062 electrons remain in the fully projected matrix
+
+                            Occupancies       Lewis Structure    Low   High
+         Max    Occ     -------------------  -----------------   occ   occ
+  Cycle  Ctr   Thresh    Lewis   non-Lewis     CR  BD  nC  LP    (L)   (NL)
+ ============================================================================
+    1     2     1.90    11.93798   0.06202      2   2   0   2     0      0
+ ----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ -------------------------------------------------------
+   Core                      3.99979 ( 99.995% of   4)
+   Valence Lewis             7.93819 ( 99.227% of   8)
+  ==================      =============================
+   Total Lewis              11.93798 ( 99.483% of  12)
+  -----------------------------------------------------
+   Valence non-Lewis         0.00000 (  0.000% of  12)
+   Rydberg non-Lewis         0.06202 (  0.517% of  12)
+  ==================      =============================
+   Total non-Lewis           0.06202 (  0.517% of  12)
+ -------------------------------------------------------
+
+
+     (Occupancy)   Bond orbital / Coefficients / Hybrids
+ ------------------ Lewis ------------------------------------------------------
+   1. (1.99979) CR ( 1)Li  1            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   2. (2.00000) CR ( 1) F  2            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   3. (1.99917) LP ( 1) F  2            s( 77.66%)p 0.29( 22.34%)
+                                         0.0000  0.8812  0.0000  0.0000  0.4727
+   4. (1.93902) LP ( 2) F  2            s( 22.34%)p 3.48( 77.66%)
+                                         0.0000  0.4727  0.0000  0.0000 -0.8812
+   5. (2.00000) BD ( 1)Li  1- F  2
+               ( 10.32%)   0.3213*Li  1 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000 -0.1780  0.9840  0.0000
+               ( 89.68%)   0.9470* F  2 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000 -0.1780  0.9840  0.0000
+   6. (2.00000) BD ( 2)Li  1- F  2
+               ( 10.32%)   0.3213*Li  1 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.9840  0.1780  0.0000
+               ( 89.68%)   0.9470* F  2 s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.9840  0.1780  0.0000
+ ---------------- non-Lewis ----------------------------------------------------
+   7. (0.00000) BD*( 1)Li  1- F  2
+               ( 89.68%)   0.9470*Li  1 s(  0.00%)p 1.00(100.00%)
+               ( 10.32%)  -0.3213* F  2 s(  0.00%)p 1.00(100.00%)
+   8. (0.00000) BD*( 2)Li  1- F  2
+               ( 89.68%)   0.9470*Li  1 s(  0.00%)p 1.00(100.00%)
+               ( 10.32%)  -0.3213* F  2 s(  0.00%)p 1.00(100.00%)
+   9. (0.06108) RY ( 1)Li  1            s( 51.85%)p 0.93( 48.15%)
+                                         0.0000  0.7201  0.0000  0.0000  0.6939
+  10. (0.00094) RY ( 2)Li  1            s( 48.15%)p 1.08( 51.85%)
+                                         0.0000  0.6939  0.0000  0.0000 -0.7201
+
+
+ NHO DIRECTIONALITY AND BOND BENDING (deviation from line of nuclear centers at
+                                      the position of maximum hybrid amplitude)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    p- or d-character  > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                        Line of Centers        Hybrid 1             Hybrid 2
+                        ---------------  -------------------  ------------------
+           NBO            Theta   Phi    Theta   Phi    Dev   Theta   Phi    Dev
+ ===============================================================================
+   4. LP ( 2) F  2          --     --    180.0    0.0   --      --     --    --
+   5. BD ( 1)Li  1- F  2    0.0    0.0    90.8  100.3  90.8    90.0  280.3  90.0
+   6. BD ( 2)Li  1- F  2    0.0    0.0    90.8   10.3  90.8    90.0   10.3  90.0
+
+
+ SECOND ORDER PERTURBATION THEORY ANALYSIS OF FOCK MATRIX IN NBO BASIS
+
+     Threshold for printing:   0.50 kcal/mol
+                                                          E(2) E(NL)-E(L) F(L,NL)
+      Donor (L) NBO              Acceptor (NL) NBO      kcal/mol   a.u.    a.u.
+ ===============================================================================
+
+ within unit  1
+    2. CR ( 1) F  2             9. RY ( 1)Li  1            1.64   25.93   0.184
+    3. LP ( 1) F  2             9. RY ( 1)Li  1            5.81    1.58   0.086
+    3. LP ( 1) F  2            10. RY ( 2)Li  1            0.66    1.39   0.027
+    4. LP ( 2) F  2             9. RY ( 1)Li  1           41.89    1.00   0.183
+
+
+ NATURAL BOND ORBITALS (Summary):
+
+                                                     Principal Delocalizations
+           NBO                 Occupancy    Energy   (geminal,vicinal,remote)
+ ===============================================================================
+ Molecular unit  1  (FLi)
+ ------ Lewis --------------------------------------
+    1. CR ( 1)Li  1             1.99979    -2.33369
+    2. CR ( 1) F  2             2.00000   -25.60350  9(v)
+    3. LP ( 1) F  2             1.99917    -1.25681  9(v),10(v)
+    4. LP ( 2) F  2             1.93902    -0.67750  9(v)
+    5. BD ( 1)Li  1- F  2       2.00000    -0.36629
+    6. BD ( 2)Li  1- F  2       2.00000    -0.36629
+ ------ non-Lewis ----------------------------------
+    7. BD*( 1)Li  1- F  2       0.00000     0.24382
+    8. BD*( 2)Li  1- F  2       0.00000     0.24382
+    9. RY ( 1)Li  1             0.06108     0.32597
+   10. RY ( 2)Li  1             0.00094     0.13225
+          -------------------------------
+                 Total Lewis   11.93798  ( 99.4831%)
+           Valence non-Lewis    0.00000  (  0.0000%)
+           Rydberg non-Lewis    0.06202  (  0.5169%)
+          -------------------------------
+               Total unit  1   12.00000  (100.0000%)
+              Charge unit  1    0.00000
+
+ $CHOOSE
+   LONE 2 2 END
+   BOND D 1 2 END
+ $END
+
+ NBO analysis completed in 0.12 CPU seconds (0 wall seconds)
+ Maximum scratch memory used by NBO was 221550 words (1.69 MB)
+ Maximum scratch memory used by G16NBO was 8259 words (0.06 MB)
+
+ Opening RunExU unformatted file "/cluster/work/users/beto93/LiF/Gau-1553493.EUF"
+ Read unf file /cluster/work/users/beto93/LiF/Gau-1553493.EUF:
+ Label Gaussian matrix elements                                         IVers= 2 NLab= 2 Version=ES64L-G16RevC.01
+ Title NBO-LiF                                                         
+ NAtoms=     2 NBasis=    10 NBsUse=    10 ICharg=     0 Multip=     1 NE=    12 Len12L=8 Len4L=8 IOpCl= 0 ICGU=111
+ GAUSSIAN SCALARS                    NI= 1 NR= 1 NTot=       1 LenBuf=    2 NRI=1 N=    1000
+ NPA CHARGES                         NI= 0 NR= 1 NTot=       2 LenBuf= 4000 NRI=1 N=       2
+ Recovered energy= -105.373081935     dipole=      0.000000000000      0.000000000000     -1.225763424088
+ Unable to Open any file for archive entry.
+ 1\1\GINC-C1-1\FOpt\RHF\STO-3G\F1Li1\BETO93\24-Jul-2024\0\\##OPT=VeryTi
+ ght Int=UltraFine RHF/STO-3G Pop=NBO7Read\\NBO-LiF\\0,1\Li,0.,0.,-0.00
+ 00121799\F,0.,0.,1.4070121799\\Version=ES64L-G16RevC.01\State=1-SG\HF=
+ -105.3730819\RMSD=3.105e-09\RMSF=6.386e-09\Dipole=0.,0.,-1.2257634\Qua
+ drupole=-1.0876898,-1.0876898,2.1753797,0.,0.,0.\PG=C*V [C*(Li1F1)]\\@
+ The archive entry for this job was punched.
+
+
+ LIVE PURE, SPEAK TRUE, RIGHT WRONG, FOLLOW THE KING...
+ ELSE, WHEREFORE BORN......
+           IDYLLS OF THE KING, TENNYSON
+ Job cpu time:       0 days  0 hours  0 minutes 26.0 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  9.1 seconds.
+ File lengths (MBytes):  RWF=     10 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 16 at Wed Jul 24 10:54:15 2024.

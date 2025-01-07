@@ -1,0 +1,42 @@
+
+#P_al = [[1.9944, 0.5919],
+#       [ 0.5919, 1.4625]]
+# 
+#S_al = [[1.0000, 0.2685],
+#       [ 0.2685, 1.0000]]
+#P=np.asarray(P)
+#print("P","\n",P)
+
+#ntrue=nbas
+#l=1
+#ml=2*l+1
+#nblock=int(ntrue/ml)
+#nr=0
+
+#block=np.zeros(ntrue).astype(int)
+#jdx = [False for i in range(ntrue)]
+#jdx = np.array(jdx).astype(bool)
+#
+#for ibas in range(ntrue):
+#  block[ibas]=int(ibas/ml)
+#  print(block[ibas])
+#
+#for iblk in range(nblock):
+#  for ibas in range(ntrue):
+#    if block[ibas] == iblk:
+#      jdx[ibas] = True
+#    else:
+#      jdx[ibas] = False
+#  print("iblk",iblk,"jdx",jdx)
+#  nsubtrue = jdx.sum()
+#  sub_blk  = np.zeros((nsubtrue,nsubtrue))
+#  nr = 0
+#  for ibas in range(ntrue):
+#    if jdx[ibas] == True:
+#      nc = 0
+#      for jbas in range(ntrue):
+#        if jdx[jbas] == True:
+#          sub_blk[nr,nc] = P[ibas,jbas]
+#          nc+=1
+#      nr+=1
+#  print(sub_blk)

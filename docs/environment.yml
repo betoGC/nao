@@ -1,0 +1,12 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - conda
+  - python=3.8
+  - psi4
+  - psi4-rt
+  - dftd4
+  - xtb
+prefix: /home/beto/psi4conda

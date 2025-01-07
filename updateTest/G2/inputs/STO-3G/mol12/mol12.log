@@ -1,0 +1,642 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /cluster/software/Gaussian/g16_C.01/l1.exe "/cluster/work/users/beto93/mol12/Gau-1466966.inp" -scrdir="/cluster/work/users/beto93/mol12/"
+ Entering Link 1 = /cluster/software/Gaussian/g16_C.01/l1.exe PID=   1466968.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                18-Nov-2024 
+ ******************************************
+ %LindaWorkers=c3-16-ib
+ %NProcShared=4
+ Will use up to    4 processors via shared memory.
+ %mem=25GB
+ %chk=mol12.chk
+ SetLPE:    new flags="-opt 'Tsnet.Node.lindarsharg: ssh'  -nodelist 'c3-16-ib.saga' -env GAUSS_MDEF=3355443200 -env GAUSS_EXEDIR="/cluster/software/Gaussian/g16_C.01/bsd:/cluster/software/Gaussian/g16_C.01""
+ Will use up to    1 processors via Linda.
+ -----------------------------------------------------------------
+ #RHF/STO-3G int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read
+ -----------------------------------------------------------------
+ 1/38=1,163=2,172=1/1;
+ 2/12=2,15=3,17=6,18=5,40=1/2;
+ 3/6=3,8=11,11=1,25=1,30=1,60=-1,116=1/1,2,3;
+ 4//1;
+ 5/5=2,38=5/2;
+ 6/7=2,8=2,9=2,10=2,28=1,40=2,113=1,114=1,124=2103/1,12;
+ 99/5=1,9=1/99;
+ ---------
+ mol12-NBO
+ ---------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ F                     0.        0.        0.09339 
+ H                     0.        0.       -0.8405 
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          9           0        0.000000    0.000000    0.093389
+      2          1           0        0.000000    0.000000   -0.840502
+ ---------------------------------------------------------------------
+ Symmetry turned off by external request.
+ Stoichiometry    FH
+ Rotational constants (GHZ):           0.0000000         605.4632600         605.4632600
+ Standard basis: STO-3G (5D, 7F)
+     6 basis functions,    18 primitive gaussians,     6 cartesian basis functions
+     5 alpha electrons        5 beta electrons
+       nuclear repulsion energy         5.0997331576 Hartrees.
+ NAtoms=    2 NActive=    2 NUniq=    2 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=     6 RedAO= T EigKep=  4.25D-01  NBF=     6
+ NBsUse=     6 1.00D-06 EigRej= -1.00D+00 NBFU=     6
+ ExpMin= 1.69D-01 ExpMax= 1.67D+02 ExpMxC= 1.67D+02 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=       500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Keep R1 ints in memory in canonical form, NReq=802009.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -98.5722186740     A.U. after    6 cycles
+            NFock=  6  Conv=0.61D-09     -V/T= 2.0083
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Alpha  occ. eigenvalues --  -25.90154  -1.46601  -0.58015  -0.46365  -0.46365
+ Alpha virt. eigenvalues --    0.61156
+          Condensed to atoms (all electrons):
+               1          2
+     1  F    9.008440   0.194081
+     2  H    0.194081   0.603398
+ Mulliken charges:
+               1
+     1  F   -0.202521
+     2  H    0.202521
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  F   -0.000000
+ Electronic spatial extent (au):  <R**2>=             12.2836
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.0000    Y=              0.0000    Z=             -1.2723  Tot=              1.2723
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -4.6316   YY=             -4.6316   ZZ=             -3.4885
+   XY=              0.0000   XZ=             -0.0000   YZ=              0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=             -0.3810   YY=             -0.3810   ZZ=              0.7621
+   XY=              0.0000   XZ=             -0.0000   YZ=              0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=             -0.0000  YYY=              0.0000  ZZZ=             -0.2246  XYY=             -0.0000
+  XXY=              0.0000  XXZ=              0.1595  XZZ=             -0.0000  YZZ=              0.0000
+  YYZ=              0.1595  XYZ=              0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=             -1.9323 YYYY=             -1.9323 ZZZZ=             -3.7786 XXXY=              0.0000
+ XXXZ=             -0.0000 YYYX=              0.0000 YYYZ=              0.0000 ZZZX=             -0.0000
+ ZZZY=              0.0000 XXYY=             -0.6441 XXZZ=             -1.0901 YYZZ=             -1.0901
+ XXYZ=              0.0000 YYXZ=             -0.0000 ZZXY=              0.0000
+ N-N= 5.099733157595D+00 E-N=-2.473502618369D+02  KE= 9.775638741104D+01
+ Running external command "gaunbo7 R"
+         input file       "/cluster/work/users/beto93/mol12/Gau-1466968.EIn"
+         output file      "/cluster/work/users/beto93/mol12/Gau-1466968.EOu"
+         message file     "/cluster/work/users/beto93/mol12/Gau-1466968.EMs"
+         fchk file        "/cluster/work/users/beto93/mol12/Gau-1466968.EFC"
+         mat. el file     "/cluster/work/users/beto93/mol12/Gau-1466968.EUF"
+
+ Writing WrtUnf unformatted file "/cluster/work/users/beto93/mol12/Gau-1466968.EUF"
+ Gaussian matrix elements                                         Version   2 NLab=11 Len12L=8 Len4L=8
+ Write SHELL TO ATOM MAP                   from file      0 offset           0 length                   3 to matrix element file.
+ Write SHELL TYPES                         from file      0 offset           0 length                   3 to matrix element file.
+ Write NUMBER OF PRIMITIVES PER SHELL      from file      0 offset           0 length                   3 to matrix element file.
+ Write PRIMITIVE EXPONENTS                 from file      0 offset           0 length                   9 to matrix element file.
+ Write CONTRACTION COEFFICIENTS            from file      0 offset           0 length                   9 to matrix element file.
+ Write P(S=P) CONTRACTION COEFFICIENTS     from file      0 offset           0 length                   9 to matrix element file.
+ Write COORDINATES OF EACH SHELL           from file      0 offset           0 length                   9 to matrix element file.
+ Write BONDS PER ATOM                      from file      0 offset           0 length                   2 to matrix element file.
+ Write BONDED ATOMS                        from file      0 offset           0 length                   2 to matrix element file.
+ Write BOND TYPES                          from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM CHARGE/MULT                   from file      0 offset           0 length                  32 to matrix element file.
+ Write ONIOM ATOM LAYERS                   from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM MODIFIERS                from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM ATOM TYPES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK ATOMS                    from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK CHARGES                  from file      0 offset           0 length                   2 to matrix element file.
+ Write ONIOM LINK DISTANCES                from file      0 offset           0 length                   8 to matrix element file.
+ Write SYMINF INTS                         from file      0 offset           0 length                  26 to matrix element file.
+ Write ROTTR TO SO                         from file      0 offset           0 length                  12 to matrix element file.
+ Write GAUSSIAN SCALARS                    from file    501 offset           0 to matrix element file.
+ Write OPTIMIZATION FLAGS                  from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER ISO                         from file      0 offset           0 length                   2 to matrix element file.
+ Write INTEGER SPIN                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZEFFECTIVE                     from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL GFACTOR                        from file      0 offset           0 length                   2 to matrix element file.
+ Write REAL ZNUCLEAR                       from file      0 offset           0 length                   2 to matrix element file.
+ Write MULLIKEN CHARGES                    from file      0 offset           0 length                   2 to matrix element file.
+ Write NUCLEAR GRADIENT                    from file  10584 offset           0 length                   6 to matrix element file.
+ Array NUCLEAR FORCE CONSTANTS              on  file  10585 does not exist.
+ Write ELECTRIC DIPOLE MOMENT              from file      0 offset           0 length                   3 to matrix element file.
+ Write NON-ADIABATIC COUPLING              from file  10810 offset           0 length                   6 to matrix element file.
+ Write FINITE EM FIELD                     from file  10521 offset           0 length                  35 to matrix element file.
+ Write OVERLAP                             from file  10514 offset           0 length                  21 to matrix element file.
+ Write CORE HAMILTONIAN ALPHA              from file  10515 offset           0 length                  21 to matrix element file.
+ Write CORE HAMILTONIAN BETA               from file  10515 offset          21 length                  21 to matrix element file.
+ Write KINETIC ENERGY                      from file  10516 offset           0 length                  21 to matrix element file.
+ Write ORTHOGONAL BASIS                    from file  10685 offset           0 length                  36 to matrix element file.
+ Write DIPOLE INTEGRALS                    from file  10518 offset           0 length                  63 to matrix element file.
+ Array DIP VEL INTEGRALS                    on  file  10572 does not exist.
+ Array R X DEL INTEGRALS                    on  file  10572 does not exist.
+ Write ALPHA ORBITAL ENERGIES              from file      0 offset           0 length                   6 to matrix element file.
+ Write ALPHA MO COEFFICIENTS               from file  10524 offset           0 length                  36 to matrix element file.
+ Write ALPHA DENSITY MATRIX                from file      0 offset           0 length                  21 to matrix element file.
+ Write ALPHA FOCK MATRIX                   from file  10536 offset           0 length                  21 to matrix element file.
+ Write ENERGY-WEIGHTED DENSITY             from file  10571 offset           0 length                  21 to matrix element file.
+ Write ALPHA SCF DENSITY MATRIX            from file      0 offset           0 length                  21 to matrix element file.
+ No 2e integrals to process.
+ Perform NBO analysis...executing G16NBO...
+
+ *********************************** NBO 7.0 ***********************************
+             N A T U R A L   A T O M I C   O R B I T A L   A N D
+          N A T U R A L   B O N D   O R B I T A L   A N A L Y S I S
+ **************************** Espen Tangen (S101595) ***************************
+  (c) Copyright 1996-2021 Board of Regents of the University of Wisconsin System
+      on behalf of the Theoretical Chemistry Institute.  All rights reserved.
+
+          Cite this program [NBO 7.0.10 (8-Feb-2021)] as:
+
+          NBO 7.0.  E. D. Glendening, J. K. Badenhoop, A. E. Reed,
+          J. E. Carpenter, J. A. Bohmann, C. M. Morales, P. Karafiloglou,
+          C. R. Landis, and F. Weinhold, Theoretical Chemistry Institute,
+          University of Wisconsin, Madison, WI (2018)
+
+       /NPA    / : Natural Population Analysis
+       /AOPNAO / : Print the AO to PNAO transformation
+       /AONAO  / : Print the AO to NAO transformation
+       /AOMO   / : Print the MOs in the AO basis
+       /BOAO   / : Print the AO bond-order matrix
+       /DMAO   / : Print the AO density matrix
+       /DMPNAO / : Print the PNAO density matrix
+       /DMNAO  / : Print the NAO density matrix
+       /DMMO   / : Print the MO density matrix
+       /SAO    / : Print the AO overlap matrix
+       /SPNAO  / : Print the PNAO overlap matrix
+       /DETAIL / : Write details of NBO search
+       /ARCHIVE/ : Write the archive file to lfn47
+       /AOINFO / : Write AO information to lfn31
+       /FILE   / : Set to mol12.gen*
+
+ Filename set to mol12.gen1
+
+ Job title: mol12-NBO
+
+
+ MOs in the AO basis:
+
+           AO          1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1 (s)      0.9947 -0.2499 -0.0806  0.0000  0.0000  0.0830
+   2.  F 1 (s)      0.0225  0.9410  0.4242  0.0000  0.0000 -0.5398
+   3.  F 1 (px)     0.0000  0.0000  0.0000 -0.6988  0.7153  0.0000
+   4.  F 1 (py)     0.0000  0.0000  0.0000  0.7153  0.6988  0.0000
+   5.  F 1 (pz)    -0.0028 -0.0846  0.7003  0.0000  0.0000  0.8210
+   6.  H 2 (s)     -0.0056  0.1549 -0.5269  0.0000  0.0000  1.0740
+
+
+ AO overlap matrix:
+
+           AO          1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1 (s)      1.0000  0.2380  0.0000  0.0000  0.0000  0.0475
+   2.  F 1 (s)      0.2380  1.0000  0.0000  0.0000  0.0000  0.4376
+   3.  F 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   4.  F 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   5.  F 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000 -0.3434
+   6.  H 2 (s)      0.0475  0.4376  0.0000  0.0000 -0.3434  1.0000
+
+
+ AO bond-order matrix:
+
+           AO          1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1 (s)      2.1168 -0.4939  0.0000  0.0000 -0.0763 -0.0036
+   2.  F 1 (s)     -0.4939  2.1317  0.0000  0.0000  0.4347 -0.1557
+   3.  F 1 (px)     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   4.  F 1 (py)     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   5.  F 1 (pz)    -0.0763  0.4347  0.0000  0.0000  0.9951 -0.7642
+   6.  H 2 (s)     -0.0036 -0.1557  0.0000  0.0000 -0.7642  0.6034
+
+
+ AO density matrix:
+
+           AO          1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1 (s)      1.9999  0.4765  0.0000  0.0000 -0.0050  0.0888
+   2.  F 1 (s)      0.4765  1.9950  0.0000  0.0000  0.0453  0.9313
+   3.  F 1 (px)     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   4.  F 1 (py)     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   5.  F 1 (pz)    -0.0050  0.0453  0.0000  0.0000  1.5910 -1.1931
+   6.  H 2 (s)      0.0888  0.9313  0.0000  0.0000 -1.1931  1.3732
+
+
+ MO density matrix:
+
+      MO     1       2       3       4       5       6
+     ---- ------  ------  ------  ------  ------  ------
+   1.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  2.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies
+
+  NAO Atom No lang   Type(AO)    Occupancy      Energy
+ -------------------------------------------------------
+   1    F  1  s      Cor( 1s)     2.00000     -25.72316
+   2    F  1  s      Val( 2s)     1.91252      -1.47863
+   3    F  1  px     Val( 2p)     2.00000      -0.46365
+   4    F  1  py     Val( 2p)     2.00000      -0.46365
+   5    F  1  pz     Val( 2p)     1.32261      -0.18615
+
+   6    H  2  s      Val( 1s)     0.76486       0.05179
+
+
+ Summary of Natural Population Analysis:
+
+                                     Natural Population
+             Natural    ---------------------------------------------
+  Atom No    Charge        Core      Valence    Rydberg      Total
+ --------------------------------------------------------------------
+    F  1   -0.23514      2.00000     7.23514    0.00000     9.23514
+    H  2    0.23514      0.00000     0.76486    0.00000     0.76486
+ ====================================================================
+ * Total *  0.00000      2.00000     8.00000    0.00000    10.00000
+
+                                 Natural Population
+ ---------------------------------------------------------
+   Core                       2.00000 (100.0000% of    2)
+   Valence                    8.00000 (100.0000% of    8)
+   Natural Minimal Basis     10.00000 (100.0000% of   10)
+   Natural Rydberg Basis      0.00000 (  0.0000% of   10)
+ ---------------------------------------------------------
+
+    Atom No         Natural Electron Configuration
+ ----------------------------------------------------------------------------
+      F  1      [core]2s( 1.91)2p( 5.32)
+      H  2            1s( 0.76)
+
+
+ PNAOs in the AO basis:
+
+           AO          1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1 (s)      0.9689 -0.3482  0.0000  0.0000  0.0000  0.0000
+   2.  F 1 (s)      0.1076  1.0239  0.0000  0.0000  0.0000  0.0000
+   3.  F 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   4.  F 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   5.  F 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000
+   6.  H 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  1.0000
+
+
+ PNAO overlap matrix:
+
+           NAO         1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1( 1s )    1.0000  0.0000  0.0000  0.0000  0.0000  0.0932
+   2.  F 1( 2s )    0.0000  1.0000  0.0000  0.0000  0.0000  0.4315
+   3.  F 1( 2px)    0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   4.  F 1( 2py)    0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   5.  F 1( 2pz)    0.0000  0.0000  0.0000  0.0000  1.0000 -0.3434
+   6.  H 2( 1s )    0.0932  0.4315  0.0000  0.0000 -0.3434  1.0000
+
+
+ PNAO density matrix:
+
+           NAO         1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1( 1s )    2.0000  0.0000  0.0000  0.0000  0.0000  0.1863
+   2.  F 1( 2s )    0.0000  1.9943  0.0000  0.0000  0.0481  0.9226
+   3.  F 1( 2px)    0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   4.  F 1( 2py)    0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   5.  F 1( 2pz)    0.0000  0.0481  0.0000  0.0000  1.5910 -1.1931
+   6.  H 2( 1s )    0.1863  0.9226  0.0000  0.0000 -1.1931  1.3732
+
+
+ NAOs in the AO basis:
+
+           AO          1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1 (s)      0.9689 -0.3556  0.0000  0.0000  0.0063  0.0063
+   2.  F 1 (s)      0.1076  1.1065  0.0000  0.0000 -0.0691 -0.3412
+   3.  F 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   4.  F 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+   5.  F 1 (pz)     0.0000 -0.0614  0.0000  0.0000  1.0514  0.2498
+   6.  H 2 (s)      0.0000 -0.2216  0.0000  0.0000  0.1840  1.1714
+
+
+ NAO density matrix:
+
+           NAO         1       2       3       4       5       6
+      ------------ ------- ------- ------- ------- ------- -------
+   1.  F 1( 1s )    2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.  F 1( 2s )    0.0000  1.9125  0.0000  0.0000  0.2434  0.3287
+   3.  F 1( 2px)    0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   4.  F 1( 2py)    0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   5.  F 1( 2pz)    0.0000  0.2434  0.0000  0.0000  1.3226 -0.9147
+   6.  H 2( 1s )    0.0000  0.3287  0.0000  0.0000 -0.9147  0.7649
+
+
+ NATURAL BOND ORBITAL ANALYSIS:
+
+ Initiate 2-center NBO search using THRESH = 1.900 and PRJTHR = 0.300
+
+ Search of NAO DM block for core orbitals on atom:   1
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Core orbitals projected from the NAO density matrix
+       8.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 2.000 1.235 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.9316-0.0946 0.1055 0.3348
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.0000 0.7444 0.6678 0.0000
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000-0.1333-0.6610 0.7369-0.0479
+      3 hybrids on atom 1 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000 1.000
+      0 hybrids eliminated in 1 pass
+      3 hybrids moved from prospective to permanent list
+
+ NHOs of 1-center eigenvectors projected from the NAO density matrix
+       2.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000-0.2658 0.0000 0.0000 0.7396-0.6184
+      1 hybrid on atom 1 stashed in prospective list
+      1 hybrid on atom 2 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000
+      0 hybrids eliminated in 1 pass
+      2 hybrids moved from prospective to permanent list
+
+ NHOs of 2-center eigenvectors projected from the NAO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+ Search of NHO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 2.000 2.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    1. Label:CR ( 1)   1
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    2. Label:LP ( 1)   1
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:    3. Label:LP ( 2)   1
+      Eigenvector ( 4) has occupancy 2.00000
+            0.0000 0.0000 0.0000 1.0000 0.0000
+           NBO accepted:    4. Label:LP ( 3)   1
+        4 eigenvector(s) stashed in permanent list
+
+  1-center NBOs projected from the NHO density matrix
+       2.000 electrons remain (>1.900); search continues
+
+ Search of NHO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.0000 0.7859 0.6184
+      Occupancy is 2.000 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.7859 0.6184
+           NBO accepted:    5. Label:BD ( 1)   1   2
+      Occupancy is 0.000 for antibonding component
+            0.0000 0.0000 0.0000 0.0000-0.6184 0.7859
+           NBO accepted:    6. Label:BD*( 1)   1   2
+        2 eigenvector(s) stashed in permanent list
+
+  2-center NBOs projected from the NHO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+                            Occupancies       Lewis Structure    Low   High
+         Max    Occ     -------------------  -----------------   occ   occ
+  Cycle  Ctr   Thresh    Lewis   non-Lewis     CR  BD  nC  LP    (L)   (NL)
+ ============================================================================
+    1     2     1.90    10.00000   0.00000      1   1   0   3     0      0
+ ----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ -------------------------------------------------------
+   Core                      2.00000 (100.000% of   2)
+   Valence Lewis             8.00000 (100.000% of   8)
+  ==================      =============================
+   Total Lewis              10.00000 (100.000% of  10)
+  -----------------------------------------------------
+   Valence non-Lewis         0.00000 (  0.000% of  10)
+   Rydberg non-Lewis         0.00000 (  0.000% of  10)
+  ==================      =============================
+   Total non-Lewis           0.00000 (  0.000% of  10)
+ -------------------------------------------------------
+
+
+     (Occupancy)   Bond orbital / Coefficients / Hybrids
+ ------------------ Lewis ------------------------------------------------------
+   1. (2.00000) CR ( 1) F  1            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   2. (2.00000) LP ( 1) F  1            s( 86.79%)p 0.15( 13.21%)
+                                         0.0000  0.9316 -0.0946  0.1055  0.3348
+   3. (2.00000) LP ( 2) F  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.7444  0.6678  0.0000
+   4. (2.00000) LP ( 3) F  1            s(  1.78%)p55.26( 98.22%)
+                                         0.0000  0.1333  0.6610 -0.7369  0.0479
+   5. (2.00000) BD ( 1) F  1- H  2
+               ( 61.76%)   0.7859* F  1 s( 11.44%)p 7.74( 88.56%)
+                                         0.0000  0.3382  0.0000  0.0000 -0.9411
+               ( 38.24%)   0.6184* H  2 s(100.00%)
+                                         1.0000
+ ---------------- non-Lewis ----------------------------------------------------
+   6. (0.00000) BD*( 1) F  1- H  2
+               ( 38.24%)   0.6184* F  1 s( 11.44%)p 7.74( 88.56%)
+               ( 61.76%)  -0.7859* H  2 s(100.00%)
+
+
+ NHO DIRECTIONALITY AND BOND BENDING (deviation from line of nuclear centers at
+                                      the position of maximum hybrid amplitude)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    p- or d-character  > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                        Line of Centers        Hybrid 1             Hybrid 2
+                        ---------------  -------------------  ------------------
+           NBO            Theta   Phi    Theta   Phi    Dev   Theta   Phi    Dev
+ ===============================================================================
+   3. LP ( 2) F  1          --     --     90.0  221.9   --      --     --    --
+   4. LP ( 3) F  1          --     --     87.5  311.9   --      --     --    --
+
+
+ SECOND ORDER PERTURBATION THEORY ANALYSIS OF FOCK MATRIX IN NBO BASIS
+
+     Threshold for printing:   0.50 kcal/mol
+                                                          E(2) E(NL)-E(L) F(L,NL)
+      Donor (L) NBO              Acceptor (NL) NBO      kcal/mol   a.u.    a.u.
+ ===============================================================================
+
+ within unit  1
+       None above threshold
+
+
+ NATURAL BOND ORBITALS (Summary):
+
+                                                     Principal Delocalizations
+           NBO                 Occupancy    Energy   (geminal,vicinal,remote)
+ ===============================================================================
+ Molecular unit  1  (HF)
+ ------ Lewis --------------------------------------
+    1. CR ( 1) F  1             2.00000   -25.72316
+    2. LP ( 1) F  1             2.00000    -1.35416
+    3. LP ( 2) F  1             2.00000    -0.46365
+    4. LP ( 3) F  1             2.00000    -0.48189
+    5. BD ( 1) F  1- H  2       2.00000    -0.85215
+ ------ non-Lewis ----------------------------------
+    6. BD*( 1) F  1- H  2       0.00000     0.61156
+          -------------------------------
+                 Total Lewis   10.00000  (100.0000%)
+           Valence non-Lewis    0.00000  (  0.0000%)
+           Rydberg non-Lewis    0.00000  (  0.0000%)
+          -------------------------------
+               Total unit  1   10.00000  (100.0000%)
+              Charge unit  1    0.00000
+
+ $CHOOSE
+   LONE 1 3 END
+   BOND S 1 2 END
+ $END
+
+ NBO analysis completed in 0.09 CPU seconds (0 wall seconds)
+ Maximum scratch memory used by NBO was 220858 words (1.69 MB)
+ Maximum scratch memory used by G16NBO was 8130 words (0.06 MB)
+
+ Opening RunExU unformatted file "/cluster/work/users/beto93/mol12/Gau-1466968.EUF"
+ Read unf file /cluster/work/users/beto93/mol12/Gau-1466968.EUF:
+ Label Gaussian matrix elements                                         IVers= 2 NLab= 2 Version=ES64L-G16RevC.01
+ Title mol12-NBO                                                       
+ NAtoms=     2 NBasis=     6 NBsUse=     6 ICharg=     0 Multip=     1 NE=    10 Len12L=8 Len4L=8 IOpCl= 0 ICGU=111
+ GAUSSIAN SCALARS                    NI= 1 NR= 1 NTot=       1 LenBuf=    2 NRI=1 N=    1000
+ NPA CHARGES                         NI= 0 NR= 1 NTot=       2 LenBuf= 4000 NRI=1 N=       2
+ Recovered energy= -98.5722186740     dipole=     -0.000000000000      0.000000000000     -0.500555871340
+ Unable to Open any file for archive entry.
+ 1\1\GINC-C3-16\SP\RHF\STO-3G\F1H1\BETO93\18-Nov-2024\0\\#RHF/STO-3G in
+ t=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read\\mol12-NBO\\0,1\F,
+ 0,0.,0.,0.093389\H,0,0.,0.,-0.840502\\Version=ES64L-G16RevC.01\HF=-98.
+ 5722187\RMSD=6.084e-10\Dipole=0.,0.,-0.5005559\Quadrupole=-0.2832947,-
+ 0.2832947,0.5665894,0.,0.,0.\PG=Unknown\\@
+ The archive entry for this job was punched.
+
+
+ NOTHING WILL BE ATTEMPTED IF ALL POSSIBLE OBJECTIONS
+ MUST FIRST BE OVERCOME.
+
+                               -- THE GOLDEN PRINCIPLE,
+                    PAUL DICKSON'S "THE OFFICIAL RULES"
+ Job cpu time:       0 days  0 hours  0 minutes  9.0 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  3.1 seconds.
+ File lengths (MBytes):  RWF=     10 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 16 at Mon Nov 18 15:41:33 2024.

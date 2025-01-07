@@ -1,0 +1,44 @@
+
+    0 1
+
+#print("=====================================================")
+#print("===== P^(av) =====")
+#prntMtrx(rho_av)
+#print("===== S^(av) =====")
+#prntMtrx(s_av)
+#print("=====================================================")
+#Solving generalized eigenvalue problem and return full basis (av,pnao) transformation
+
+#print("===== P^(av)N=WS^(av)N (atom,l) blockwise diagonalization =====")
+#print("===== W =====","\n",W_st)
+#print("===== N =====")
+#prntMtrx(N_st)
+#print("===== ibasismap =====","\n",ibasismap_st)
+
+p_al = np.zeros((nsh,nsh))
+s_al = np.zeros((nsh,nsh))
+
+
+#for i in range(nsh):
+#  for j in range(nsh):
+#    ifirst = shell_idx[i]
+#    jfirst = shell_idx[j]
+#    for im in range(ml_up):
+#      for jm in range(ml_up):
+#        p_al[i,j] += cA[ifirst+im,jfirst+jm]
+#        s_al[i,j] += cB[ifirst+im,jfirst+jm]
+#p_al/=ml_up
+#s_al/=ml_up
+
+for i in range(nsh):
+  for j in range(nsh):
+    ifirst = shell_idx[i]
+    jfirst = shell_idx[j]
+    #for im in range(ml_up):
+    #  for jm in range(ml_up):
+    #    if im == jm:
+    #      cA[ifirst+im,jfirst+jm] = p_al[i,j]
+    #      cB[ifirst+im,jfirst+jm] = s_al[i,j]
+    #    else:
+    #      cA[ifirst+im,jfirst+jm] = 0.
+    #      cB[ifirst+im,jfirst+jm] = 0.

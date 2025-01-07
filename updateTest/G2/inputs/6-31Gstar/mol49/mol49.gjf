@@ -1,0 +1,12 @@
+%mem=25GB
+%chk=mol49.chk
+
+#RHF/6-31G* int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read 
+
+mol49-NBO
+
+0 1
+F .000000 .000000 -1.084794
+Cl .000000 .000000 .574302
+
+$nbo BOAO SAO SPNAO DMPNAO DMNAO DMMO DMAO AOMO AOPNAO AONAO DETAIL ARCHIVE FILE=mol49.gen* AOINFO NPA $end

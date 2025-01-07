@@ -1,0 +1,3 @@
+2025-01-07:11:14:31,990 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'D_CONVERGENCE': 1e-08, 'E_CONVERGENCE': 1e-08, 'G_CONVERGENCE': 'GAU_VERYTIGHT', 'PRINT_MOS': 1, 'PUREAM': 1, 'REFERENCE': 'RHF', 'SCF_TYPE': 'DIRECT', 'S_ORTHOGONALIZATION': 'SYMMETRIC', 'function_kwargs': {}}
+2025-01-07:11:14:31,994 INFO     [psi4.driver.driver:499] Compute energy(): method=scf, basis=userbas, molecule=default, nre=0.0
+2025-01-07:11:14:32,299 INFO     [psi4.driver.driver:502] Return energy(): -285.38397420105696

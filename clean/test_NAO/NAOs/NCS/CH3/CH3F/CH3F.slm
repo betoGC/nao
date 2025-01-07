@@ -1,0 +1,44 @@
+#!/bin/bash
+
+## Setting up account, job name, number of nodes, cores/node, time, and memory
+
+#SBATCH --account=nn4654k
+#SBATCH --job-name=CH3F
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --time=00:15:00
+#SBATCH --mem-per-cpu=4GB
+#SBATCH --output=/cluster/home/beto93/logfiles/CH3F.logfile
+#SBATCH --signal=B:USR1@120
+###################################################################
+
+## Modules for Gaussian and NBO7
+module purge
+module load Gaussian/g16_C.01
+
+## Scratch folder
+if [[ -d "/cluster/work/users/beto93/CH3F" ]]
+then
+    rm -rf /cluster/work/users/beto93/CH3F
+fi
+
+mkdir /cluster/work/users/beto93/CH3F
+
+# Copying input files (also chk, if it exists) to scratch
+
+cd $SUBMITDIR
+cp CH3F.* /cluster/work/users/beto93/CH3F/
+cd /cluster/work/users/beto93/CH3F
+
+# Running the calc with the parallel ib binary from the scratch folder
+
+g16.ib  < CH3F.gjf > $SUBMITDIR/CH3F.log
+
+# Recovering the relevant files and cleaning up
+
+formchk CH3F.chk
+cp CH3F.47 $SUBMITDIR
+
+cd $SUBMITDIR
+# rm -rf /cluster/work/users/beto93/CH3F
+

@@ -1,0 +1,12 @@
+%mem=25GB
+%chk=mol21.chk
+
+#RHF/6-31G* int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read 
+
+mol21-NBO
+
+0 1
+Li .000000 .000000 1.386530
+Li .000000 .000000 -1.386530
+
+$nbo BOAO SAO SPNAO DMPNAO DMNAO DMMO DMAO AOMO AOPNAO AONAO DETAIL ARCHIVE FILE=mol21.gen* AOINFO NPA $end

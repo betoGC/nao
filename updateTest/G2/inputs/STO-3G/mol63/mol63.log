@@ -1,0 +1,1750 @@
+ Entering Gaussian System, Link 0=g16
+ Initial command:
+ /cluster/software/Gaussian/g16_C.01/l1.exe "/cluster/work/users/beto93/mol63/Gau-508766.inp" -scrdir="/cluster/work/users/beto93/mol63/"
+ Entering Link 1 = /cluster/software/Gaussian/g16_C.01/l1.exe PID=    508773.
+  
+ Copyright (c) 1988-2019, Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 16 program.  It is based on
+ the Gaussian(R) 09 system (copyright 2009, Gaussian, Inc.),
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 16, Revision C.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, 
+ G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, 
+ J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, 
+ J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, 
+ F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, 
+ T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, 
+ G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, 
+ J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, 
+ T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, 
+ F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, 
+ V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, 
+ J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, 
+ J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, 
+ J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2019.
+ 
+ ******************************************
+ Gaussian 16:  ES64L-G16RevC.01  3-Jul-2019
+                18-Nov-2024 
+ ******************************************
+ %LindaWorkers=c1-41-ib
+ %NProcShared=4
+ Will use up to    4 processors via shared memory.
+ %mem=25GB
+ %chk=mol63.chk
+ SetLPE:    new flags="-opt 'Tsnet.Node.lindarsharg: ssh'  -nodelist 'c1-41-ib.saga' -env GAUSS_MDEF=3355443200 -env GAUSS_EXEDIR="/cluster/software/Gaussian/g16_C.01/bsd:/cluster/software/Gaussian/g16_C.01""
+ Will use up to    1 processors via Linda.
+ -----------------------------------------------------------------
+ #RHF/STO-3G int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read
+ -----------------------------------------------------------------
+ 1/38=1,163=2,172=1/1;
+ 2/12=2,15=3,17=6,18=5,40=1/2;
+ 3/6=3,8=11,11=1,25=1,30=1,60=-1,116=1/1,2,3;
+ 4//1;
+ 5/5=2,38=5/2;
+ 6/7=2,8=2,9=2,10=2,28=1,40=2,113=1,114=1,124=2103/1,12;
+ 99/5=1,9=1/99;
+ ---------
+ mol63-NBO
+ ---------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ O                     0.        0.        1.33072 
+ C                     0.        0.        0.14436 
+ F                     0.        1.06949  -0.63955 
+ F                     0.       -1.06949  -0.63955 
+ 
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8           0        0.000000    0.000000    1.330715
+      2          6           0        0.000000    0.000000    0.144358
+      3          9           0        0.000000    1.069490   -0.639548
+      4          9           0        0.000000   -1.069490   -0.639548
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4
+     1  O    0.000000
+     2  C    1.186357   0.000000
+     3  F    2.241817   1.326016   0.000000
+     4  F    2.241817   1.326016   2.138980   0.000000
+ Symmetry turned off by external request.
+ Stoichiometry    CF2O
+ Rotational constants (GHZ):          11.6283112          11.4623250           5.7723608
+ Standard basis: STO-3G (5D, 7F)
+    20 basis functions,    60 primitive gaussians,    20 cartesian basis functions
+    16 alpha electrons       16 beta electrons
+       nuclear repulsion energy       118.5405192725 Hartrees.
+ NAtoms=    4 NActive=    4 NUniq=    4 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned off.
+ One-electron integrals computed using PRISM.
+ NBasis=    20 RedAO= T EigKep=  2.34D-01  NBF=    20
+ NBsUse=    20 1.00D-06 EigRej= -1.00D+00 NBFU=    20
+ ExpMin= 2.22D-01 ExpMax= 1.67D+02 ExpMxC= 1.67D+02 IAcc=3 IRadAn=         5 AccDes= 0.00D+00
+ Harris functional with IExCor=  205 and IRadAn=       5 diagonalized for initial guess.
+ HarFok:  IExCor=  205 AccDes= 0.00D+00 IRadAn=         5 IDoV= 1 UseB2=F ITyADJ=14
+ ICtDFT=  3500011 ScaDFX=  1.000000  1.000000  1.000000  1.000000
+ FoFCou: FMM=F IPFlag=           0 FMFlag=      100000 FMFlg1=           0
+         NFxFlg=           0 DoJE=T BraDBF=F KetDBF=T FulRan=T
+         wScrn=  0.000000 ICntrl=       500 IOpCl=  0 I1Cent=   200000004 NGrid=           0
+         NMat0=    1 NMatS0=      1 NMatT0=    0 NMatD0=    1 NMtDS0=    0 NMtDT0=    0
+ Symmetry not used in FoFCou.
+ Keep R1 ints in memory in canonical form, NReq=827820.
+ Requested convergence on RMS density matrix=1.00D-08 within 128 cycles.
+ Requested convergence on MAX density matrix=1.00D-06.
+ Requested convergence on             energy=1.00D-06.
+ No special actions if energy rises.
+ SCF Done:  E(RHF) =  -307.305324680     A.U. after   11 cycles
+            NFock= 11  Conv=0.80D-08     -V/T= 2.0114
+
+ **********************************************************************
+
+            Population analysis using the SCF Density.
+
+ **********************************************************************
+
+ Alpha  occ. eigenvalues --  -26.02264 -26.02251 -20.32442 -11.30138  -1.62696
+ Alpha  occ. eigenvalues --   -1.54596  -1.38104  -0.79274  -0.70009  -0.67315
+ Alpha  occ. eigenvalues --   -0.64737  -0.53293  -0.51161  -0.51105  -0.41909
+ Alpha  occ. eigenvalues --   -0.41411
+ Alpha virt. eigenvalues --    0.28287   0.54373   0.65311   0.97236
+          Condensed to atoms (all electrons):
+               1          2          3          4
+     1  O    7.835249   0.439689  -0.014454  -0.014454
+     2  C    0.439689   4.624606   0.216932   0.216932
+     3  F   -0.014454   0.216932   8.939603  -0.014177
+     4  F   -0.014454   0.216932  -0.014177   8.939603
+ Mulliken charges:
+               1
+     1  O   -0.246031
+     2  C    0.501840
+     3  F   -0.127905
+     4  F   -0.127905
+ Sum of Mulliken charges =  -0.00000
+ Mulliken charges with hydrogens summed into heavy atoms:
+               1
+     1  O   -0.246031
+     2  C    0.501840
+     3  F   -0.127905
+     4  F   -0.127905
+ Electronic spatial extent (au):  <R**2>=            192.3085
+ Charge=             -0.0000 electrons
+ Dipole moment (field-independent basis, Debye):
+    X=             -0.0000    Y=             -0.0000    Z=             -0.8653  Tot=              0.8653
+ Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=            -16.2709   YY=            -18.7586   ZZ=            -20.7332
+   XY=             -0.0000   XZ=             -0.0000   YZ=             -0.0000
+ Traceless Quadrupole moment (field-independent basis, Debye-Ang):
+   XX=              2.3167   YY=             -0.1711   ZZ=             -2.1456
+   XY=             -0.0000   XZ=             -0.0000   YZ=             -0.0000
+ Octapole moment (field-independent basis, Debye-Ang**2):
+  XXX=             -0.0000  YYY=             -0.0000  ZZZ=             -9.3553  XYY=              0.0000
+  XXY=             -0.0000  XXZ=             -1.3573  XZZ=             -0.0000  YZZ=             -0.0000
+  YYZ=             -0.5691  XYZ=             -0.0000
+ Hexadecapole moment (field-independent basis, Debye-Ang**3):
+ XXXX=             -8.0990 YYYY=            -63.8612 ZZZZ=            -83.1763 XXXY=              0.0000
+ XXXZ=             -0.0000 YYYX=              0.0000 YYYZ=              0.0000 ZZZX=             -0.0000
+ ZZZY=              0.0000 XXYY=            -11.6873 XXZZ=            -13.5860 YYZZ=            -23.7674
+ XXYZ=              0.0000 YYXZ=             -0.0000 ZZXY=             -0.0000
+ N-N= 1.185405192725D+02 E-N=-9.686703865829D+02  KE= 3.038327756712D+02
+ Running external command "gaunbo7 R"
+         input file       "/cluster/work/users/beto93/mol63/Gau-508773.EIn"
+         output file      "/cluster/work/users/beto93/mol63/Gau-508773.EOu"
+         message file     "/cluster/work/users/beto93/mol63/Gau-508773.EMs"
+         fchk file        "/cluster/work/users/beto93/mol63/Gau-508773.EFC"
+         mat. el file     "/cluster/work/users/beto93/mol63/Gau-508773.EUF"
+
+ Writing WrtUnf unformatted file "/cluster/work/users/beto93/mol63/Gau-508773.EUF"
+ Gaussian matrix elements                                         Version   2 NLab=11 Len12L=8 Len4L=8
+ Write SHELL TO ATOM MAP                   from file      0 offset           0 length                   8 to matrix element file.
+ Write SHELL TYPES                         from file      0 offset           0 length                   8 to matrix element file.
+ Write NUMBER OF PRIMITIVES PER SHELL      from file      0 offset           0 length                   8 to matrix element file.
+ Write PRIMITIVE EXPONENTS                 from file      0 offset           0 length                  24 to matrix element file.
+ Write CONTRACTION COEFFICIENTS            from file      0 offset           0 length                  24 to matrix element file.
+ Write P(S=P) CONTRACTION COEFFICIENTS     from file      0 offset           0 length                  24 to matrix element file.
+ Write COORDINATES OF EACH SHELL           from file      0 offset           0 length                  24 to matrix element file.
+ Write BONDS PER ATOM                      from file      0 offset           0 length                   4 to matrix element file.
+ Write BONDED ATOMS                        from file      0 offset           0 length                   6 to matrix element file.
+ Write BOND TYPES                          from file      0 offset           0 length                   6 to matrix element file.
+ Write ONIOM CHARGE/MULT                   from file      0 offset           0 length                  32 to matrix element file.
+ Write ONIOM ATOM LAYERS                   from file      0 offset           0 length                   4 to matrix element file.
+ Write ONIOM ATOM MODIFIERS                from file      0 offset           0 length                   4 to matrix element file.
+ Write ONIOM ATOM TYPES                    from file      0 offset           0 length                   4 to matrix element file.
+ Write ONIOM LINK ATOMS                    from file      0 offset           0 length                   4 to matrix element file.
+ Write ONIOM LINK CHARGES                  from file      0 offset           0 length                   4 to matrix element file.
+ Write ONIOM LINK DISTANCES                from file      0 offset           0 length                  16 to matrix element file.
+ Write SYMINF INTS                         from file      0 offset           0 length                  26 to matrix element file.
+ Write ROTTR TO SO                         from file      0 offset           0 length                  12 to matrix element file.
+ Write GAUSSIAN SCALARS                    from file    501 offset           0 to matrix element file.
+ Write OPTIMIZATION FLAGS                  from file      0 offset           0 length                   4 to matrix element file.
+ Write INTEGER ISO                         from file      0 offset           0 length                   4 to matrix element file.
+ Write INTEGER SPIN                        from file      0 offset           0 length                   4 to matrix element file.
+ Write REAL ZEFFECTIVE                     from file      0 offset           0 length                   4 to matrix element file.
+ Write REAL GFACTOR                        from file      0 offset           0 length                   4 to matrix element file.
+ Write REAL ZNUCLEAR                       from file      0 offset           0 length                   4 to matrix element file.
+ Write MULLIKEN CHARGES                    from file      0 offset           0 length                   4 to matrix element file.
+ Write NUCLEAR GRADIENT                    from file  10584 offset           0 length                  12 to matrix element file.
+ Array NUCLEAR FORCE CONSTANTS              on  file  10585 does not exist.
+ Write ELECTRIC DIPOLE MOMENT              from file      0 offset           0 length                   3 to matrix element file.
+ Write NON-ADIABATIC COUPLING              from file  10810 offset           0 length                  12 to matrix element file.
+ Write FINITE EM FIELD                     from file  10521 offset           0 length                  35 to matrix element file.
+ Write OVERLAP                             from file  10514 offset           0 length                 210 to matrix element file.
+ Write CORE HAMILTONIAN ALPHA              from file  10515 offset           0 length                 210 to matrix element file.
+ Write CORE HAMILTONIAN BETA               from file  10515 offset         210 length                 210 to matrix element file.
+ Write KINETIC ENERGY                      from file  10516 offset           0 length                 210 to matrix element file.
+ Write ORTHOGONAL BASIS                    from file  10685 offset           0 length                 400 to matrix element file.
+ Write DIPOLE INTEGRALS                    from file  10518 offset           0 length                 630 to matrix element file.
+ Array DIP VEL INTEGRALS                    on  file  10572 does not exist.
+ Array R X DEL INTEGRALS                    on  file  10572 does not exist.
+ Write ALPHA ORBITAL ENERGIES              from file      0 offset           0 length                  20 to matrix element file.
+ Write ALPHA MO COEFFICIENTS               from file  10524 offset           0 length                 400 to matrix element file.
+ Write ALPHA DENSITY MATRIX                from file      0 offset           0 length                 210 to matrix element file.
+ Write ALPHA FOCK MATRIX                   from file  10536 offset           0 length                 210 to matrix element file.
+ Write ENERGY-WEIGHTED DENSITY             from file  10571 offset           0 length                 210 to matrix element file.
+ Write ALPHA SCF DENSITY MATRIX            from file      0 offset           0 length                 210 to matrix element file.
+ No 2e integrals to process.
+ Perform NBO analysis...executing G16NBO...
+
+ *********************************** NBO 7.0 ***********************************
+             N A T U R A L   A T O M I C   O R B I T A L   A N D
+          N A T U R A L   B O N D   O R B I T A L   A N A L Y S I S
+ **************************** Espen Tangen (S101595) ***************************
+  (c) Copyright 1996-2021 Board of Regents of the University of Wisconsin System
+      on behalf of the Theoretical Chemistry Institute.  All rights reserved.
+
+          Cite this program [NBO 7.0.10 (8-Feb-2021)] as:
+
+          NBO 7.0.  E. D. Glendening, J. K. Badenhoop, A. E. Reed,
+          J. E. Carpenter, J. A. Bohmann, C. M. Morales, P. Karafiloglou,
+          C. R. Landis, and F. Weinhold, Theoretical Chemistry Institute,
+          University of Wisconsin, Madison, WI (2018)
+
+       /NPA    / : Natural Population Analysis
+       /AOPNAO / : Print the AO to PNAO transformation
+       /AONAO  / : Print the AO to NAO transformation
+       /AOMO   / : Print the MOs in the AO basis
+       /BOAO   / : Print the AO bond-order matrix
+       /DMAO   / : Print the AO density matrix
+       /DMPNAO / : Print the PNAO density matrix
+       /DMNAO  / : Print the NAO density matrix
+       /DMMO   / : Print the MO density matrix
+       /SAO    / : Print the AO overlap matrix
+       /SPNAO  / : Print the PNAO overlap matrix
+       /DETAIL / : Write details of NBO search
+       /ARCHIVE/ : Write the archive file to lfn47
+       /AOINFO / : Write AO information to lfn31
+       /FILE   / : Set to mol63.gen*
+
+ Filename set to mol63.gen1
+
+ Job title: mol63-NBO
+
+
+ MOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.0000  0.9942  0.0000 -0.0374  0.0000 -0.2139  0.0704
+   2.  O 1 (s)     -0.0001  0.0000  0.0268 -0.0053  0.1230  0.0000  0.7328 -0.3030
+   3.  O 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.0000  0.0008  0.0000  0.0000  0.0000  0.0099  0.0000  0.0000
+   5.  O 1 (pz)     0.0000  0.0000 -0.0063  0.0010 -0.0492  0.0000 -0.1805 -0.1410
+   6.  C 2 (s)      0.0008  0.0000  0.0005  0.9931 -0.1053  0.0000 -0.0984 -0.1537
+   7.  C 2 (s)     -0.0059  0.0000 -0.0078  0.0288  0.2512  0.0000  0.2159  0.5320
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   9.  C 2 (py)     0.0000 -0.0052  0.0000  0.0000  0.0000  0.1473  0.0000  0.0000
+  10.  C 2 (pz)     0.0041  0.0000 -0.0069  0.0007 -0.0712  0.0000  0.2277 -0.2232
+  11.  F 3 (s)      0.7033  0.7034  0.0000  0.0004 -0.1606 -0.1785  0.0475  0.0781
+  12.  F 3 (s)      0.0163  0.0157  0.0002 -0.0043  0.5923  0.6755 -0.1853 -0.3821
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  14.  F 3 (py)    -0.0021 -0.0015  0.0002  0.0012 -0.0726 -0.0458  0.0026 -0.3830
+  15.  F 3 (pz)     0.0012  0.0014  0.0004 -0.0010  0.0445  0.0424  0.0215  0.1613
+  16.  F 4 (s)      0.7033 -0.7034  0.0000  0.0004 -0.1606  0.1785  0.0475  0.0781
+  17.  F 4 (s)      0.0163 -0.0157  0.0002 -0.0043  0.5923 -0.6755 -0.1853 -0.3821
+  18.  F 4 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  19.  F 4 (py)     0.0021 -0.0015 -0.0002 -0.0012  0.0726 -0.0458 -0.0026  0.3830
+  20.  F 4 (pz)     0.0012 -0.0014  0.0004 -0.0010  0.0445 -0.0424  0.0215  0.1613
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.0000 -0.1093  0.0000  0.0000 -0.0524  0.0000  0.0000
+   2.  O 1 (s)      0.0000  0.0000  0.5618  0.0000  0.0000  0.2794  0.0000  0.0000
+   3.  O 1 (px)     0.0000  0.2717  0.0000  0.0000  0.0000  0.0000  0.6918  0.0000
+   4.  O 1 (py)     0.3220  0.0000  0.0000  0.0000 -0.0969  0.0000  0.0000  0.8803
+   5.  O 1 (pz)     0.0000  0.0000  0.4369  0.0000  0.0000  0.4975  0.0000  0.0000
+   6.  C 2 (s)      0.0000  0.0000  0.0583  0.0000  0.0000  0.0252  0.0000  0.0000
+   7.  C 2 (s)      0.0000  0.0000 -0.1982  0.0000  0.0000 -0.0498  0.0000  0.0000
+   8.  C 2 (px)     0.0000  0.4980  0.0000  0.0000  0.0000  0.0000  0.3319  0.0000
+   9.  C 2 (py)     0.4810  0.0000  0.0000  0.0000 -0.1028  0.0000  0.0000 -0.0123
+  10.  C 2 (pz)     0.0000  0.0000 -0.3463  0.0000  0.0000 -0.2238  0.0000  0.0000
+  11.  F 3 (s)      0.0522  0.0000  0.0078  0.0000 -0.0094  0.0089  0.0000 -0.0028
+  12.  F 3 (s)     -0.2703  0.0000 -0.0449  0.0000  0.0510 -0.0518  0.0000  0.0128
+  13.  F 3 (px)     0.0000  0.4919  0.0000  0.7084  0.0000  0.0000 -0.4421  0.0000
+  14.  F 3 (py)    -0.1750  0.0000 -0.3050  0.0000  0.5876  0.1409  0.0000  0.2418
+  15.  F 3 (pz)     0.4124  0.0000 -0.3152  0.0000  0.3911  0.5503  0.0000 -0.2539
+  16.  F 4 (s)     -0.0522  0.0000  0.0078  0.0000  0.0094  0.0089  0.0000  0.0028
+  17.  F 4 (s)      0.2703  0.0000 -0.0449  0.0000 -0.0510 -0.0518  0.0000 -0.0128
+  18.  F 4 (px)     0.0000  0.4919  0.0000 -0.7084  0.0000  0.0000 -0.4421  0.0000
+  19.  F 4 (py)    -0.1750  0.0000  0.3050  0.0000  0.5876 -0.1409  0.0000  0.2418
+  20.  F 4 (pz)    -0.4124  0.0000 -0.3152  0.0000 -0.3911  0.5503  0.0000  0.2539
+
+           AO         17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.0447  0.0000  0.1146
+   2.  O 1 (s)      0.0000 -0.2672  0.0000 -0.9042
+   3.  O 1 (px)    -0.7077  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.0000  0.0000 -0.4215  0.0000
+   5.  O 1 (pz)     0.0000  0.3765  0.0000  0.9189
+   6.  C 2 (s)      0.0000 -0.2112  0.0000 -0.0704
+   7.  C 2 (s)      0.0000  1.1366  0.0000  0.5944
+   8.  C 2 (px)     0.8565  0.0000  0.0000  0.0000
+   9.  C 2 (py)     0.0000  0.0000  1.1066  0.0000
+  10.  C 2 (pz)     0.0000 -0.3418  0.0000  1.2700
+  11.  F 3 (s)      0.0000  0.0636  0.0572 -0.0223
+  12.  F 3 (s)      0.0000 -0.3934 -0.3713  0.1545
+  13.  F 3 (px)    -0.2822  0.0000  0.0000  0.0000
+  14.  F 3 (py)     0.0000  0.5171  0.3286 -0.2506
+  15.  F 3 (pz)     0.0000 -0.3090 -0.4092 -0.0393
+  16.  F 4 (s)      0.0000  0.0636 -0.0572 -0.0223
+  17.  F 4 (s)      0.0000 -0.3934  0.3713  0.1545
+  18.  F 4 (px)    -0.2822  0.0000  0.0000  0.0000
+  19.  F 4 (py)     0.0000 -0.5171  0.3286  0.2506
+  20.  F 4 (pz)     0.0000 -0.3090  0.4092 -0.0393
+
+
+ AO overlap matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      1.0000  0.2367  0.0000  0.0000  0.0000  0.0000  0.0391  0.0000
+   2.  O 1 (s)      0.2367  1.0000  0.0000  0.0000  0.0000  0.0395  0.3781  0.0000
+   3.  O 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.2221
+   4.  O 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5.  O 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000 -0.0659 -0.3297  0.0000
+   6.  C 2 (s)      0.0000  0.0395  0.0000  0.0000 -0.0659  1.0000  0.2484  0.0000
+   7.  C 2 (s)      0.0391  0.3781  0.0000  0.0000 -0.3297  0.2484  1.0000  0.0000
+   8.  C 2 (px)     0.0000  0.0000  0.2221  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  C 2 (py)     0.0000  0.0000  0.0000  0.2221  0.0000  0.0000  0.0000  0.0000
+  10.  C 2 (pz)     0.0660  0.4550  0.0000  0.0000 -0.3135  0.0000  0.0000  0.0000
+  11.  F 3 (s)      0.0000  0.0002  0.0000  0.0002 -0.0004  0.0000  0.0235  0.0000
+  12.  F 3 (s)      0.0000  0.0118  0.0000  0.0101 -0.0186  0.0161  0.2591  0.0000
+  13.  F 3 (px)     0.0000  0.0000  0.0042  0.0000  0.0000  0.0000  0.0000  0.1328
+  14.  F 3 (py)    -0.0001 -0.0091  0.0000 -0.0041  0.0153 -0.0240 -0.1852  0.0000
+  15.  F 3 (pz)     0.0001  0.0168  0.0000  0.0153 -0.0239  0.0176  0.1358  0.0000
+  16.  F 4 (s)      0.0000  0.0002  0.0000 -0.0002 -0.0004  0.0000  0.0235  0.0000
+  17.  F 4 (s)      0.0000  0.0118  0.0000 -0.0101 -0.0186  0.0161  0.2591  0.0000
+  18.  F 4 (px)     0.0000  0.0000  0.0042  0.0000  0.0000  0.0000  0.0000  0.1328
+  19.  F 4 (py)     0.0001  0.0091  0.0000 -0.0041 -0.0153  0.0240  0.1852  0.0000
+  20.  F 4 (pz)     0.0001  0.0168  0.0000 -0.0153 -0.0239  0.0176  0.1358  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.0660  0.0000  0.0000  0.0000 -0.0001  0.0001  0.0000
+   2.  O 1 (s)      0.0000  0.4550  0.0002  0.0118  0.0000 -0.0091  0.0168  0.0002
+   3.  O 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0042  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.2221  0.0000  0.0002  0.0101  0.0000 -0.0041  0.0153 -0.0002
+   5.  O 1 (pz)     0.0000 -0.3135 -0.0004 -0.0186  0.0000  0.0153 -0.0239 -0.0004
+   6.  C 2 (s)      0.0000  0.0000  0.0000  0.0161  0.0000 -0.0240  0.0176  0.0000
+   7.  C 2 (s)      0.0000  0.0000  0.0235  0.2591  0.0000 -0.1852  0.1358  0.0235
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000  0.1328  0.0000  0.0000  0.0000
+   9.  C 2 (py)     1.0000  0.0000  0.0315  0.2874  0.0000 -0.1322  0.1942 -0.0315
+  10.  C 2 (pz)     0.0000  1.0000 -0.0231 -0.2106  0.0000  0.1942 -0.0095 -0.0231
+  11.  F 3 (s)      0.0315 -0.0231  1.0000  0.2380  0.0000  0.0000  0.0000  0.0000
+  12.  F 3 (s)      0.2874 -0.2106  0.2380  1.0000  0.0000  0.0000  0.0000  0.0001
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+  14.  F 3 (py)    -0.1322  0.1942  0.0000  0.0000  0.0000  1.0000  0.0000 -0.0002
+  15.  F 3 (pz)     0.1942 -0.0095  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000
+  16.  F 4 (s)     -0.0315 -0.0231  0.0000  0.0001  0.0000 -0.0002  0.0000  1.0000
+  17.  F 4 (s)     -0.2874 -0.2106  0.0001  0.0101  0.0000 -0.0176  0.0000  0.2380
+  18.  F 4 (px)     0.0000  0.0000  0.0000  0.0000  0.0036  0.0000  0.0000  0.0000
+  19.  F 4 (py)    -0.1322 -0.1942  0.0002  0.0176  0.0000 -0.0288  0.0000  0.0000
+  20.  F 4 (pz)    -0.1942 -0.0095  0.0000  0.0000  0.0000  0.0000  0.0036  0.0000
+
+           AO         17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.0000  0.0001  0.0001
+   2.  O 1 (s)      0.0118  0.0000  0.0091  0.0168
+   3.  O 1 (px)     0.0000  0.0042  0.0000  0.0000
+   4.  O 1 (py)    -0.0101  0.0000 -0.0041 -0.0153
+   5.  O 1 (pz)    -0.0186  0.0000 -0.0153 -0.0239
+   6.  C 2 (s)      0.0161  0.0000  0.0240  0.0176
+   7.  C 2 (s)      0.2591  0.0000  0.1852  0.1358
+   8.  C 2 (px)     0.0000  0.1328  0.0000  0.0000
+   9.  C 2 (py)    -0.2874  0.0000 -0.1322 -0.1942
+  10.  C 2 (pz)    -0.2106  0.0000 -0.1942 -0.0095
+  11.  F 3 (s)      0.0001  0.0000  0.0002  0.0000
+  12.  F 3 (s)      0.0101  0.0000  0.0176  0.0000
+  13.  F 3 (px)     0.0000  0.0036  0.0000  0.0000
+  14.  F 3 (py)    -0.0176  0.0000 -0.0288  0.0000
+  15.  F 3 (pz)     0.0000  0.0000  0.0000  0.0036
+  16.  F 4 (s)      0.2380  0.0000  0.0000  0.0000
+  17.  F 4 (s)      1.0000  0.0000  0.0000  0.0000
+  18.  F 4 (px)     0.0000  1.0000  0.0000  0.0000
+  19.  F 4 (py)     0.0000  0.0000  1.0000  0.0000
+  20.  F 4 (pz)     0.0000  0.0000  0.0000  1.0000
+
+
+ AO bond-order matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      2.1105 -0.4643  0.0000  0.0000 -0.0991  0.0140 -0.0032  0.0000
+   2.  O 1 (s)     -0.4643  2.0768  0.0000  0.0000  0.5774 -0.0079 -0.1954  0.0000
+   3.  O 1 (px)     0.0000  0.0000  1.1049  0.0000  0.0000  0.0000  0.0000  0.7299
+   4.  O 1 (py)     0.0000  0.0000  0.0000  1.7761  0.0000  0.0000  0.0000  0.0000
+   5.  O 1 (pz)    -0.0991  0.5774  0.0000  0.0000  0.9867  0.1673 -0.4753  0.0000
+   6.  C 2 (s)      0.0140 -0.0079  0.0000  0.0000  0.1673  2.0693 -0.2274  0.0000
+   7.  C 2 (s)     -0.0032 -0.1954  0.0000  0.0000 -0.4753 -0.2274  0.8709  0.0000
+   8.  C 2 (px)     0.0000  0.0000  0.7299  0.0000  0.0000  0.0000  0.0000  0.7163
+   9.  C 2 (py)     0.0000  0.0000  0.0000  0.3108  0.0000  0.0000  0.0000  0.0000
+  10.  C 2 (pz)    -0.0381 -0.0631  0.0000  0.0000 -0.5374 -0.0115 -0.0153  0.0000
+  11.  F 3 (s)      0.0000 -0.0035  0.0000  0.0281 -0.0076  0.0037  0.0107  0.0000
+  12.  F 3 (s)     -0.0033  0.0264  0.0000 -0.1480  0.0255  0.0128 -0.1665  0.0000
+  13.  F 3 (px)     0.0000  0.0000 -0.3444  0.0000  0.0000  0.0000  0.0000  0.1964
+  14.  F 3 (py)     0.0027 -0.0460  0.0000  0.1983 -0.0122  0.1065 -0.3358  0.0000
+  15.  F 3 (pz)     0.0222 -0.1020  0.0000 -0.2565  0.2144 -0.0742  0.2734  0.0000
+  16.  F 4 (s)      0.0000 -0.0035  0.0000 -0.0281 -0.0076  0.0037  0.0107  0.0000
+  17.  F 4 (s)     -0.0033  0.0264  0.0000  0.1480  0.0255  0.0128 -0.1665  0.0000
+  18.  F 4 (px)     0.0000  0.0000 -0.3444  0.0000  0.0000  0.0000  0.0000  0.1964
+  19.  F 4 (py)    -0.0027  0.0460  0.0000  0.1983  0.0122 -0.1065  0.3358  0.0000
+  20.  F 4 (pz)     0.0222 -0.1020  0.0000  0.2565  0.2144 -0.0742  0.2734  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.0000 -0.0381  0.0000 -0.0033  0.0000  0.0027  0.0222  0.0000
+   2.  O 1 (s)      0.0000 -0.0631 -0.0035  0.0264  0.0000 -0.0460 -0.1020 -0.0035
+   3.  O 1 (px)     0.0000  0.0000  0.0000  0.0000 -0.3444  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.3108  0.0000  0.0281 -0.1480  0.0000  0.1983 -0.2565 -0.0281
+   5.  O 1 (pz)     0.0000 -0.5374 -0.0076  0.0255  0.0000 -0.0122  0.2144 -0.0076
+   6.  C 2 (s)      0.0000 -0.0115  0.0037  0.0128  0.0000  0.1065 -0.0742  0.0037
+   7.  C 2 (s)      0.0000 -0.0153  0.0107 -0.1665  0.0000 -0.3358  0.2734  0.0107
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000  0.1964  0.0000  0.0000  0.0000
+   9.  C 2 (py)     0.5275  0.0000 -0.0077 -0.0719  0.0000 -0.3086  0.3350  0.0077
+  10.  C 2 (pz)     0.0000  0.5535  0.0059  0.0563  0.0000  0.3307 -0.0965  0.0059
+  11.  F 3 (s)     -0.0077  0.0059  2.1168 -0.4946  0.0000 -0.0579  0.0435 -0.0010
+  12.  F 3 (s)     -0.0719  0.0563 -0.4946  2.1371  0.0000  0.3173 -0.2395  0.0020
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000  1.8785  0.0000  0.0000  0.0000
+  14.  F 3 (py)    -0.3086  0.3307 -0.0579  0.3173  0.0000  1.4026  0.4060 -0.0250
+  15.  F 3 (pz)     0.3350 -0.0965  0.0435 -0.2395  0.0000  0.4060  1.6400 -0.0044
+  16.  F 4 (s)      0.0077  0.0059 -0.0010  0.0020  0.0000 -0.0250 -0.0044  2.1168
+  17.  F 4 (s)      0.0719  0.0563  0.0020  0.0077  0.0000  0.1195  0.0250 -0.4946
+  18.  F 4 (px)     0.0000  0.0000  0.0000  0.0000 -0.1288  0.0000  0.0000  0.0000
+  19.  F 4 (py)    -0.3086 -0.3307  0.0250 -0.1195  0.0000  0.3433 -0.0289  0.0579
+  20.  F 4 (pz)    -0.3350 -0.0965 -0.0044  0.0250  0.0000  0.0289  0.0827  0.0435
+
+           AO         17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1 (s)     -0.0033  0.0000 -0.0027  0.0222
+   2.  O 1 (s)      0.0264  0.0000  0.0460 -0.1020
+   3.  O 1 (px)     0.0000 -0.3444  0.0000  0.0000
+   4.  O 1 (py)     0.1480  0.0000  0.1983  0.2565
+   5.  O 1 (pz)     0.0255  0.0000  0.0122  0.2144
+   6.  C 2 (s)      0.0128  0.0000 -0.1065 -0.0742
+   7.  C 2 (s)     -0.1665  0.0000  0.3358  0.2734
+   8.  C 2 (px)     0.0000  0.1964  0.0000  0.0000
+   9.  C 2 (py)     0.0719  0.0000 -0.3086 -0.3350
+  10.  C 2 (pz)     0.0563  0.0000 -0.3307 -0.0965
+  11.  F 3 (s)      0.0020  0.0000  0.0250 -0.0044
+  12.  F 3 (s)      0.0077  0.0000 -0.1195  0.0250
+  13.  F 3 (px)     0.0000 -0.1288  0.0000  0.0000
+  14.  F 3 (py)     0.1195  0.0000  0.3433  0.0289
+  15.  F 3 (pz)     0.0250  0.0000 -0.0289  0.0827
+  16.  F 4 (s)     -0.4946  0.0000  0.0579  0.0435
+  17.  F 4 (s)      2.1371  0.0000 -0.3173 -0.2395
+  18.  F 4 (px)     0.0000  1.8785  0.0000  0.0000
+  19.  F 4 (py)    -0.3173  0.0000  1.4026 -0.4060
+  20.  F 4 (pz)    -0.2395  0.0000 -0.4060  1.6400
+
+
+ AO density matrix:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      1.9999  0.4746  0.0000  0.0000 -0.0059  0.0001  0.0743  0.0000
+   2.  O 1 (s)      0.4746  1.9893  0.0000  0.0000  0.0514  0.0780  0.7851  0.0000
+   3.  O 1 (px)     0.0000  0.0000  1.4593  0.0000  0.0000  0.0000  0.0000  1.0934
+   4.  O 1 (py)     0.0000  0.0000  0.0000  1.9212  0.0000  0.0000  0.0000  0.0000
+   5.  O 1 (pz)    -0.0059  0.0514  0.0000  0.0000  1.7414 -0.1254 -0.8508  0.0000
+   6.  C 2 (s)      0.0001  0.0780  0.0000  0.0000 -0.1254  1.9997  0.5071  0.0000
+   7.  C 2 (s)      0.0743  0.7851  0.0000  0.0000 -0.8508  0.5071  1.6853  0.0000
+   8.  C 2 (px)     0.0000  0.0000  1.0934  0.0000  0.0000  0.0000  0.0000  1.2204
+   9.  C 2 (py)     0.0000  0.0000  0.0000  0.6653  0.0000  0.0000  0.0000  0.0000
+  10.  C 2 (pz)     0.1270  0.9605  0.0000  0.0000 -0.8222 -0.0024  0.0790  0.0000
+  11.  F 3 (s)      0.0000  0.0003  0.0000  0.0019 -0.0014  0.0001  0.0439  0.0000
+  12.  F 3 (s)      0.0001  0.0238  0.0000  0.0065 -0.0325  0.0314  0.5452  0.0000
+  13.  F 3 (px)     0.0000  0.0000 -0.1708  0.0000  0.0000  0.0000  0.0000  0.4810
+  14.  F 3 (py)    -0.0004 -0.0215  0.0000  0.0586  0.0017 -0.0417 -0.5625  0.0000
+  15.  F 3 (pz)     0.0015  0.0256  0.0000 -0.0485  0.0150  0.0308  0.4038  0.0000
+  16.  F 4 (s)      0.0000  0.0003  0.0000 -0.0019 -0.0014  0.0001  0.0439  0.0000
+  17.  F 4 (s)      0.0001  0.0238  0.0000 -0.0065 -0.0325  0.0314  0.5452  0.0000
+  18.  F 4 (px)     0.0000  0.0000 -0.1708  0.0000  0.0000  0.0000  0.0000  0.4810
+  19.  F 4 (py)     0.0004  0.0215  0.0000  0.0586 -0.0017  0.0417  0.5625  0.0000
+  20.  F 4 (pz)     0.0015  0.0256  0.0000  0.0485  0.0150  0.0308  0.4038  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.1270  0.0000  0.0001  0.0000 -0.0004  0.0015  0.0000
+   2.  O 1 (s)      0.0000  0.9605  0.0003  0.0238  0.0000 -0.0215  0.0256  0.0003
+   3.  O 1 (px)     0.0000  0.0000  0.0000  0.0000 -0.1708  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.6653  0.0000  0.0019  0.0065  0.0000  0.0586 -0.0485 -0.0019
+   5.  O 1 (pz)     0.0000 -0.8222 -0.0014 -0.0325  0.0000  0.0017  0.0150 -0.0014
+   6.  C 2 (s)      0.0000 -0.0024  0.0001  0.0314  0.0000 -0.0417  0.0308  0.0001
+   7.  C 2 (s)      0.0000  0.0790  0.0439  0.5452  0.0000 -0.5625  0.4038  0.0439
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000  0.4810  0.0000  0.0000  0.0000
+   9.  C 2 (py)     1.3787  0.0000  0.0588  0.6131  0.0000 -0.4517  0.6106 -0.0588
+  10.  C 2 (pz)     0.0000  1.5643 -0.0432 -0.4480  0.0000  0.5869 -0.0823 -0.0432
+  11.  F 3 (s)      0.0588 -0.0432  1.9999  0.4766  0.0000 -0.0038  0.0029  0.0000
+  12.  F 3 (s)      0.6131 -0.4480  0.4766  1.9943  0.0000  0.0353 -0.0265  0.0002
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000  1.9405  0.0000  0.0000  0.0000
+  14.  F 3 (py)    -0.4517  0.5869 -0.0038  0.0353  0.0000  1.7720  0.1586 -0.0018
+  15.  F 3 (pz)     0.6106 -0.0823  0.0029 -0.0265  0.0000  0.1586  1.8628 -0.0001
+  16.  F 4 (s)     -0.0588 -0.0432  0.0000  0.0002  0.0000 -0.0018 -0.0001  1.9999
+  17.  F 4 (s)     -0.6131 -0.4480  0.0002  0.0193  0.0000 -0.0231  0.0009  0.4766
+  18.  F 4 (px)     0.0000  0.0000  0.0000  0.0000 -0.0522  0.0000  0.0000  0.0000
+  19.  F 4 (py)    -0.4517 -0.5869  0.0018  0.0231  0.0000  0.0574 -0.0246  0.0038
+  20.  F 4 (pz)    -0.6106 -0.0823 -0.0001  0.0009  0.0000  0.0246  0.0289  0.0029
+
+           AO         17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1 (s)      0.0001  0.0000  0.0004  0.0015
+   2.  O 1 (s)      0.0238  0.0000  0.0215  0.0256
+   3.  O 1 (px)     0.0000 -0.1708  0.0000  0.0000
+   4.  O 1 (py)    -0.0065  0.0000  0.0586  0.0485
+   5.  O 1 (pz)    -0.0325  0.0000 -0.0017  0.0150
+   6.  C 2 (s)      0.0314  0.0000  0.0417  0.0308
+   7.  C 2 (s)      0.5452  0.0000  0.5625  0.4038
+   8.  C 2 (px)     0.0000  0.4810  0.0000  0.0000
+   9.  C 2 (py)    -0.6131  0.0000 -0.4517 -0.6106
+  10.  C 2 (pz)    -0.4480  0.0000 -0.5869 -0.0823
+  11.  F 3 (s)      0.0002  0.0000  0.0018 -0.0001
+  12.  F 3 (s)      0.0193  0.0000  0.0231  0.0009
+  13.  F 3 (px)     0.0000 -0.0522  0.0000  0.0000
+  14.  F 3 (py)    -0.0231  0.0000  0.0574  0.0246
+  15.  F 3 (pz)     0.0009  0.0000 -0.0246  0.0289
+  16.  F 4 (s)      0.4766  0.0000  0.0038  0.0029
+  17.  F 4 (s)      1.9943  0.0000 -0.0353 -0.0265
+  18.  F 4 (px)     0.0000  1.9405  0.0000  0.0000
+  19.  F 4 (py)    -0.0353  0.0000  1.7720 -0.1586
+  20.  F 4 (pz)    -0.0265  0.0000 -0.1586  1.8628
+
+
+ MO density matrix:
+
+      MO     1       2       3       4       5       6       7       8       9
+     ---- ------  ------  ------  ------  ------  ------  ------  ------  ------
+   1.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000
+  10.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  14.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  15.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  16.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  17.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  18.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  19.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  20.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+      MO    10      11      12      13      14      15      16      17      18
+     ---- ------  ------  ------  ------  ------  ------  ------  ------  ------
+   1.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   6.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   7.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   8.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   9.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.     2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.     0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.     0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13.     0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  14.     0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000
+  15.     0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000  0.0000
+  16.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000  0.0000  0.0000
+  17.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  18.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  19.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  20.     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+      MO    19      20
+     ---- ------  ------
+   1.     0.0000  0.0000
+   2.     0.0000  0.0000
+   3.     0.0000  0.0000
+   4.     0.0000  0.0000
+   5.     0.0000  0.0000
+   6.     0.0000  0.0000
+   7.     0.0000  0.0000
+   8.     0.0000  0.0000
+   9.     0.0000  0.0000
+  10.     0.0000  0.0000
+  11.     0.0000  0.0000
+  12.     0.0000  0.0000
+  13.     0.0000  0.0000
+  14.     0.0000  0.0000
+  15.     0.0000  0.0000
+  16.     0.0000  0.0000
+  17.     0.0000  0.0000
+  18.     0.0000  0.0000
+  19.     0.0000  0.0000
+  20.     0.0000  0.0000
+
+
+ NATURAL POPULATIONS:  Natural atomic orbital occupancies
+
+  NAO Atom No lang   Type(AO)    Occupancy      Energy
+ -------------------------------------------------------
+   1    O  1  s      Cor( 1s)     2.00000     -20.18441
+   2    O  1  s      Val( 2s)     1.80316      -1.09969
+   3    O  1  px     Val( 2p)     1.28521      -0.19609
+   4    O  1  py     Val( 2p)     1.84258      -0.37415
+   5    O  1  pz     Val( 2p)     1.36773      -0.17290
+
+   6    C  2  s      Cor( 1s)     2.00000     -11.30030
+   7    C  2  s      Val( 2s)     0.97621      -0.29580
+   8    C  2  px     Val( 2p)     0.90068      -0.11719
+   9    C  2  py     Val( 2p)     0.73861       0.06456
+  10    C  2  pz     Val( 2p)     0.76725       0.15838
+
+  11    F  3  s      Cor( 1s)     2.00000     -25.85337
+  12    F  3  s      Val( 2s)     1.90418      -1.54427
+  13    F  3  px     Val( 2p)     1.90705      -0.51451
+  14    F  3  py     Val( 2p)     1.59343      -0.37351
+  15    F  3  pz     Val( 2p)     1.75462      -0.44302
+
+  16    F  4  s      Cor( 1s)     2.00000     -25.85337
+  17    F  4  s      Val( 2s)     1.90418      -1.54427
+  18    F  4  px     Val( 2p)     1.90705      -0.51451
+  19    F  4  py     Val( 2p)     1.59343      -0.37351
+  20    F  4  pz     Val( 2p)     1.75462      -0.44302
+
+
+ Summary of Natural Population Analysis:
+
+                                     Natural Population
+             Natural    ---------------------------------------------
+  Atom No    Charge        Core      Valence    Rydberg      Total
+ --------------------------------------------------------------------
+    O  1   -0.29867      2.00000     6.29868    0.00000     8.29867
+    C  2    0.61724      2.00000     3.38276    0.00000     5.38276
+    F  3   -0.15928      2.00000     7.15928    0.00000     9.15928
+    F  4   -0.15928      2.00000     7.15928    0.00000     9.15928
+ ====================================================================
+ * Total *  0.00000      8.00000    24.00000    0.00000    32.00000
+
+                                 Natural Population
+ ---------------------------------------------------------
+   Core                       8.00000 (100.0000% of    8)
+   Valence                   24.00000 (100.0000% of   24)
+   Natural Minimal Basis     32.00000 (100.0000% of   32)
+   Natural Rydberg Basis      0.00000 (  0.0000% of   32)
+ ---------------------------------------------------------
+
+    Atom No         Natural Electron Configuration
+ ----------------------------------------------------------------------------
+      O  1      [core]2s( 1.80)2p( 4.50)
+      C  2      [core]2s( 0.98)2p( 2.41)
+      F  3      [core]2s( 1.90)2p( 5.26)
+      F  4      [core]2s( 1.90)2p( 5.26)
+
+
+ PNAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.9687 -0.3478  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.  O 1 (s)      0.1086  1.0235  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.  O 1 (px)     0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5.  O 1 (pz)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+   6.  C 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.9914 -0.2880  0.0000
+   7.  C 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0327  1.0318  0.0000
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  C 2 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.  C 2 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.  F 3 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.  F 3 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  14.  F 3 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  15.  F 3 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  16.  F 4 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  17.  F 4 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  18.  F 4 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  19.  F 4 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  20.  F 4 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   2.  O 1 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   3.  O 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   5.  O 1 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   6.  C 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   7.  C 2 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+   9.  C 2 (py)     1.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  10.  C 2 (pz)     0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  11.  F 3 (s)      0.0000  0.0000  0.9697 -0.3460  0.0000  0.0000  0.0000  0.0000
+  12.  F 3 (s)      0.0000  0.0000  0.1052  1.0242  0.0000  0.0000  0.0000  0.0000
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+  14.  F 3 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000
+  15.  F 3 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000
+  16.  F 4 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.9697
+  17.  F 4 (s)      0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.1052
+  18.  F 4 (px)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  19.  F 4 (py)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  20.  F 4 (pz)     0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+
+           AO         17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1 (s)      0.0000  0.0000  0.0000  0.0000
+   2.  O 1 (s)      0.0000  0.0000  0.0000  0.0000
+   3.  O 1 (px)     0.0000  0.0000  0.0000  0.0000
+   4.  O 1 (py)     0.0000  0.0000  0.0000  0.0000
+   5.  O 1 (pz)     0.0000  0.0000  0.0000  0.0000
+   6.  C 2 (s)      0.0000  0.0000  0.0000  0.0000
+   7.  C 2 (s)      0.0000  0.0000  0.0000  0.0000
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000
+   9.  C 2 (py)     0.0000  0.0000  0.0000  0.0000
+  10.  C 2 (pz)     0.0000  0.0000  0.0000  0.0000
+  11.  F 3 (s)      0.0000  0.0000  0.0000  0.0000
+  12.  F 3 (s)      0.0000  0.0000  0.0000  0.0000
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000
+  14.  F 3 (py)     0.0000  0.0000  0.0000  0.0000
+  15.  F 3 (pz)     0.0000  0.0000  0.0000  0.0000
+  16.  F 4 (s)     -0.3460  0.0000  0.0000  0.0000
+  17.  F 4 (s)      1.0242  0.0000  0.0000  0.0000
+  18.  F 4 (px)     0.0000  1.0000  0.0000  0.0000
+  19.  F 4 (py)     0.0000  0.0000  1.0000  0.0000
+  20.  F 4 (pz)     0.0000  0.0000  0.0000  1.0000
+
+
+ PNAO overlap matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1( 1s )    1.0000  0.0000  0.0000  0.0000  0.0000  0.0068  0.0802  0.0000
+   2.  O 1( 2s )    0.0000  1.0000  0.0000  0.0000  0.0000  0.0523  0.3736  0.0000
+   3.  O 1( 2px)    0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000  0.2221
+   4.  O 1( 2py)    0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000  0.0000
+   5.  O 1( 2pz)    0.0000  0.0000  0.0000  0.0000  1.0000 -0.0762 -0.3212  0.0000
+   6.  C 2( 1s )    0.0068  0.0523  0.0000  0.0000 -0.0762  1.0000  0.0000  0.0000
+   7.  C 2( 2s )    0.0802  0.3736  0.0000  0.0000 -0.3212  0.0000  1.0000  0.0000
+   8.  C 2( 2px)    0.0000  0.0000  0.2221  0.0000  0.0000  0.0000  0.0000  1.0000
+   9.  C 2( 2py)    0.0000  0.0000  0.0000  0.2221  0.0000  0.0000  0.0000  0.0000
+  10.  C 2( 2pz)    0.1133  0.4427  0.0000  0.0000 -0.3135  0.0000  0.0000  0.0000
+  11.  F 3( 1s )    0.0002  0.0014  0.0000  0.0013 -0.0024  0.0033  0.0511  0.0000
+  12.  F 3( 2s )    0.0013  0.0122  0.0000  0.0103 -0.0189  0.0248  0.2607  0.0000
+  13.  F 3( 2px)    0.0000  0.0000  0.0042  0.0000  0.0000  0.0000  0.0000  0.1328
+  14.  F 3( 2py)   -0.0011 -0.0093  0.0000 -0.0041  0.0153 -0.0298 -0.1842  0.0000
+  15.  F 3( 2pz)    0.0019  0.0172  0.0000  0.0153 -0.0239  0.0219  0.1350  0.0000
+  16.  F 4( 1s )    0.0002  0.0014  0.0000 -0.0013 -0.0024  0.0033  0.0511  0.0000
+  17.  F 4( 2s )    0.0013  0.0122  0.0000 -0.0103 -0.0189  0.0248  0.2607  0.0000
+  18.  F 4( 2px)    0.0000  0.0000  0.0042  0.0000  0.0000  0.0000  0.0000  0.1328
+  19.  F 4( 2py)    0.0011  0.0093  0.0000 -0.0041 -0.0153  0.0298  0.1842  0.0000
+  20.  F 4( 2pz)    0.0019  0.0172  0.0000 -0.0153 -0.0239  0.0219  0.1350  0.0000
+
+           NAO         9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1( 1s )    0.0000  0.1133  0.0002  0.0013  0.0000 -0.0011  0.0019  0.0002
+   2.  O 1( 2s )    0.0000  0.4427  0.0014  0.0122  0.0000 -0.0093  0.0172  0.0014
+   3.  O 1( 2px)    0.0000  0.0000  0.0000  0.0000  0.0042  0.0000  0.0000  0.0000
+   4.  O 1( 2py)    0.2221  0.0000  0.0013  0.0103  0.0000 -0.0041  0.0153 -0.0013
+   5.  O 1( 2pz)    0.0000 -0.3135 -0.0024 -0.0189  0.0000  0.0153 -0.0239 -0.0024
+   6.  C 2( 1s )    0.0000  0.0000  0.0033  0.0248  0.0000 -0.0298  0.0219  0.0033
+   7.  C 2( 2s )    0.0000  0.0000  0.0511  0.2607  0.0000 -0.1842  0.1350  0.0511
+   8.  C 2( 2px)    0.0000  0.0000  0.0000  0.0000  0.1328  0.0000  0.0000  0.0000
+   9.  C 2( 2py)    1.0000  0.0000  0.0608  0.2834  0.0000 -0.1322  0.1942 -0.0608
+  10.  C 2( 2pz)    0.0000  1.0000 -0.0445 -0.2077  0.0000  0.1942 -0.0095 -0.0445
+  11.  F 3( 1s )    0.0608 -0.0445  1.0000  0.0000  0.0000  0.0000  0.0000  0.0001
+  12.  F 3( 2s )    0.2834 -0.2077  0.0000  1.0000  0.0000  0.0000  0.0000  0.0012
+  13.  F 3( 2px)    0.0000  0.0000  0.0000  0.0000  1.0000  0.0000  0.0000  0.0000
+  14.  F 3( 2py)   -0.1322  0.1942  0.0000  0.0000  0.0000  1.0000  0.0000 -0.0021
+  15.  F 3( 2pz)    0.1942 -0.0095  0.0000  0.0000  0.0000  0.0000  1.0000  0.0000
+  16.  F 4( 1s )   -0.0608 -0.0445  0.0001  0.0012  0.0000 -0.0021  0.0000  1.0000
+  17.  F 4( 2s )   -0.2834 -0.2077  0.0012  0.0106  0.0000 -0.0180  0.0000  0.0000
+  18.  F 4( 2px)    0.0000  0.0000  0.0000  0.0000  0.0036  0.0000  0.0000  0.0000
+  19.  F 4( 2py)   -0.1322 -0.1942  0.0021  0.0180  0.0000 -0.0288  0.0000  0.0000
+  20.  F 4( 2pz)   -0.1942 -0.0095  0.0000  0.0000  0.0000  0.0000  0.0036  0.0000
+
+           NAO        17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1( 1s )    0.0013  0.0000  0.0011  0.0019
+   2.  O 1( 2s )    0.0122  0.0000  0.0093  0.0172
+   3.  O 1( 2px)    0.0000  0.0042  0.0000  0.0000
+   4.  O 1( 2py)   -0.0103  0.0000 -0.0041 -0.0153
+   5.  O 1( 2pz)   -0.0189  0.0000 -0.0153 -0.0239
+   6.  C 2( 1s )    0.0248  0.0000  0.0298  0.0219
+   7.  C 2( 2s )    0.2607  0.0000  0.1842  0.1350
+   8.  C 2( 2px)    0.0000  0.1328  0.0000  0.0000
+   9.  C 2( 2py)   -0.2834  0.0000 -0.1322 -0.1942
+  10.  C 2( 2pz)   -0.2077  0.0000 -0.1942 -0.0095
+  11.  F 3( 1s )    0.0012  0.0000  0.0021  0.0000
+  12.  F 3( 2s )    0.0106  0.0000  0.0180  0.0000
+  13.  F 3( 2px)    0.0000  0.0036  0.0000  0.0000
+  14.  F 3( 2py)   -0.0180  0.0000 -0.0288  0.0000
+  15.  F 3( 2pz)    0.0000  0.0000  0.0000  0.0036
+  16.  F 4( 1s )    0.0000  0.0000  0.0000  0.0000
+  17.  F 4( 2s )    1.0000  0.0000  0.0000  0.0000
+  18.  F 4( 2px)    0.0000  1.0000  0.0000  0.0000
+  19.  F 4( 2py)    0.0000  0.0000  1.0000  0.0000
+  20.  F 4( 2pz)    0.0000  0.0000  0.0000  1.0000
+
+
+ PNAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1( 1s )    2.0000  0.0000  0.0000  0.0000 -0.0001  0.0137  0.1597  0.0000
+   2.  O 1( 2s )    0.0000  1.9879  0.0000  0.0000  0.0547  0.1046  0.7796  0.0000
+   3.  O 1( 2px)    0.0000  0.0000  1.4593  0.0000  0.0000  0.0000  0.0000  1.0934
+   4.  O 1( 2py)    0.0000  0.0000  0.0000  1.9212  0.0000  0.0000  0.0000  0.0000
+   5.  O 1( 2pz)   -0.0001  0.0547  0.0000  0.0000  1.7414 -0.1522 -0.8417  0.0000
+   6.  C 2( 1s )    0.0137  0.1046  0.0000  0.0000 -0.1522  2.0000  0.0000  0.0000
+   7.  C 2( 2s )    0.1597  0.7796  0.0000  0.0000 -0.8417  0.0000  1.6588  0.0000
+   8.  C 2( 2px)    0.0000  0.0000  1.0934  0.0000  0.0000  0.0000  0.0000  1.2204
+   9.  C 2( 2py)    0.0000  0.0000  0.0000  0.6653  0.0000  0.0000  0.0000  0.0000
+  10.  C 2( 2pz)    0.2273  0.9390  0.0000  0.0000 -0.8222  0.0002  0.0822  0.0000
+  11.  F 3( 1s )    0.0003  0.0029  0.0000  0.0026 -0.0048  0.0066  0.1022  0.0000
+  12.  F 3( 2s )    0.0028  0.0248  0.0000  0.0060 -0.0328  0.0496  0.5513  0.0000
+  13.  F 3( 2px)    0.0000  0.0000 -0.1708  0.0000  0.0000  0.0000  0.0000  0.4810
+  14.  F 3( 2py)   -0.0027 -0.0219  0.0000  0.0586  0.0017 -0.0598 -0.5684  0.0000
+  15.  F 3( 2pz)    0.0042  0.0257  0.0000 -0.0485  0.0150  0.0438  0.4078  0.0000
+  16.  F 4( 1s )    0.0003  0.0029  0.0000 -0.0026 -0.0048  0.0066  0.1022  0.0000
+  17.  F 4( 2s )    0.0028  0.0248  0.0000 -0.0060 -0.0328  0.0496  0.5513  0.0000
+  18.  F 4( 2px)    0.0000  0.0000 -0.1708  0.0000  0.0000  0.0000  0.0000  0.4810
+  19.  F 4( 2py)    0.0027  0.0219  0.0000  0.0586 -0.0017  0.0598  0.5684  0.0000
+  20.  F 4( 2pz)    0.0042  0.0257  0.0000  0.0485  0.0150  0.0438  0.4078  0.0000
+
+           NAO         9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1( 1s )    0.0000  0.2273  0.0003  0.0028  0.0000 -0.0027  0.0042  0.0003
+   2.  O 1( 2s )    0.0000  0.9390  0.0029  0.0248  0.0000 -0.0219  0.0257  0.0029
+   3.  O 1( 2px)    0.0000  0.0000  0.0000  0.0000 -0.1708  0.0000  0.0000  0.0000
+   4.  O 1( 2py)    0.6653  0.0000  0.0026  0.0060  0.0000  0.0586 -0.0485 -0.0026
+   5.  O 1( 2pz)    0.0000 -0.8222 -0.0048 -0.0328  0.0000  0.0017  0.0150 -0.0048
+   6.  C 2( 1s )    0.0000  0.0002  0.0066  0.0496  0.0000 -0.0598  0.0438  0.0066
+   7.  C 2( 2s )    0.0000  0.0822  0.1022  0.5513  0.0000 -0.5684  0.4078  0.1022
+   8.  C 2( 2px)    0.0000  0.0000  0.0000  0.0000  0.4810  0.0000  0.0000  0.0000
+   9.  C 2( 2py)    1.3787  0.0000  0.1216  0.6076  0.0000 -0.4517  0.6106 -0.1216
+  10.  C 2( 2pz)    0.0000  1.5643 -0.0891 -0.4439  0.0000  0.5869 -0.0823 -0.0891
+  11.  F 3( 1s )    0.1216 -0.0891  2.0000  0.0000  0.0000  0.0000  0.0000  0.0003
+  12.  F 3( 2s )    0.6076 -0.4439  0.0000  1.9936  0.0000  0.0375 -0.0282  0.0023
+  13.  F 3( 2px)    0.0000  0.0000  0.0000  0.0000  1.9405  0.0000  0.0000  0.0000
+  14.  F 3( 2py)   -0.4517  0.5869  0.0000  0.0375  0.0000  1.7720  0.1586 -0.0042
+  15.  F 3( 2pz)    0.6106 -0.0823  0.0000 -0.0282  0.0000  0.1586  1.8628  0.0000
+  16.  F 4( 1s )   -0.1216 -0.0891  0.0003  0.0023  0.0000 -0.0042  0.0000  2.0000
+  17.  F 4( 2s )   -0.6076 -0.4439  0.0023  0.0201  0.0000 -0.0230  0.0010  0.0000
+  18.  F 4( 2px)    0.0000  0.0000  0.0000  0.0000 -0.0522  0.0000  0.0000  0.0000
+  19.  F 4( 2py)   -0.4517 -0.5869  0.0042  0.0230  0.0000  0.0574 -0.0246  0.0000
+  20.  F 4( 2pz)   -0.6106 -0.0823  0.0000  0.0010  0.0000  0.0246  0.0289  0.0000
+
+           NAO        17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1( 1s )    0.0028  0.0000  0.0027  0.0042
+   2.  O 1( 2s )    0.0248  0.0000  0.0219  0.0257
+   3.  O 1( 2px)    0.0000 -0.1708  0.0000  0.0000
+   4.  O 1( 2py)   -0.0060  0.0000  0.0586  0.0485
+   5.  O 1( 2pz)   -0.0328  0.0000 -0.0017  0.0150
+   6.  C 2( 1s )    0.0496  0.0000  0.0598  0.0438
+   7.  C 2( 2s )    0.5513  0.0000  0.5684  0.4078
+   8.  C 2( 2px)    0.0000  0.4810  0.0000  0.0000
+   9.  C 2( 2py)   -0.6076  0.0000 -0.4517 -0.6106
+  10.  C 2( 2pz)   -0.4439  0.0000 -0.5869 -0.0823
+  11.  F 3( 1s )    0.0023  0.0000  0.0042  0.0000
+  12.  F 3( 2s )    0.0201  0.0000  0.0230  0.0010
+  13.  F 3( 2px)    0.0000 -0.0522  0.0000  0.0000
+  14.  F 3( 2py)   -0.0230  0.0000  0.0574  0.0246
+  15.  F 3( 2pz)    0.0010  0.0000 -0.0246  0.0289
+  16.  F 4( 1s )    0.0000  0.0000  0.0000  0.0000
+  17.  F 4( 2s )    1.9936  0.0000 -0.0375 -0.0282
+  18.  F 4( 2px)    0.0000  1.9405  0.0000  0.0000
+  19.  F 4( 2py)   -0.0375  0.0000  1.7720 -0.1586
+  20.  F 4( 2pz)   -0.0282  0.0000 -0.1586  1.8628
+
+
+ NAOs in the AO basis:
+
+           AO          1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.9687 -0.3628  0.0000  0.0000  0.0142 -0.0033  0.0060  0.0000
+   2.  O 1 (s)      0.1086  1.2387  0.0000  0.0000 -0.1885 -0.0004 -0.3550  0.0000
+   3.  O 1 (px)     0.0000  0.0000  1.0181  0.0000  0.0000  0.0000  0.0000 -0.1289
+   4.  O 1 (py)     0.0000  0.0000  0.0000  1.0208  0.0000  0.0000  0.0000  0.0000
+   5.  O 1 (pz)     0.0000 -0.1537  0.0000  0.0000  1.1363  0.0000  0.2635  0.0000
+   6.  C 2 (s)     -0.0034  0.0064  0.0000  0.0000  0.0213  0.9914 -0.3168  0.0000
+   7.  C 2 (s)     -0.0001 -0.2907  0.0000  0.0000  0.2673  0.0327  1.3484  0.0000
+   8.  C 2 (px)     0.0000  0.0000 -0.1048  0.0000  0.0000  0.0000  0.0000  1.0362
+   9.  C 2 (py)     0.0000  0.0000  0.0000 -0.1218  0.0000  0.0000  0.0000  0.0000
+  10.  C 2 (pz)     0.0000 -0.3070  0.0000  0.0000  0.2504  0.0000  0.0884  0.0000
+  11.  F 3 (s)     -0.0001 -0.0001  0.0000 -0.0022  0.0001 -0.0016  0.0048  0.0000
+  12.  F 3 (s)      0.0000 -0.0034  0.0000  0.0247  0.0016 -0.0002 -0.1970  0.0000
+  13.  F 3 (px)     0.0000  0.0000  0.0088  0.0000  0.0000  0.0000  0.0000 -0.0796
+  14.  F 3 (py)     0.0000  0.0143  0.0000 -0.0117 -0.0116  0.0000  0.1209  0.0000
+  15.  F 3 (pz)     0.0000  0.0146  0.0000  0.0111 -0.0096  0.0000 -0.0973  0.0000
+  16.  F 4 (s)     -0.0001 -0.0001  0.0000  0.0022  0.0001 -0.0016  0.0048  0.0000
+  17.  F 4 (s)      0.0000 -0.0034  0.0000 -0.0247  0.0016 -0.0002 -0.1970  0.0000
+  18.  F 4 (px)     0.0000  0.0000  0.0088  0.0000  0.0000  0.0000  0.0000 -0.0796
+  19.  F 4 (py)     0.0000 -0.0143  0.0000 -0.0117  0.0116  0.0000 -0.1209  0.0000
+  20.  F 4 (pz)     0.0000  0.0146  0.0000 -0.0111 -0.0096  0.0000 -0.0973  0.0000
+
+           AO          9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1 (s)      0.0000 -0.0031 -0.0001 -0.0009  0.0000 -0.0002 -0.0011 -0.0001
+   2.  O 1 (s)      0.0000 -0.4676  0.0000 -0.0035  0.0000  0.0163  0.0165  0.0000
+   3.  O 1 (px)     0.0000  0.0000  0.0000  0.0000  0.0081  0.0000  0.0000  0.0000
+   4.  O 1 (py)    -0.1498  0.0000  0.0000  0.0201  0.0000 -0.0107  0.0102  0.0000
+   5.  O 1 (pz)     0.0000  0.3080  0.0000  0.0013  0.0000 -0.0106 -0.0089  0.0000
+   6.  C 2 (s)      0.0000 -0.0012 -0.0016  0.0149  0.0000  0.0009 -0.0003 -0.0016
+   7.  C 2 (s)      0.0000  0.1100 -0.0001 -0.1607  0.0000  0.1124 -0.0904 -0.0001
+   8.  C 2 (px)     0.0000  0.0000  0.0000  0.0000 -0.0594  0.0000  0.0000  0.0000
+   9.  C 2 (py)     1.1811  0.0000  0.0000 -0.1498  0.0000  0.0761 -0.1052  0.0000
+  10.  C 2 (pz)     0.0000  1.3375  0.0000  0.1156  0.0000 -0.1142  0.0057  0.0000
+  11.  F 3 (s)      0.0046 -0.0042  0.9697 -0.3546  0.0000  0.0062 -0.0045 -0.0001
+  12.  F 3 (s)     -0.2280  0.1759  0.1052  1.1158  0.0000 -0.0639  0.0463  0.0000
+  13.  F 3 (px)     0.0000  0.0000  0.0000  0.0000  1.0062  0.0000  0.0000  0.0000
+  14.  F 3 (py)     0.1019 -0.1529  0.0000 -0.0567  0.0000  1.0424 -0.0252  0.0000
+  15.  F 3 (pz)    -0.1409  0.0076  0.0000  0.0411  0.0000 -0.0252  1.0258  0.0000
+  16.  F 4 (s)     -0.0046 -0.0042 -0.0001 -0.0012  0.0000  0.0014  0.0003  0.9697
+  17.  F 4 (s)      0.2280  0.1759  0.0000  0.0117  0.0000 -0.0157 -0.0062  0.1052
+  18.  F 4 (px)     0.0000  0.0000  0.0000  0.0000  0.0044  0.0000  0.0000  0.0000
+  19.  F 4 (py)     0.1019  0.1529  0.0000  0.0139  0.0000 -0.0101  0.0013  0.0000
+  20.  F 4 (pz)     0.1409  0.0076  0.0000 -0.0055  0.0000 -0.0013 -0.0091  0.0000
+
+           AO         17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1 (s)     -0.0009  0.0000  0.0002 -0.0011
+   2.  O 1 (s)     -0.0035  0.0000 -0.0163  0.0165
+   3.  O 1 (px)     0.0000  0.0081  0.0000  0.0000
+   4.  O 1 (py)    -0.0201  0.0000 -0.0107 -0.0102
+   5.  O 1 (pz)     0.0013  0.0000  0.0106 -0.0089
+   6.  C 2 (s)      0.0149  0.0000 -0.0009 -0.0003
+   7.  C 2 (s)     -0.1607  0.0000 -0.1124 -0.0904
+   8.  C 2 (px)     0.0000 -0.0594  0.0000  0.0000
+   9.  C 2 (py)     0.1498  0.0000  0.0761  0.1052
+  10.  C 2 (pz)     0.1156  0.0000  0.1142  0.0057
+  11.  F 3 (s)     -0.0012  0.0000 -0.0014  0.0003
+  12.  F 3 (s)      0.0117  0.0000  0.0157 -0.0062
+  13.  F 3 (px)     0.0000  0.0044  0.0000  0.0000
+  14.  F 3 (py)    -0.0139  0.0000 -0.0101 -0.0013
+  15.  F 3 (pz)    -0.0055  0.0000  0.0013 -0.0091
+  16.  F 4 (s)     -0.3546  0.0000 -0.0062 -0.0045
+  17.  F 4 (s)      1.1158  0.0000  0.0639  0.0463
+  18.  F 4 (px)     0.0000  1.0062  0.0000  0.0000
+  19.  F 4 (py)     0.0567  0.0000  1.0424  0.0252
+  20.  F 4 (pz)     0.0411  0.0000  0.0252  1.0258
+
+
+ NAO density matrix:
+
+           NAO         1       2       3       4       5       6       7       8
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1( 1s )    2.0000  0.0000  0.0000  0.0000 -0.0002  0.0000 -0.0011  0.0000
+   2.  O 1( 2s )    0.0000  1.8032  0.0000  0.0000  0.3496 -0.0001  0.2786  0.0000
+   3.  O 1( 2px)    0.0000  0.0000  1.2852  0.0000  0.0000  0.0000  0.0000  0.8864
+   4.  O 1( 2py)    0.0000  0.0000  0.0000  1.8426  0.0000  0.0000  0.0000  0.0000
+   5.  O 1( 2pz)   -0.0002  0.3496  0.0000  0.0000  1.3677  0.0002 -0.5788  0.0000
+   6.  C 2( 1s )    0.0000 -0.0001  0.0000  0.0000  0.0002  2.0000  0.0000  0.0000
+   7.  C 2( 2s )   -0.0011  0.2786  0.0000  0.0000 -0.5788  0.0000  0.9762  0.0000
+   8.  C 2( 2px)    0.0000  0.0000  0.8864  0.0000  0.0000  0.0000  0.0000  0.9007
+   9.  C 2( 2py)    0.0000  0.0000  0.0000  0.4456  0.0000  0.0000  0.0000  0.0000
+  10.  C 2( 2pz)    0.0009  0.3860  0.0000  0.0000 -0.6125  0.0004  0.0012  0.0000
+  11.  F 3( 1s )    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0001  0.0000
+  12.  F 3( 2s )    0.0003  0.0029  0.0000 -0.0804  0.0197  0.0000  0.1816  0.0000
+  13.  F 3( 2px)    0.0000  0.0000 -0.2578  0.0000  0.0000  0.0000  0.0000  0.3197
+  14.  F 3( 2py)   -0.0008 -0.0185  0.0000  0.1260 -0.0255 -0.0001 -0.4113  0.0000
+  15.  F 3( 2pz)    0.0004 -0.0520  0.0000 -0.1530  0.1229  0.0000  0.3021  0.0000
+  16.  F 4( 1s )    0.0000  0.0000  0.0000  0.0000  0.0000  0.0000 -0.0001  0.0000
+  17.  F 4( 2s )    0.0003  0.0029  0.0000  0.0804  0.0197  0.0000  0.1816  0.0000
+  18.  F 4( 2px)    0.0000  0.0000 -0.2578  0.0000  0.0000  0.0000  0.0000  0.3197
+  19.  F 4( 2py)    0.0008  0.0185  0.0000  0.1260  0.0255  0.0001  0.4113  0.0000
+  20.  F 4( 2pz)    0.0004 -0.0520  0.0000  0.1530  0.1229  0.0000  0.3021  0.0000
+
+           NAO         9      10      11      12      13      14      15      16
+      ------------ ------- ------- ------- ------- ------- ------- ------- -------
+   1.  O 1( 1s )    0.0000  0.0009  0.0000  0.0003  0.0000 -0.0008  0.0004  0.0000
+   2.  O 1( 2s )    0.0000  0.3860  0.0000  0.0029  0.0000 -0.0185 -0.0520  0.0000
+   3.  O 1( 2px)    0.0000  0.0000  0.0000  0.0000 -0.2578  0.0000  0.0000  0.0000
+   4.  O 1( 2py)    0.4456  0.0000  0.0000 -0.0804  0.0000  0.1260 -0.1530  0.0000
+   5.  O 1( 2pz)    0.0000 -0.6125  0.0000  0.0197  0.0000 -0.0255  0.1229  0.0000
+   6.  C 2( 1s )    0.0000  0.0004  0.0000  0.0000  0.0000 -0.0001  0.0000  0.0000
+   7.  C 2( 2s )    0.0000  0.0012 -0.0001  0.1816  0.0000 -0.4113  0.3021 -0.0001
+   8.  C 2( 2px)    0.0000  0.0000  0.0000  0.0000  0.3197  0.0000  0.0000  0.0000
+   9.  C 2( 2py)    0.7386  0.0000  0.0001  0.2276  0.0000 -0.3566  0.4331 -0.0001
+  10.  C 2( 2pz)    0.0000  0.7673  0.0000 -0.1670  0.0000  0.4167 -0.0966  0.0000
+  11.  F 3( 1s )    0.0001  0.0000  2.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+  12.  F 3( 2s )    0.2276 -0.1670  0.0000  1.9042  0.0000  0.1936 -0.1447  0.0000
+  13.  F 3( 2px)    0.0000  0.0000  0.0000  0.0000  1.9071  0.0000  0.0000  0.0000
+  14.  F 3( 2py)   -0.3566  0.4167  0.0000  0.1936  0.0000  1.5934  0.2763  0.0000
+  15.  F 3( 2pz)    0.4331 -0.0966  0.0000 -0.1447  0.0000  0.2763  1.7546  0.0000
+  16.  F 4( 1s )   -0.0001  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  2.0000
+  17.  F 4( 2s )   -0.2276 -0.1670  0.0000 -0.0137  0.0000  0.0649  0.0116  0.0000
+  18.  F 4( 2px)    0.0000  0.0000  0.0000  0.0000 -0.0929  0.0000  0.0000  0.0000
+  19.  F 4( 2py)   -0.3566 -0.4167  0.0000 -0.0649  0.0000  0.2050 -0.0314  0.0000
+  20.  F 4( 2pz)   -0.4331 -0.0966  0.0000  0.0116  0.0000  0.0314  0.0521  0.0000
+
+           NAO        17      18      19      20
+      ------------ ------- ------- ------- -------
+   1.  O 1( 1s )    0.0003  0.0000  0.0008  0.0004
+   2.  O 1( 2s )    0.0029  0.0000  0.0185 -0.0520
+   3.  O 1( 2px)    0.0000 -0.2578  0.0000  0.0000
+   4.  O 1( 2py)    0.0804  0.0000  0.1260  0.1530
+   5.  O 1( 2pz)    0.0197  0.0000  0.0255  0.1229
+   6.  C 2( 1s )    0.0000  0.0000  0.0001  0.0000
+   7.  C 2( 2s )    0.1816  0.0000  0.4113  0.3021
+   8.  C 2( 2px)    0.0000  0.3197  0.0000  0.0000
+   9.  C 2( 2py)   -0.2276  0.0000 -0.3566 -0.4331
+  10.  C 2( 2pz)   -0.1670  0.0000 -0.4167 -0.0966
+  11.  F 3( 1s )    0.0000  0.0000  0.0000  0.0000
+  12.  F 3( 2s )   -0.0137  0.0000 -0.0649  0.0116
+  13.  F 3( 2px)    0.0000 -0.0929  0.0000  0.0000
+  14.  F 3( 2py)    0.0649  0.0000  0.2050  0.0314
+  15.  F 3( 2pz)    0.0116  0.0000 -0.0314  0.0521
+  16.  F 4( 1s )    0.0000  0.0000  0.0000  0.0000
+  17.  F 4( 2s )    1.9042  0.0000 -0.1936 -0.1447
+  18.  F 4( 2px)    0.0000  1.9071  0.0000  0.0000
+  19.  F 4( 2py)   -0.1936  0.0000  1.5934 -0.2763
+  20.  F 4( 2pz)   -0.1447  0.0000 -0.2763  1.7546
+
+
+ NATURAL BOND ORBITAL ANALYSIS:
+
+ Initiate 2-center NBO search using THRESH = 1.900 and PRJTHR = 0.300
+
+ Search of NAO DM block for core orbitals on atom:   1
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   2
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   3
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   4
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Core orbitals projected from the NAO density matrix
+      24.000 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       1.997 1.843 1.285 1.174 0.000
+      Eigenvector ( 1) has occupancy 1.99733
+            0.0000 0.8742 0.0000 0.0000 0.4855
+      1 hybrid on atom 1 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.900
+       0.976 0.901 0.767 0.739 0.000
+
+ Search of NAO DM block for the following atom(s):   3
+      Select eigenvectors with eigenvalue > 1.900
+       1.999 1.962 1.907 1.291 0.000
+      Eigenvector ( 1) has occupancy 1.99945
+            0.0000 0.9303 0.0000 0.2985-0.2131
+      Eigenvector ( 2) has occupancy 1.96184
+            0.0000-0.0080 0.0000 0.5973 0.8020
+      Eigenvector ( 3) has occupancy 1.90705
+            0.0000 0.0000 1.0000 0.0000 0.0000
+      3 hybrids on atom 3 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   4
+      Select eigenvectors with eigenvalue > 1.900
+       1.999 1.962 1.907 1.291 0.000
+      Eigenvector ( 1) has occupancy 1.99945
+            0.0000 0.9303 0.0000-0.2985-0.2131
+      Eigenvector ( 2) has occupancy 1.96184
+            0.0000-0.0080 0.0000-0.5973 0.8020
+      Eigenvector ( 3) has occupancy 1.90705
+            0.0000 0.0000 1.0000 0.0000 0.0000
+      3 hybrids on atom 4 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000 1.000 1.000 1.000 1.000 1.000
+      0 hybrids eliminated in 1 pass
+      7 hybrids moved from prospective to permanent list
+
+ NHOs of 1-center eigenvectors projected from the NAO density matrix
+      10.266 electrons remain (>1.900); search continues
+
+ Search of NAO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 2.000 0.886 0.581 0.186 0.031 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000-0.0106 0.6075 0.5890 0.0192 0.0000-0.0137 0.4898
+            0.2081-0.0129
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000-0.3681-0.0175-0.0171 0.6629 0.0000-0.4755-0.0141
+           -0.0061-0.4451
+      Eigenvector ( 3) has occupancy 2.00000
+            0.0000-0.0001-0.4865 0.7361 0.0001 0.0000-0.0001-0.3923
+            0.2601-0.0001
+      3 hybrids on atom 1 stashed in prospective list
+      3 hybrids on atom 2 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   2   3
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.902 0.901 0.757 0.114 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000-0.4155 0.0000-0.3682 0.2709 0.0000-0.2884 0.0000
+            0.5854-0.4388
+      1 hybrid on atom 2 stashed in prospective list
+      1 hybrid on atom 3 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   2   4
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.902 0.901 0.757 0.114 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.4155 0.0000-0.3682-0.2709 0.0000 0.2884 0.0000
+            0.5854 0.4388
+      1 hybrid on atom 2 stashed in prospective list
+      1 hybrid on atom 4 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      10 hybrids eliminated in 2 passes
+
+ Stash additional hybrids from high occupancy eigenvectors
+       2.000 2.000 2.000 2.000 2.000
+      Hybrid projection expectation values
+       1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+      Occ=2.000; Vecs=  1
+       0.000 1.000 0.966 0.000 1.000 0.697 0.949 1.000 0.943 1.000
+      Occ=4.000; Vecs=  1  2
+       0.000 0.000 0.966 0.000 0.000 0.696 0.909 1.000 0.909 1.000
+      Occ=6.000; Vecs=  1  2  3
+       0.000 0.000 0.000 0.000 0.000 0.000 0.608 1.000 0.608 1.000
+      Occ=8.000; Vecs=  1  2  3  4
+       0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000
+      61 bonding patterns considered
+       0.498 0.930 0.466 0.498 0.930 0.466 0.608 0.608 0.000 0.000
+       0.930 0.930 0.608 0.608 0.498 0.498 0.466 0.466
+      8 additional hybrids moved from prospective to permanent list
+
+ NHOs of 2-center eigenvectors projected from the NAO density matrix
+       1.291 electrons remain in the fully projected matrix
+
+ Search of NHO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.997 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    1. Label:CR ( 1)   1
+      Eigenvector ( 2) has occupancy 1.99733
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    2. Label:LP ( 1)   1
+        2 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    3. Label:CR ( 1)   2
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   3
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.999 1.962 1.907 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    4. Label:CR ( 1)   3
+      Eigenvector ( 2) has occupancy 1.99945
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    5. Label:LP ( 1)   3
+      Eigenvector ( 3) has occupancy 1.96184
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:    6. Label:LP ( 2)   3
+      Eigenvector ( 4) has occupancy 1.90705
+            0.0000 0.0000 0.0000 1.0000 0.0000
+           NBO accepted:    7. Label:LP ( 3)   3
+        4 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   4
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 1.999 1.962 1.907 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    8. Label:CR ( 1)   4
+      Eigenvector ( 2) has occupancy 1.99945
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    9. Label:LP ( 1)   4
+      Eigenvector ( 3) has occupancy 1.96184
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:   10. Label:LP ( 2)   4
+      Eigenvector ( 4) has occupancy 1.90705
+            0.0000 0.0000 0.0000 1.0000 0.0000
+           NBO accepted:   11. Label:LP ( 3)   4
+        4 eigenvector(s) stashed in permanent list
+
+  1-center NBOs projected from the NHO density matrix
+      10.266 electrons remain (>1.900); search continues
+
+ Search of NHO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.900
+       2.000 2.000 1.977 0.620 0.186 0.035 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.6302 0.4460-0.1472 0.0000 0.4282 0.3867
+           -0.2221 0.0000
+      Occupancy is 1.995 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.7620 0.0000 0.0000 0.0000 0.6475
+            0.0000 0.0000
+           NBO accepted:   12. Label:BD ( 1)   1   2
+      Occupancy is 0.037 for antibonding component
+            0.0000 0.0000 0.0000-0.6475 0.0000 0.0000 0.0000 0.7620
+            0.0000 0.0000
+           NBO accepted:   13. Label:BD*( 1)   1   2
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000 0.0000-0.1862 0.4958 0.5907 0.0000-0.2392 0.4283
+            0.3606 0.0000
+      Occupancy is 1.946 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.8827 0.0000 0.0000 0.0000
+            0.4699 0.0000
+           NBO accepted:   14. Label:BD ( 2)   1   2
+      Occupancy is 0.495 for antibonding component
+            0.0000 0.0000 0.0000 0.0000-0.4699 0.0000 0.0000 0.0000
+            0.8827 0.0000
+           NBO accepted:   15. Label:BD*( 2)   1   2
+      Eigenvector ( 3) has occupancy 1.97724
+            0.0000 0.0000 0.5362-0.3686 0.6430 0.0000 0.1874-0.2941
+            0.2040 0.0000
+           Eigenvector rejected; only 1 principal hybrid(s)
+        4 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2   3
+      Select eigenvectors with eigenvalue > 1.900
+       1.963 0.193 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.96324
+            0.0000 0.0000 0.0000 0.0000 0.6162 0.0000 0.0000 0.0000
+            0.0000 0.7876
+      Occupancy is 1.963 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.6162 0.0000 0.0000 0.0000
+            0.0000 0.7876
+           NBO accepted:   16. Label:BD ( 1)   2   3
+      Occupancy is 0.193 for antibonding component
+            0.0000 0.0000 0.0000 0.0000 0.7876 0.0000 0.0000 0.0000
+            0.0000-0.6162
+           NBO accepted:   17. Label:BD*( 1)   2   3
+        2 eigenvector(s) stashed in permanent list
+
+  2-center NBOs projected from the NHO density matrix
+       3.637 electrons remain in the fully projected matrix
+
+ Search may extend to 3 centers because sum of residual populations (3.637)
+ exceeds the occupancy threshold (1.900):   1   2   4
+
+                            Occupancies       Lewis Structure    Low   High
+         Max    Occ     -------------------  -----------------   occ   occ
+  Cycle  Ctr   Thresh    Lewis   non-Lewis     CR  BD  nC  LP    (L)   (NL)
+ ============================================================================
+    1     2     1.90    30.43084   1.56916      4   3   0   9     2      3
+
+ Initiate 2-center NBO search using THRESH = 1.840 and PRJTHR = 0.300
+
+ Search of NAO DM block for core orbitals on atom:   1
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   2
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   3
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NAO DM block for core orbitals on atom:   4
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+        1 eigenvector(s) stashed in permanent list
+
+ Core orbitals projected from the NAO density matrix
+      24.000 electrons remain (>1.840); search continues
+
+ Search of NAO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.840
+       1.997 1.843 1.285 1.174 0.000
+      Eigenvector ( 1) has occupancy 1.99733
+            0.0000 0.8742 0.0000 0.0000 0.4855
+      Eigenvector ( 2) has occupancy 1.84258
+            0.0000 0.0000 0.0000 1.0000 0.0000
+      2 hybrids on atom 1 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.840
+       0.976 0.901 0.767 0.739 0.000
+
+ Search of NAO DM block for the following atom(s):   3
+      Select eigenvectors with eigenvalue > 1.840
+       1.999 1.962 1.907 1.291 0.000
+      Eigenvector ( 1) has occupancy 1.99945
+            0.0000 0.9303 0.0000 0.2985-0.2131
+      Eigenvector ( 2) has occupancy 1.96184
+            0.0000-0.0080 0.0000 0.5973 0.8020
+      Eigenvector ( 3) has occupancy 1.90705
+            0.0000 0.0000 1.0000 0.0000 0.0000
+      3 hybrids on atom 3 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   4
+      Select eigenvectors with eigenvalue > 1.840
+       1.999 1.962 1.907 1.291 0.000
+      Eigenvector ( 1) has occupancy 1.99945
+            0.0000 0.9303 0.0000-0.2985-0.2131
+      Eigenvector ( 2) has occupancy 1.96184
+            0.0000-0.0080 0.0000-0.5973 0.8020
+      Eigenvector ( 3) has occupancy 1.90705
+            0.0000 0.0000 1.0000 0.0000 0.0000
+      3 hybrids on atom 4 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+      0 hybrids eliminated in 1 pass
+      8 hybrids moved from prospective to permanent list
+
+ NHOs of 1-center eigenvectors projected from the NAO density matrix
+       8.423 electrons remain (>1.840); search continues
+
+ Search of NAO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 2.000 0.886 0.739 0.186 0.031 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0145 0.7778 0.0000-0.0260 0.0000 0.0187 0.6272
+            0.0000 0.0175
+      Eigenvector ( 2) has occupancy 2.00000
+            0.0000-0.3680 0.0306 0.0000 0.6627 0.0000-0.4753 0.0246
+            0.0000-0.4449
+      2 hybrids on atom 1 stashed in prospective list
+      2 hybrids on atom 2 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   2   3
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 0.902 0.901 0.757 0.114 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000-0.4155 0.0000-0.3682 0.2709 0.0000-0.2884 0.0000
+            0.5854-0.4388
+      1 hybrid on atom 2 stashed in prospective list
+      1 hybrid on atom 3 stashed in prospective list
+
+ Search of NAO DM block for the following atom(s):   2   4
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 0.902 0.901 0.757 0.114 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.4155 0.0000-0.3682-0.2709 0.0000 0.2884 0.0000
+            0.5854 0.4388
+      1 hybrid on atom 2 stashed in prospective list
+      1 hybrid on atom 4 stashed in prospective list
+
+ Stash prospective hybrids having projection expectation value > 0.300
+       1.000 1.000 0.943 0.943 0.897 0.897 0.897 0.897
+      0 hybrids eliminated in 1 pass
+      8 hybrids moved from prospective to permanent list
+
+ NHOs of 2-center eigenvectors projected from the NAO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+ Search of NHO DM block for the following atom(s):   1
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 1.997 1.843 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    1. Label:CR ( 1)   1
+      Eigenvector ( 2) has occupancy 1.99733
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    2. Label:LP ( 1)   1
+      Eigenvector ( 3) has occupancy 1.84258
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:    3. Label:LP ( 2)   1
+        3 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    4. Label:CR ( 1)   2
+        1 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   3
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 1.999 1.962 1.907 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    5. Label:CR ( 1)   3
+      Eigenvector ( 2) has occupancy 1.99945
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:    6. Label:LP ( 1)   3
+      Eigenvector ( 3) has occupancy 1.96184
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:    7. Label:LP ( 2)   3
+      Eigenvector ( 4) has occupancy 1.90705
+            0.0000 0.0000 0.0000 1.0000 0.0000
+           NBO accepted:    8. Label:LP ( 3)   3
+        4 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   4
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 1.999 1.962 1.907 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            1.0000 0.0000 0.0000 0.0000 0.0000
+           NBO accepted:    9. Label:CR ( 1)   4
+      Eigenvector ( 2) has occupancy 1.99945
+            0.0000 1.0000 0.0000 0.0000 0.0000
+           NBO accepted:   10. Label:LP ( 1)   4
+      Eigenvector ( 3) has occupancy 1.96184
+            0.0000 0.0000 1.0000 0.0000 0.0000
+           NBO accepted:   11. Label:LP ( 2)   4
+      Eigenvector ( 4) has occupancy 1.90705
+            0.0000 0.0000 0.0000 1.0000 0.0000
+           NBO accepted:   12. Label:LP ( 3)   4
+        4 eigenvector(s) stashed in permanent list
+
+  1-center NBOs projected from the NHO density matrix
+       8.423 electrons remain (>1.840); search continues
+
+ Search of NHO DM block for the following atom(s):   1   2
+      Select eigenvectors with eigenvalue > 1.840
+       2.000 1.993 0.186 0.035 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 2.00000
+            0.0000 0.0000 0.0000 0.7779-0.0297 0.0000 0.6273-0.0239
+            0.0000 0.0000
+      Occupancy is 2.000 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.7784 0.0000 0.0000 0.6277 0.0000
+            0.0000 0.0000
+           NBO accepted:   13. Label:BD ( 1)   1   2
+      Occupancy is 0.186 for antibonding component
+            0.0000 0.0000 0.0000-0.6277 0.0000 0.0000 0.7784 0.0000
+            0.0000 0.0000
+           NBO accepted:   14. Label:BD*( 1)   1   2
+      Eigenvector ( 2) has occupancy 1.99253
+            0.0000 0.0000 0.0000 0.0291 0.7622 0.0000 0.0247 0.6463
+            0.0000 0.0000
+      Occupancy is 1.993 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.7627 0.0000 0.0000 0.6467
+            0.0000 0.0000
+           NBO accepted:   15. Label:BD ( 2)   1   2
+      Occupancy is 0.035 for antibonding component
+            0.0000 0.0000 0.0000 0.0000-0.6467 0.0000 0.0000 0.7627
+            0.0000 0.0000
+           NBO accepted:   16. Label:BD*( 2)   1   2
+        4 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2   3
+      Select eigenvectors with eigenvalue > 1.840
+       1.988 0.117 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.98771
+            0.0000 0.0000 0.0000 0.6104 0.0000 0.0000 0.0000 0.0000
+            0.0000 0.7921
+      Occupancy is 1.988 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.6104 0.0000 0.0000 0.0000 0.0000
+            0.0000 0.7921
+           NBO accepted:   17. Label:BD ( 1)   2   3
+      Occupancy is 0.117 for antibonding component
+            0.0000 0.0000 0.0000 0.7921 0.0000 0.0000 0.0000 0.0000
+            0.0000-0.6104
+           NBO accepted:   18. Label:BD*( 1)   2   3
+        2 eigenvector(s) stashed in permanent list
+
+ Search of NHO DM block for the following atom(s):   2   4
+      Select eigenvectors with eigenvalue > 1.840
+       1.988 0.117 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+      Eigenvector ( 1) has occupancy 1.98771
+            0.0000 0.0000 0.0000 0.0000 0.6104 0.0000 0.0000 0.0000
+            0.0000 0.7921
+      Occupancy is 1.988 after deleting minor hybrid components
+            0.0000 0.0000 0.0000 0.0000 0.6104 0.0000 0.0000 0.0000
+            0.0000 0.7921
+           NBO accepted:   19. Label:BD ( 1)   2   4
+      Occupancy is 0.117 for antibonding component
+            0.0000 0.0000 0.0000 0.0000 0.7921 0.0000 0.0000 0.0000
+            0.0000-0.6104
+           NBO accepted:   20. Label:BD*( 1)   2   4
+        2 eigenvector(s) stashed in permanent list
+
+  2-center NBOs projected from the NHO density matrix
+       0.000 electrons remain in the fully projected matrix
+
+                            Occupancies       Lewis Structure    Low   High
+         Max    Occ     -------------------  -----------------   occ   occ
+  Cycle  Ctr   Thresh    Lewis   non-Lewis     CR  BD  nC  LP    (L)   (NL)
+ ============================================================================
+    2     2     1.84    31.54455   0.45545      4   4   0   8     0      3
+ ----------------------------------------------------------------------------
+
+ Structure accepted: No low occupancy Lewis orbitals
+
+ -------------------------------------------------------
+   Core                      8.00000 (100.000% of   8)
+   Valence Lewis            23.54455 ( 98.102% of  24)
+  ==================      =============================
+   Total Lewis              31.54455 ( 98.577% of  32)
+  -----------------------------------------------------
+   Valence non-Lewis         0.45545 (  1.423% of  32)
+   Rydberg non-Lewis         0.00000 (  0.000% of  32)
+  ==================      =============================
+   Total non-Lewis           0.45545 (  1.423% of  32)
+ -------------------------------------------------------
+
+
+     (Occupancy)   Bond orbital / Coefficients / Hybrids
+ ------------------ Lewis ------------------------------------------------------
+   1. (2.00000) CR ( 1) O  1            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   2. (2.00000) CR ( 1) C  2            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   3. (2.00000) CR ( 1) F  3            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   4. (2.00000) CR ( 1) F  4            s(100.00%)
+                                         1.0000  0.0000  0.0000  0.0000  0.0000
+   5. (1.99733) LP ( 1) O  1            s( 76.43%)p 0.31( 23.57%)
+                                         0.0000  0.8742  0.0000  0.0000  0.4855
+   6. (1.84258) LP ( 2) O  1            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  0.0000  1.0000  0.0000
+   7. (1.99945) LP ( 1) F  3            s( 86.55%)p 0.16( 13.45%)
+                                         0.0000  0.9303  0.0000  0.2985 -0.2131
+   8. (1.96184) LP ( 2) F  3            s(  0.01%)p 1.00( 99.99%)
+                                         0.0000  0.0080  0.0000 -0.5973 -0.8020
+   9. (1.90705) LP ( 3) F  3            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  1.0000  0.0000  0.0000
+  10. (1.99945) LP ( 1) F  4            s( 86.55%)p 0.16( 13.45%)
+                                         0.0000  0.9303  0.0000 -0.2985 -0.2131
+  11. (1.96184) LP ( 2) F  4            s(  0.01%)p 1.00( 99.99%)
+                                         0.0000  0.0080  0.0000  0.5973 -0.8020
+  12. (1.90705) LP ( 3) F  4            s(  0.00%)p 1.00(100.00%)
+                                         0.0000  0.0000  1.0000  0.0000  0.0000
+  13. (1.99999) BD ( 1) O  1- C  2
+               ( 60.59%)   0.7784* O  1 s(  0.04%)p99.99( 99.96%)
+                                         0.0000  0.0190  0.9992  0.0000 -0.0343
+               ( 39.41%)   0.6277* C  2 s(  0.06%)p99.99( 99.94%)
+                                         0.0000  0.0252  0.9992  0.0000  0.0301
+  14. (1.99254) BD ( 2) O  1- C  2
+               ( 58.18%)   0.7627* O  1 s( 23.53%)p 3.25( 76.47%)
+                                         0.0000  0.4851 -0.0392  0.0000 -0.8736
+               ( 41.82%)   0.6467* C  2 s( 40.69%)p 1.46( 59.31%)
+                                         0.0000  0.6379 -0.0393  0.0000  0.7691
+  15. (1.98771) BD ( 1) C  2- F  3
+               ( 37.26%)   0.6104* C  2 s( 29.62%)p 2.38( 70.38%)
+                                         0.0000  0.5443 -0.0001  0.7071 -0.4514
+               ( 62.74%)   0.7921* F  3 s( 13.45%)p 6.44( 86.55%)
+                                         0.0000  0.3667  0.0000 -0.7444  0.5580
+  16. (1.98771) BD ( 1) C  2- F  4
+               ( 37.26%)   0.6104* C  2 s( 29.62%)p 2.38( 70.38%)
+                                         0.0000  0.5443 -0.0001 -0.7071 -0.4514
+               ( 62.74%)   0.7921* F  4 s( 13.45%)p 6.44( 86.55%)
+                                         0.0000  0.3667  0.0000  0.7444  0.5580
+ ---------------- non-Lewis ----------------------------------------------------
+  17. (0.18567) BD*( 1) O  1- C  2
+               ( 39.41%)   0.6277* O  1 s(  0.04%)p99.99( 99.96%)
+                                         0.0000 -0.0190 -0.9992  0.0000  0.0343
+               ( 60.59%)  -0.7784* C  2 s(  0.06%)p99.99( 99.94%)
+                                         0.0000 -0.0252 -0.9992  0.0000 -0.0301
+  18. (0.03483) BD*( 2) O  1- C  2
+               ( 41.82%)   0.6467* O  1 s( 23.53%)p 3.25( 76.47%)
+                                         0.0000 -0.4851  0.0392  0.0000  0.8736
+               ( 58.18%)  -0.7627* C  2 s( 40.69%)p 1.46( 59.31%)
+                                         0.0000 -0.6379  0.0393  0.0000 -0.7691
+  19. (0.11748) BD*( 1) C  2- F  3
+               ( 62.74%)   0.7921* C  2 s( 29.62%)p 2.38( 70.38%)
+                                         0.0000  0.5443 -0.0001  0.7071 -0.4514
+               ( 37.26%)  -0.6104* F  3 s( 13.45%)p 6.44( 86.55%)
+                                         0.0000  0.3667  0.0000 -0.7444  0.5580
+  20. (0.11748) BD*( 1) C  2- F  4
+               ( 62.74%)   0.7921* C  2 s( 29.62%)p 2.38( 70.38%)
+                                         0.0000  0.5443 -0.0001 -0.7071 -0.4514
+               ( 37.26%)  -0.6104* F  4 s( 13.45%)p 6.44( 86.55%)
+                                         0.0000  0.3667  0.0000  0.7444  0.5580
+
+
+ NHO DIRECTIONALITY AND BOND BENDING (deviation from line of nuclear centers at
+                                      the position of maximum hybrid amplitude)
+
+         [Thresholds for printing:  angular deviation  >  1.0 degree]
+                                    p- or d-character  > 25.0%
+                                    orbital occupancy  >  0.10e
+
+                        Line of Centers        Hybrid 1             Hybrid 2
+                        ---------------  -------------------  ------------------
+           NBO            Theta   Phi    Theta   Phi    Dev   Theta   Phi    Dev
+ ===============================================================================
+   6. LP ( 2) O  1          --     --     89.9  270.0   --      --     --    --
+   8. LP ( 2) F  3          --     --    143.3  270.0   --      --     --    --
+   9. LP ( 3) F  3          --     --     90.0  180.0   --      --     --    --
+  11. LP ( 2) F  4          --     --    143.3   90.0   --      --     --    --
+  12. LP ( 3) F  4          --     --     90.0    0.0   --      --     --    --
+  13. BD ( 1) O  1- C  2  180.0    0.0    92.1    0.0  87.9    88.0    0.0  88.0
+  14. BD ( 2) O  1- C  2  180.0    0.0   177.6  180.0   2.4     3.3  180.0   3.3
+  15. BD ( 1) C  2- F  3  126.2   90.0   123.2   90.0   3.1     --     --    --
+  16. BD ( 1) C  2- F  4  126.2  270.0   123.2  270.0   3.1     --     --    --
+
+
+ SECOND ORDER PERTURBATION THEORY ANALYSIS OF FOCK MATRIX IN NBO BASIS
+
+     Threshold for printing:   0.50 kcal/mol
+                                                          E(2) E(NL)-E(L) F(L,NL)
+      Donor (L) NBO              Acceptor (NL) NBO      kcal/mol   a.u.    a.u.
+ ===============================================================================
+
+ within unit  1
+    6. LP ( 2) O  1            19. BD*( 1) C  2- F  3     58.41    0.93   0.208
+    6. LP ( 2) O  1            20. BD*( 1) C  2- F  4     58.41    0.93   0.208
+    8. LP ( 2) F  3            18. BD*( 2) O  1- C  2     14.71    1.43   0.129
+    8. LP ( 2) F  3            20. BD*( 1) C  2- F  4     21.60    1.08   0.137
+    9. LP ( 3) F  3            17. BD*( 1) O  1- C  2     54.21    0.72   0.176
+   11. LP ( 2) F  4            18. BD*( 2) O  1- C  2     14.71    1.43   0.129
+   11. LP ( 2) F  4            19. BD*( 1) C  2- F  3     21.60    1.08   0.137
+   12. LP ( 3) F  4            17. BD*( 1) O  1- C  2     54.21    0.72   0.176
+   13. BD ( 1) O  1- C  2      17. BD*( 1) O  1- C  2      2.47    0.72   0.038
+   14. BD ( 2) O  1- C  2      19. BD*( 1) C  2- F  3      3.16    1.70   0.065
+   14. BD ( 2) O  1- C  2      20. BD*( 1) C  2- F  4      3.16    1.70   0.065
+   15. BD ( 1) C  2- F  3      18. BD*( 2) O  1- C  2      2.90    1.91   0.066
+   15. BD ( 1) C  2- F  3      19. BD*( 1) C  2- F  3      0.51    1.57   0.025
+   15. BD ( 1) C  2- F  3      20. BD*( 1) C  2- F  4      6.43    1.57   0.090
+   16. BD ( 1) C  2- F  4      18. BD*( 2) O  1- C  2      2.90    1.91   0.066
+   16. BD ( 1) C  2- F  4      19. BD*( 1) C  2- F  3      6.43    1.57   0.090
+   16. BD ( 1) C  2- F  4      20. BD*( 1) C  2- F  4      0.51    1.57   0.025
+
+
+ NATURAL BOND ORBITALS (Summary):
+
+                                                     Principal Delocalizations
+           NBO                 Occupancy    Energy   (geminal,vicinal,remote)
+ ===============================================================================
+ Molecular unit  1  (CF2O)
+ ------ Lewis --------------------------------------
+    1. CR ( 1) O  1             2.00000   -20.18441
+    2. CR ( 1) C  2             2.00000   -11.30030
+    3. CR ( 1) F  3             2.00000   -25.85337
+    4. CR ( 1) F  4             2.00000   -25.85337
+    5. LP ( 1) O  1             1.99733    -0.99027
+    6. LP ( 2) O  1             1.84258    -0.37415  19(v),20(v)
+    7. LP ( 1) F  3             1.99945    -1.42355
+    8. LP ( 2) F  3             1.96184    -0.53128  20(v),18(v)
+    9. LP ( 3) F  3             1.90705    -0.51451  17(v)
+   10. LP ( 1) F  4             1.99945    -1.42355
+   11. LP ( 2) F  4             1.96184    -0.53128  19(v),18(v)
+   12. LP ( 3) F  4             1.90705    -0.51451  17(v)
+   13. BD ( 1) O  1- C  2       1.99999    -0.51729  17(g)
+   14. BD ( 2) O  1- C  2       1.99254    -1.14220  19(g),20(g)
+   15. BD ( 1) C  2- F  3       1.98771    -1.01455  20(g),18(g),19(g)
+   16. BD ( 1) C  2- F  4       1.98771    -1.01455  19(g),18(g),20(g)
+ ------ non-Lewis ----------------------------------
+   17. BD*( 1) O  1- C  2       0.18567     0.20411
+   18. BD*( 2) O  1- C  2       0.03483     0.89735
+   19. BD*( 1) C  2- F  3       0.11748     0.55336
+   20. BD*( 1) C  2- F  4       0.11748     0.55336
+          -------------------------------
+                 Total Lewis   31.54455  ( 98.5767%)
+           Valence non-Lewis    0.45545  (  1.4233%)
+           Rydberg non-Lewis    0.00000  (  0.0000%)
+          -------------------------------
+               Total unit  1   32.00000  (100.0000%)
+              Charge unit  1    0.00000
+
+ $CHOOSE
+   LONE 1 2 3 3 4 3 END
+   BOND D 1 2 S 2 3 S 2 4 END
+ $END
+
+ NBO analysis completed in 0.24 CPU seconds (0 wall seconds)
+ Maximum scratch memory used by NBO was 224470 words (1.71 MB)
+ Maximum scratch memory used by G16NBO was 8818 words (0.07 MB)
+
+ Opening RunExU unformatted file "/cluster/work/users/beto93/mol63/Gau-508773.EUF"
+ Read unf file /cluster/work/users/beto93/mol63/Gau-508773.EUF:
+ Label Gaussian matrix elements                                         IVers= 2 NLab= 2 Version=ES64L-G16RevC.01
+ Title mol63-NBO                                                       
+ NAtoms=     4 NBasis=    20 NBsUse=    20 ICharg=     0 Multip=     1 NE=    32 Len12L=8 Len4L=8 IOpCl= 0 ICGU=111
+ GAUSSIAN SCALARS                    NI= 1 NR= 1 NTot=       1 LenBuf=    2 NRI=1 N=    1000
+ NPA CHARGES                         NI= 0 NR= 1 NTot=       4 LenBuf= 4000 NRI=1 N=       4
+ Recovered energy= -307.305324680     dipole=     -0.000000000000     -0.000000000000     -0.340423052534
+ Unable to Open any file for archive entry.
+ 1\1\GINC-C1-41\SP\RHF\STO-3G\C1F2O1\BETO93\18-Nov-2024\0\\#RHF/STO-3G 
+ int=nobasistransform Symmetry=None 5D 7F Pop=NBO7Read\\mol63-NBO\\0,1\
+ O,0,0.,0.,1.330715\C,0,0.,0.,0.144358\F,0,0.,1.06949,-0.639548\F,0,0.,
+ -1.06949,-0.639548\\Version=ES64L-G16RevC.01\HF=-307.3053247\RMSD=7.96
+ 6e-09\Dipole=0.,0.,-0.3404231\Quadrupole=1.7223906,-0.1271918,-1.59519
+ 89,0.,0.,0.\PG=Unknown\\@
+ The archive entry for this job was punched.
+
+
+ WE LEARN WISDOM FROM FAILURE MUCH MORE THAN FROM SUCCESS.
+ WE DISCOVER WHAT WILL DO BY FINDING OUT WHAT WILL NOT DO...
+ AND HE WHO NEVER MADE A MISTAKE NEVER MADE A DISCOVERY
+ Job cpu time:       0 days  0 hours  0 minutes  7.8 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  2.7 seconds.
+ File lengths (MBytes):  RWF=     10 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 16 at Mon Nov 18 15:41:19 2024.

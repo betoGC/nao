@@ -1,0 +1,7 @@
+mol03.xyz
+mol07.xyz
+mol14.xyz
+mol35.xyz
+mol40.xyz
+mol42.xyz
+mol47.xyz

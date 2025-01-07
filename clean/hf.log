@@ -1,0 +1,6 @@
+2024-11-22:13:19:00,22 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'D_CONVERGENCE': 1e-08, 'E_CONVERGENCE': 1e-08, 'G_CONVERGENCE': 'GAU_VERYTIGHT', 'PUREAM': 1, 'REFERENCE': 'RHF', 'SCF_TYPE': 'DIRECT', 'function_kwargs': {}}
+2024-11-22:13:19:00,26 INFO     [psi4.driver.driver:499] Compute energy(): method=scf, basis=sto-3g, molecule=default, nre=0.9680070926890244
+2024-11-22:13:19:00,404 INFO     [psi4.driver.driver:502] Return energy(): -7.860313085472221
+2024-11-22:13:19:00,447 INFO     [psi4.driver.task_planner:266] PLANNING Atomic:  keywords={'D_CONVERGENCE': 1e-08, 'E_CONVERGENCE': 1e-08, 'G_CONVERGENCE': 'GAU_VERYTIGHT', 'SCF__INTS_TOLERANCE': 1e-12, 'PUREAM': 1, 'REFERENCE': 'RHF', 'SCF_TYPE': 'DIRECT', 'function_kwargs': {}}
+2024-11-22:13:19:00,449 INFO     [psi4.driver.driver:499] Compute energy(): method=scf, basis=sto-3g, molecule=default, nre=59.01783242169546
+2024-11-22:13:19:01,5 INFO     [psi4.driver.driver:502] Return energy(): -114.41991591725504

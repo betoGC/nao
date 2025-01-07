@@ -1,0 +1,8 @@
+%mem=25GB
+%chk=a.chk
+
+#RHF/4-31G Pop=NBO7Read
+
+NBO-a
+
+0 1
