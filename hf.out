@@ -30,9 +30,9 @@
     -----------------------------------------------------------------------
 
 
-    Psi4 started on: Tuesday, 07 January 2025 11:14AM
+    Psi4 started on: Friday, 17 January 2025 01:33PM
 
-    Process ID: 12186
+    Process ID: 11801
     Host:       UIO-5CG2126K37
     PSIDATADIR: /home/beto/psi4conda/share/psi4
     Memory:     500.0 MiB
@@ -319,15 +319,15 @@ np.set_printoptions(threshold=sys.maxsize,formatter={'float': lambda x: "{0:20.4
 #      imap_pb[ibas]=ntrue+nfalse
 #  return imap_pb,ntrue,nfalse
 #
-#def mapMatrix(A,imap):
-#  #Define orbitals shuffle from imap as a unitary tranformation 
-#  #Forward: newM=A*oldM*A.T
-#  #Reverse: oldM=A.T*newM*A
-#  nb=len(A[:,0])
-#  dummy=np.zeros((nb,nb))
-#  for j in range(nb):
-#    dummy[:,j] = A[:,imap[j]-1]
-#  return dummy
+def mapMatrix(A,imap):
+  #Define orbitals shuffle from imap as a unitary tranformation 
+  #Forward: newM=A*oldM*A.T
+  #Reverse: oldM=A.T*newM*A
+  nb=len(A[:,0])
+  dummy=np.zeros((nb,nb))
+  for j in range(nb):
+    dummy[:,j] = A[:,imap[j]-1]
+  return dummy
 #
 #def symmOrthMat(Sw,w):
 #  #Weigthed symmetric orthogonalization
@@ -444,8 +444,8 @@ def stdGorder(A):
         shuffle = np.zeros(nbas)
         shuffle = shuffle.astype(int)
         stdOrder = np.array([[0.0, 1.0, 0.0],
-                             [0.0, 0.0, 1.0],
-                             [1.0, 0.0, 0.0]], dtype=np.float64)
+                             [1.0, 0.0, 0.0],
+                             [0.0, 0.0, 1.0]], dtype=np.float64)
         for ish in range(nsh):
           first = shell_idx[ish]
           last = first+ml_up
@@ -566,10 +566,9 @@ def stdGorder(A):
 #        rotate(a,p,k,l)
 #    print('Jacobi method did not converge')
 
-######## Here we start performing an OPT-RHF/3-21G calculation for H2######
-######## FIXME:Replace with a callback to any ESS  ####################
-import math
+###############Here we start a rhf calculation with ESS at this point psi4################
 #import psi4 
+import math
 import glob
 import os
 import numpy as np
@@ -615,18 +614,20 @@ for a_molecule in files:
       coords[iatom,0] = mol.fx(iatom)
       coords[iatom,1] = mol.fy(iatom)
       coords[iatom,2] = mol.fz(iatom)
-    #set basis sto-3g
 
+    #set basis sto-3g
     set reference rhf
     set puream true
     set print_mos true
     set s_orthogonalization symmetric
-    set g_convergence GAU_VERYTIGHT    
-
-    ops = {'basis': 'userbas',
+    set g_convergence GAU_VERYTIGHT
+    set guess core
+    
+    ops = {
+          'basis': 'userbas',
           'scf_type': 'direct',
           'e_convergence': 1.00e-8,
-          'd_convergence': 1.00e-8,
+          'd_convergence': 1.00e-10,
     }
 
     psi4.set_options(ops)
@@ -643,6 +644,7 @@ for a_molecule in files:
     Upsi=psi4.core.Matrix(nmo,nmo)
     seig=psi4.core.Vector(nmo)
     S=np.asarray(Spsi)
+    print("Energy:",energy)
     for iatom in range(natom):
       print("System:, atNum:",atNum[iatom], "coords", coords[iatom])
     print("===== Original AO-S matrix =====")
@@ -744,11 +746,11 @@ for a_molecule in files:
     prntMtrx(S)
 
     print("====== P^(AO) std gaussian m_l ordering SPS =====")
-    #P=stdGorder(P)
+    P=stdGorder(P)
     prntMtrx(P)
 
     print("====== S^(AO) std gaussian m_l ordering =====")
-    #S=stdGorder(S)
+    S=stdGorder(S)
     prntMtrx(S)
     continue
     ############ NAO-step2 - symmetry averaged matrices ###################
@@ -1196,14 +1198,14 @@ for a_molecule in files:
 Scratch directory: /tmp/
 
 *** tstart() called on UIO-5CG2126K37
-*** at Tue Jan  7 11:14:32 2025
+*** at Fri Jan 17 13:33:38 2025
 
    => Loading Basis Set <=
 
     Name: USERBAS
     Role: ORBITAL
     Keyword: BASIS
-    atoms 1 entry SI         line     4 file /mnt/c/Users/jaguerr/Documents/proyecto/WP4-04NBO/trial/H2.4.2024.10.01/userbas.gbs 
+    atoms 1 entry C          line     4 file /mnt/c/Users/jaguerr/Documents/proyecto/WP4-04NBO/trial/H2.4.2024.10.01/nao/userbas.gbs 
 
 
          ---------------------------------------------------------
@@ -1221,7 +1223,7 @@ Scratch directory: /tmp/
 
        Center              X                  Y                   Z               Mass       
     ------------   -----------------  -----------------  -----------------  -----------------
-         SI           0.000000000000     0.000000000000     0.000000000000    27.976926534650
+         C            0.000000000000     0.000000000000     0.000000000000    12.000000000000
 
   Running in c1 symmetry.
 
@@ -1231,9 +1233,9 @@ Scratch directory: /tmp/
 
   Charge       = 0
   Multiplicity = 1
-  Electrons    = 14
-  Nalpha       = 7
-  Nbeta        = 7
+  Electrons    = 6
+  Nalpha       = 3
+  Nbeta        = 3
 
   ==> Algorithm <==
 
@@ -1243,16 +1245,16 @@ Scratch directory: /tmp/
   Fractional occupation disabled.
   Guess Type is CORE.
   Energy threshold   = 1.00e-08
-  Density threshold  = 1.00e-08
+  Density threshold  = 1.00e-10
   Integral threshold = 1.00e-12
 
   ==> Primary Basis <==
 
   Basis Set: USERBAS
     Blend: USERBAS
-    Number of shells: 5
-    Number of basis functions: 9
-    Number of Cartesian functions: 9
+    Number of shells: 4
+    Number of basis functions: 8
+    Number of Cartesian functions: 8
     Spherical Harmonics?: true
     Max angular momentum: 1
 
@@ -1261,7 +1263,7 @@ Scratch directory: /tmp/
     Name: (USERBAS AUX)
     Role: JKFIT
     Keyword: DF_BASIS_SCF
-    atoms 1 entry SI         line   737 file /home/beto/psi4conda/share/psi4/basis/def2-universal-jkfit.gbs 
+    atoms 1 entry C          line   198 file /home/beto/psi4conda/share/psi4/basis/def2-universal-jkfit.gbs 
 
   Starting with a DF guess...
 
@@ -1285,15 +1287,15 @@ Scratch directory: /tmp/
 
   Basis Set: (USERBAS AUX)
     Blend: DEF2-UNIVERSAL-JKFIT
-    Number of shells: 38
-    Number of basis functions: 128
-    Number of Cartesian functions: 155
+    Number of shells: 25
+    Number of basis functions: 75
+    Number of Cartesian functions: 89
     Spherical Harmonics?: true
     Max angular momentum: 4
 
     Using symmetric orthogonalization.
-  Minimum eigenvalue in the overlap matrix is 6.0238360314E-01.
-  Reciprocal condition number of the overlap matrix is 4.2694999238E-01.
+  Minimum eigenvalue in the overlap matrix is 3.0152557755E-02.
+  Reciprocal condition number of the overlap matrix is 1.5307052266E-02.
 
   ==> Pre-Iterations <==
 
@@ -1302,21 +1304,22 @@ Scratch directory: /tmp/
    -------------------------------------------------------
     Irrep   Nso     Nmo     Nalpha   Nbeta   Ndocc  Nsocc
    -------------------------------------------------------
-     A          9       9       7       7       7       0
+     A          8       8       3       3       3       0
    -------------------------------------------------------
-    Total       9       9       7       7       7       0
+    Total       8       8       3       3       3       0
    -------------------------------------------------------
 
   ==> Iterations <==
 
                            Total Energy        Delta E     RMS |[F,P]|
 
-   @DF-RHF iter   1:  -285.03390888081753   -2.85034e+02   1.21481e-01 ADIIS
-   @DF-RHF iter   2:  -285.38100817932974   -3.47099e-01   1.21923e-02 DIIS/ADIIS
-   @DF-RHF iter   3:  -285.38422813062596   -3.21995e-03   2.01332e-04 DIIS/ADIIS
-   @DF-RHF iter   4:  -285.38422900053945   -8.69913e-07   3.02437e-06 DIIS
-   @DF-RHF iter   5:  -285.38422900073596   -1.96508e-10   3.04111e-08 DIIS
-   @DF-RHF iter   6:  -285.38422900073579    1.70530e-13   2.31703e-10 DIIS
+   @DF-RHF iter   1:   -18.70966324171949   -1.87097e+01   1.32513e-01 ADIIS
+   @DF-RHF iter   2:   -19.61867444253463   -9.09011e-01   6.40361e-03 ADIIS/DIIS
+   @DF-RHF iter   3:   -19.62016150113257   -1.48706e-03   5.10469e-04 ADIIS/DIIS
+   @DF-RHF iter   4:   -19.62016576938345   -4.26825e-06   3.12612e-05 DIIS
+   @DF-RHF iter   5:   -19.62016579793627   -2.85528e-08   4.16499e-07 DIIS
+   @DF-RHF iter   6:   -19.62016579794122   -4.95248e-12   3.26758e-09 DIIS
+   @DF-RHF iter   7:   -19.62016579794121    7.10543e-15   1.81873e-11 DIIS
 
   DF guess converged.
 
@@ -1331,9 +1334,10 @@ Scratch directory: /tmp/
     Incremental Fock:           No
     LinK:                       No
 
-   @RHF iter   7:  -285.38397420103081   -2.85384e+02   1.09959e-06 DIIS
-   @RHF iter   8:  -285.38397420105673   -2.59206e-11   7.60793e-08 DIIS
-   @RHF iter   9:  -285.38397420105696   -2.27374e-13   1.72263e-14 DIIS
+   @RHF iter   8:   -19.62017490444772   -1.96202e+01   5.51509e-07 DIIS
+   @RHF iter   9:   -19.62017490445275   -5.03064e-12   6.45463e-08 DIIS
+   @RHF iter  10:   -19.62017490445284   -9.23706e-14   1.68839e-09 DIIS
+   @RHF iter  11:   -19.62017490445280    3.55271e-14   2.63827e-16 DIIS
   Energy and wave function converged.
 
 
@@ -1344,26 +1348,25 @@ Scratch directory: /tmp/
 
     Doubly Occupied:                                                      
 
-       1A    -67.715757     2A     -5.751273     3A     -3.766749  
-       4A     -3.766749     5A     -3.765579     6A     -0.405102  
-       7A     -0.054957  
+       1A     -3.957597     2A     -0.233945     3A     -0.233945  
 
     Virtual:                                                              
 
-       8A      0.286579     9A      0.286579  
+       4A      0.252541     5A      0.478272     6A      1.471486  
+       7A      1.492709     8A      1.492709  
 
     Final Occupation by Irrep:
               A 
-    DOCC [     7 ]
+    DOCC [     3 ]
 
-  @RHF Final Energy:  -285.38397420105696
+  @RHF Final Energy:   -19.62017490445280
 
    => Energetics <=
 
     Nuclear Repulsion Energy =              0.0000000000000000
-    One-Electron Energy =                -400.3156174044171394
-    Two-Electron Energy =                 114.9316432033602240
-    Total Energy =                       -285.3839742010569012
+    One-Electron Energy =                 -30.3893730844314831
+    Two-Electron Energy =                  10.7691981799786802
+    Total Energy =                        -19.6201749044528029
 
 Computation Completed
 
@@ -1382,7 +1385,7 @@ Properties computed using the SCF density matrix
  L = 1.  Multiply by 2.5417464519 to convert [e a0] to [Debye]
  Dipole X            :          0.0000000            0.0000000            0.0000000
  Dipole Y            :         -0.0000000            0.0000000           -0.0000000
- Dipole Z            :          0.0000000            0.0000000            0.0000000
+ Dipole Z            :         -0.0000000            0.0000000           -0.0000000
  Magnitude           :                                                    0.0000000
 
  ------------------------------------------------------------------------------------
@@ -1391,100 +1394,86 @@ Properties computed using the SCF density matrix
 
                             1            2            3            4            5
 
- 1    SI1 s0        0.9939838    0.3442694   -0.0000000    0.0000000   -0.0000000
- 2    SI1 s0        0.0187793   -1.0394312    0.0000000   -0.0000000    0.0000000
- 3    SI1 p0        0.0000000    0.0000000    0.2575015    0.8487816    0.4088248
- 4    SI1 p+1       0.0000000    0.0000000   -0.5139321    0.4806817   -0.6786768
- 5    SI1 p-1      -0.0000000    0.0000000   -0.7888947   -0.0360952    0.5755734
- 6    SI1 s0       -0.0025788   -0.0459306   -0.0000000   -0.0000000   -0.0000000
- 7    SI1 p0        0.0000000   -0.0000000    0.0206698    0.0681324    0.0287589
- 8    SI1 p+1       0.0000000   -0.0000000   -0.0412537    0.0385847   -0.0477417
- 9    SI1 p-1       0.0000000    0.0000000   -0.0633252   -0.0028974    0.0404889
+ 1    C1 s0         1.5839511   -0.0000000    0.0000000    0.0000000    3.7851376
+ 2    C1 s0        -2.4586775    0.0000000   -0.0000000   -0.0000000   -3.2849768
+ 3    C1 p0         0.0000000   -0.0007098    0.4883360    0.0492462   -0.0000000
+ 4    C1 p+1       -0.0000000    0.0390564   -0.0626675    0.3810032    0.0000000
+ 5    C1 p-1        0.0000000   -0.4908215   -0.0056929    0.0302466   -0.0000000
+ 6    C1 p0        -0.0000000   -0.0008441    0.5807581    0.0877099    0.0000000
+ 7    C1 p+1        0.0000000    0.0464482   -0.0745279    0.6785849   -0.0000000
+ 8    C1 p-1       -0.0000000   -0.5837141   -0.0067703    0.0538706   -0.0000000
 
-            Ene   -67.7157567   -5.7512732   -3.7667488   -3.7667488   -3.7655789
+            Ene    -3.9575974   -0.2339455   -0.2339455    0.2525407    0.4782725
             Sym             A            A            A            A            A
-            Occ             2            2            2            2            2
+            Occ             2            2            2            0            0
 
 
-                           6            7            8            9
+                           6            7            8
 
- 1    SI1 s0        0.0940831   -0.0000000    0.0000000   -0.0000000
- 2    SI1 s0       -0.3338485    0.0000000   -0.0000000    0.0000000
- 3    SI1 p0        0.0000000    0.1438165    0.0992763    0.3054332
- 4    SI1 p+1       0.0000000   -0.2387452   -0.1826203    0.1776811
- 5    SI1 p-1      -0.0000000    0.2024754   -0.2858485   -0.0074372
- 6    SI1 s0        1.0356562   -0.0000000    0.0000000   -0.0000000
- 7    SI1 p0       -0.0000000   -0.4324278   -0.2907680   -0.8945765
- 8    SI1 p+1      -0.0000000    0.7178594    0.5348727   -0.5204061
- 9    SI1 p-1       0.0000000   -0.6088035    0.8372152    0.0217826
+ 1    C1 s0         0.0000000   -0.0000000    0.0000000
+ 2    C1 s0        -0.0000000    0.0000000    0.0000000
+ 3    C1 p0         0.1771992    0.0253243    1.3409979
+ 4    C1 p+1        1.3709362   -0.1102535   -0.1702233
+ 5    C1 p-1        0.1088340    1.3475849   -0.0391275
+ 6    C1 p0        -0.1616531   -0.0246190   -1.3036496
+ 7    C1 p+1       -1.2506606    0.1071828    0.1654824
+ 8    C1 p-1       -0.0992857   -1.3100532    0.0380377
 
-            Ene    -0.4051018   -0.0549573    0.2865788    0.2865788
-            Sym             A            A            A            A
-            Occ             2            2            0            0
+            Ene     1.4714858    1.4927087    1.4927087
+            Sym             A            A            A
+            Occ             0            0            0
 
 
-*** tstop() called on UIO-5CG2126K37 at Tue Jan  7 11:14:32 2025
+*** tstop() called on UIO-5CG2126K37 at Fri Jan 17 13:33:38 2025
 Module time:
-	user time   =       0.10 seconds =       0.00 minutes
-	system time =       0.09 seconds =       0.00 minutes
+	user time   =       0.08 seconds =       0.00 minutes
+	system time =       0.00 seconds =       0.00 minutes
 	total time  =          0 seconds =       0.00 minutes
 Total time:
-	user time   =       0.10 seconds =       0.00 minutes
-	system time =       0.09 seconds =       0.00 minutes
+	user time   =       0.08 seconds =       0.00 minutes
+	system time =       0.00 seconds =       0.00 minutes
 	total time  =          0 seconds =       0.00 minutes
   -AO BASIS SET INFORMATION:
     Name                   = USERBAS
     Blend                  = USERBAS
-    Total number of shells = 5
-    Number of primitives   = 15
-    Number of AO           = 9
-    Number of SO           = 9
+    Total number of shells = 4
+    Number of primitives   = 4
+    Number of AO           = 8
+    Number of SO           = 8
     Maximum AM             = 1
     Spherical Harmonics    = TRUE
 
   -Contraction Scheme:
     Atom   Type   All Primitives // Shells:
    ------ ------ --------------------------
-       1    SI     9s 6p // 3s 2p 
+       1     C     2s 2p // 2s 2p 
 
   ==> AO Basis Functions <==
 
     [ USERBAS ]
     spherical
     ****
-   SI   1
-    S   3 1.00
-                       407.79755140           0.15432897
-                        74.28083305           0.53532814
-                        20.10329229           0.44463454
-    S   3 1.00
-                        23.19365606          -0.09996723
-                         5.38970687           0.39951283
-                         1.75289995           0.70011547
-    P   3 1.00
-                        23.19365606           0.15591627
-                         5.38970687           0.60768372
-                         1.75289995           0.39195739
-    S   3 1.00
-                         1.47874062          -0.21962037
-                         0.41256488           0.22559543
-                         0.16147510           0.90039843
-    P   3 1.00
-                         1.47874062           0.01058760
-                         0.41256488           0.59516701
-                         0.16147510           0.46200101
+    C   1
+    S   1 1.00
+                         0.50000000           1.00000000
+    S   1 1.00
+                         0.75000000           1.00000000
+    P   1 1.00
+                         1.00000000           1.00000000
+    P   1 1.00
+                         0.35000000           1.00000000
     ****
 
   Basis Set: USERBAS
     Blend: USERBAS
-    Number of shells: 5
-    Number of basis functions: 9
-    Number of Cartesian functions: 9
+    Number of shells: 4
+    Number of basis functions: 8
+    Number of Cartesian functions: 8
     Spherical Harmonics?: true
     Max angular momentum: 1
 
 
-    Psi4 stopped on: Tuesday, 07 January 2025 11:14AM
-    Psi4 wall time for execution: 0:00:00.55
+    Psi4 stopped on: Friday, 17 January 2025 01:33PM
+    Psi4 wall time for execution: 0:00:00.34
 
 *** Psi4 exiting successfully. Buy a developer a beer!

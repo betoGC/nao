@@ -276,15 +276,15 @@ np.set_printoptions(threshold=sys.maxsize,formatter={'float': lambda x: "{0:20.4
 #      imap_pb[ibas]=ntrue+nfalse
 #  return imap_pb,ntrue,nfalse
 #
-#def mapMatrix(A,imap):
-#  #Define orbitals shuffle from imap as a unitary tranformation 
-#  #Forward: newM=A*oldM*A.T
-#  #Reverse: oldM=A.T*newM*A
-#  nb=len(A[:,0])
-#  dummy=np.zeros((nb,nb))
-#  for j in range(nb):
-#    dummy[:,j] = A[:,imap[j]-1]
-#  return dummy
+def mapMatrix(A,imap):
+  #Define orbitals shuffle from imap as a unitary tranformation 
+  #Forward: newM=A*oldM*A.T
+  #Reverse: oldM=A.T*newM*A
+  nb=len(A[:,0])
+  dummy=np.zeros((nb,nb))
+  for j in range(nb):
+    dummy[:,j] = A[:,imap[j]-1]
+  return dummy
 #
 #def symmOrthMat(Sw,w):
 #  #Weigthed symmetric orthogonalization
@@ -401,8 +401,8 @@ def stdGorder(A):
         shuffle = np.zeros(nbas)
         shuffle = shuffle.astype(int)
         stdOrder = np.array([[0.0, 1.0, 0.0],
-                             [0.0, 0.0, 1.0],
-                             [1.0, 0.0, 0.0]], dtype=np.float64)
+                             [1.0, 0.0, 0.0],
+                             [0.0, 0.0, 1.0]], dtype=np.float64)
         for ish in range(nsh):
           first = shell_idx[ish]
           last = first+ml_up
@@ -523,10 +523,9 @@ def stdGorder(A):
 #        rotate(a,p,k,l)
 #    print('Jacobi method did not converge')
 
-######## Here we start performing an OPT-RHF/3-21G calculation for H2######
-######## FIXME:Replace with a callback to any ESS  ####################
-import math
+###############Here we start a rhf calculation with ESS at this point psi4################
 #import psi4 
+import math
 import glob
 import os
 import numpy as np
@@ -572,18 +571,20 @@ for a_molecule in files:
       coords[iatom,0] = mol.fx(iatom)
       coords[iatom,1] = mol.fy(iatom)
       coords[iatom,2] = mol.fz(iatom)
-    #set basis sto-3g
 
+    #set basis sto-3g
     set reference rhf
     set puream true
     set print_mos true
     set s_orthogonalization symmetric
-    set g_convergence GAU_VERYTIGHT    
-
-    ops = {'basis': 'userbas',
+    set g_convergence GAU_VERYTIGHT
+    set guess core
+    
+    ops = {
+          'basis': 'userbas',
           'scf_type': 'direct',
           'e_convergence': 1.00e-8,
-          'd_convergence': 1.00e-8,
+          'd_convergence': 1.00e-10,
     }
 
     psi4.set_options(ops)
@@ -600,6 +601,7 @@ for a_molecule in files:
     Upsi=psi4.core.Matrix(nmo,nmo)
     seig=psi4.core.Vector(nmo)
     S=np.asarray(Spsi)
+    print("Energy:",energy)
     for iatom in range(natom):
       print("System:, atNum:",atNum[iatom], "coords", coords[iatom])
     print("===== Original AO-S matrix =====")
@@ -701,11 +703,11 @@ for a_molecule in files:
     prntMtrx(S)
 
     print("====== P^(AO) std gaussian m_l ordering SPS =====")
-    #P=stdGorder(P)
+    P=stdGorder(P)
     prntMtrx(P)
 
     print("====== S^(AO) std gaussian m_l ordering =====")
-    #S=stdGorder(S)
+    S=stdGorder(S)
     prntMtrx(S)
     continue
     ############ NAO-step2 - symmetry averaged matrices ###################
